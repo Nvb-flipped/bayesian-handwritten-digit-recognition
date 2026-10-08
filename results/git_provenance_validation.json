@@ -1,8 +1,8 @@
 {
-  "recorded_hashes_checked": 81,
+  "recorded_hashes_checked": 102,
   "working_files_match": true,
   "staged_git_blobs_match": true,
   "historical_plot_module_hash": "Preserved in original environment; current plot generator checked via figure manifest",
   "baseline_evidence_invariance": "results/refinement_audit.json",
-  "review_date": "2026-10-08"
+  "review_date": "2026-10-09"
 }

@@ -8,6 +8,8 @@ The agent compared three primary-literature candidates, wrote all code, executed
 
 Applied skills covered literature review, experimental design, sklearn, visualization, ML/PyTorch checks, PDF rendering and LaTeX compilation. Guidance did not constitute experiment results or independent review. No subagent or paid schematic generator was used. [Scientific Agent Skills](https://arxiv.org/abs/2609.00065) is acknowledged.
 
+Section 1 of the report now explains the instruction hierarchy, records actual discovery queries, pairs seven exact prompt excerpts with executed responses, and includes a TikZ workflow diagram. [Complete skill instruction snapshots and consultation status](../skill_sources.md) and the [verbatim-excerpt ledger](../prompt_excerpts.json) distinguish actual guidance from availability. Prompt 03 publication and Prompt 04 post-publication verification are marked pending. The final method comparison and student-authored reflection are preserved.
+
 Windows temporary-directory access was repaired without weakening tests. Package/TeX bundle downloads required authorized network access. The negative calibration result was retained.
 
 The AI did not invent student learning. The student supplied five reflection paragraphs, which were inserted faithfully into the named report section; the percentage sign and curly apostrophes were encoded for LaTeX. Publication is deferred to Prompt 03. GitHub CLI reported invalid authentication.

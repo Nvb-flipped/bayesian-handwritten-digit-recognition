@@ -1,6 +1,6 @@
 # Final report and figure refinement
 
-Historical review snapshot before the student's reflection was supplied. The current report now includes the student's five paragraphs and has 16 pages; its updated validation record is in results/report_validation.json.
+Historical review snapshot before the student's reflection was supplied. The current report includes the student's five paragraphs and the expanded Section 1; its current pagination and validation record are in results/report_validation.json.
 
 Completed locally on 8 October 2026, following the user's final refinement request and Prompt 02. This is AI self-review, not independent peer review. The comparison baseline is local commit `93b625e`.
 

@@ -26,8 +26,11 @@ def audit():
         original = subprocess.check_output(["git", "show", f"{baseline}:{name}"])
         assert original == path.read_bytes(), f"Executed evidence changed: {name}"
         hashes[name] = hashlib.sha256(original).hexdigest()
-    tables = sorted(p for p in Path("report").glob("*.tex")
-                    if p.name not in {"main.tex", "student_reflection.tex"})
+    # Only generated numerical tables belong to the frozen evidence set.
+    # Diagram/prose includes may legitimately change during report refinement.
+    tables = [Path("report") / name for name in [
+        "results.tex", "performance.tex", "probability_metrics.tex", "selection.tex",
+        "per_class.tex", "diagnostic_text.tex", "ablation.tex"]]
     for path in tables:
         original = subprocess.check_output(["git", "show", f"{baseline}:{path.as_posix()}"])
         assert original == path.read_bytes(), f"Numerical table changed: {path}"

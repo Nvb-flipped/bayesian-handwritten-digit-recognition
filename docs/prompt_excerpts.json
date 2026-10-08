@@ -1,0 +1,65 @@
+[
+  {
+    "id": "P01/D",
+    "source": "prompts/01_RESEARCH_IMPLEMENT_REPORT.md",
+    "heading": "Phase D — report and documentation",
+    "line": 47,
+    "quote": "Use only verified citations.",
+    "latex_quote": "Use only verified citations.",
+    "source_sha256": "4365eb0e259ebfc7883e24368ffceff58f51e980d5db3b617d28b33b079fb216"
+  },
+  {
+    "id": "P01/A",
+    "source": "prompts/01_RESEARCH_IMPLEMENT_REPORT.md",
+    "heading": "Phase A — literature and method choice",
+    "line": 18,
+    "quote": "and compare: publication/year, mathematical basis, relevance to the course, reproducibility, compute/data requirements, evaluation protocol, and risk.",
+    "latex_quote": "and compare: publication/year, mathematical basis, relevance to the course, reproducibility, compute/data requirements, evaluation protocol, and risk.",
+    "source_sha256": "4365eb0e259ebfc7883e24368ffceff58f51e980d5db3b617d28b33b079fb216"
+  },
+  {
+    "id": "P01/A",
+    "source": "prompts/01_RESEARCH_IMPLEMENT_REPORT.md",
+    "heading": "Phase A — literature and method choice",
+    "line": 19,
+    "quote": "Prefer genuinely recent publications (approximately 2021–2026) while citing older foundational Bayesian/probabilistic work when appropriate.",
+    "latex_quote": "Prefer genuinely recent publications (approximately 2021--2026) while citing older foundational Bayesian/probabilistic work when appropriate.",
+    "source_sha256": "4365eb0e259ebfc7883e24368ffceff58f51e980d5db3b617d28b33b079fb216"
+  },
+  {
+    "id": "P01/A",
+    "source": "prompts/01_RESEARCH_IMPLEMENT_REPORT.md",
+    "heading": "Phase A — literature and method choice",
+    "line": 23,
+    "quote": "Verify important symbolic or numerical identities against the implementation.",
+    "latex_quote": "Verify important symbolic or numerical identities against the implementation.",
+    "source_sha256": "4365eb0e259ebfc7883e24368ffceff58f51e980d5db3b617d28b33b079fb216"
+  },
+  {
+    "id": "P01/C",
+    "source": "prompts/01_RESEARCH_IMPLEMENT_REPORT.md",
+    "heading": "Phase C — actual experiments and figures",
+    "line": 35,
+    "quote": "Use a proper train/validation/test strategy; select models with validation only.",
+    "latex_quote": "Use a proper train/validation/test strategy; select models with validation only.",
+    "source_sha256": "4365eb0e259ebfc7883e24368ffceff58f51e980d5db3b617d28b33b079fb216"
+  },
+  {
+    "id": "P02/QA3",
+    "source": "prompts/02_CRITICAL_REVIEW_AND_FIGURES.md",
+    "heading": "Required QA loop",
+    "line": 37,
+    "quote": "Re-run affected tests, figure generation, experiments where necessary, and bibliography/reference checks.",
+    "latex_quote": "Re-run affected tests, figure generation, experiments where necessary, and bibliography/reference checks.",
+    "source_sha256": "3092ae77c2c9d1e80351417667f61c11233a09f4605d940e1d2aa76fdc0aef10"
+  },
+  {
+    "id": "P02/Figures",
+    "source": "prompts/02_CRITICAL_REVIEW_AND_FIGURES.md",
+    "heading": "Scientific visualization quality gate",
+    "line": 31,
+    "quote": "Use a controlled layout with informative whitespace; no unnecessary pages or enormous gaps.",
+    "latex_quote": "Use a controlled layout with informative whitespace; no unnecessary pages or enormous gaps.",
+    "source_sha256": "3092ae77c2c9d1e80351417667f61c11233a09f4605d940e1d2aa76fdc0aef10"
+  }
+]

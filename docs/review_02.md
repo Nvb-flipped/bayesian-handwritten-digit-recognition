@@ -1,6 +1,6 @@
 # Prompt 02 technical and figure review
 
-Historical review snapshot before the student's reflection was supplied. The current report now includes the student's five paragraphs and has 16 pages; its updated validation record is in results/report_validation.json.
+Historical review snapshot before the student's reflection was supplied. The current report includes the student's five paragraphs and the expanded Section 1; its current pagination and validation record are in results/report_validation.json.
 
 This records the initial Prompt 02 review at commit 93b625e. Figure styles and final layout are superseded by the [final refinement record](refinement_02.md); the original executed diagnostic remains unchanged.
 

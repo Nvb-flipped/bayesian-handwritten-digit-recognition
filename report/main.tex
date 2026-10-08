@@ -4,6 +4,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,microtype,xcolor}
 \usepackage{enumitem,float,placeins}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\newcounter{workflowdiagram}
 \usepackage[colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,citecolor=blue!45!black]{hyperref}
 \setlist{itemsep=2pt,topsep=4pt}
 \setlength{\parindent}{0pt}
@@ -55,35 +58,99 @@ outputs. Public publication is deliberately deferred to Prompt 03.
 \clearpage
 
 \section{How AI Found the Algorithm}
-\subsection{Instructions, search and verification}
-The instructor's one-page assignment requests a recent classification or
-recognition algorithm based on probability or Bayes theory and allows AI to
-perform the technical work. It requires six report items and
-prohibits the student from writing the code. The agent read the full PDF and
-rendered it to verify the text. The initial chat was attached to the older
-denoising project; the requested Assignment 2 files were found in the sibling
-\texttt{AI Assignment 2} directory, where all new work was performed.
+\subsection{How the student structured Codex's work}
+The student guided Codex Desktop through a hierarchy of written instructions.
+The instructor's \texttt{AIassign2.pdf} defined the assignment: a recent
+probability- or Bayes-based recognition algorithm, AI-written technical code and
+six required report items. Codex extracted the complete one-page PDF and
+inspected its rendering. The project \texttt{AGENTS.md} supplied persistent
+rules for scientific integrity, reproducibility, mathematical rigor, held-out
+evaluation and student authorship. Task-specific Markdown prompts supplied the
+executable stages; installed skills supplied procedural guidance for carrying
+out those stages. The project priority was course requirements, then
+\texttt{AGENTS.md}, then the current task prompt, then skill guidance.
 
-The project's \texttt{AGENTS.md} supplied persistent constraints: substantive
-Bayesian inference, isolated held-out data, truthful execution evidence and a
-student-authored reflection. The user invoked
-\path{01_RESEARCH_IMPLEMENT_REPORT.md}, which decomposed work into literature
-choice, implementation, execution and report preparation. These were instructions
-actually received, rather than a reconstruction of an earlier dialogue.
-Prompt 02 subsequently requested adversarial technical review and figure editing.
-The same agent performed that self-review; it was not independent human peer review.
+The student explicitly invoked Prompt 01 for research, implementation,
+experiments and reporting, then Prompt 02 for technical and figure review.
+Later requests refined the report and supplied the student's own reflection.
+Workflow diagram~\ref{fig:ai-workflow} distinguishes these executed activities
+from the deferred publication and post-publication audit. Descriptions below
+are evidence-based paraphrases; only the quotation column reproduces prompt text.
+\input{instruction_workflow.tex}
 
-On 8 October 2026, searches included \emph{Laplace Redux Effortless Bayesian
-Deep Learning NeurIPS 2021 Daxberger}, \emph{Posterior Network uncertainty
-estimation without OOD samples NeurIPS 2020 Natural Posterior Network 2021},
-and \emph{2022 Bayesian neural network classification variational inference last
-layer uncertainty paper}. Primary proceedings, author manuscripts and dataset
-documentation were opened. OpenReview forum pages returned a verification
-challenge; accessible PDFs and arXiv records supplied candidate metadata.
-This bounded search is a targeted narrative review, not an exhaustive systematic
-review. Query strings and source links are retained in \texttt{docs/research.md}.
+\textbf{What the skills actually contributed.}
+The usage record identifies \texttt{literature-review} for primary-source
+provenance; \texttt{experimental-design} for matched controls and seed replication;
+and \texttt{scikit-learn} for splitting, baselines and metric conventions.
+Machine-learning, \texttt{pytorch-patterns} and \texttt{pytorch-training-recipe}
+guidance informed deterministic training, device handling and checkpoint checks.
+\texttt{scientific-visualization} informed scales, sample counts, vector exports
+and final-size readability. PDF guidance supported extraction/rendering, while
+the LaTeX compile plugin provided compiler detection and actual builds.
+These were procedural aids, not experimental evidence \cite{skills}.
 
-\subsection{Three substantive candidates}
+\texttt{scientific-writing} and \texttt{latex-paper-en} were inspected in
+Prompt 01, but their review services/scripts were not used then. Prompt 02
+materially applied their writing, caption and reviewer guidance, together with
+\texttt{statistical-analysis} for replication units and uncertainty interpretation.
+Installed \texttt{pymc}, \texttt{exploratory-data-analysis},
+\texttt{analytical-method-validation} and \texttt{markdown-mermaid-writing} have
+no documented material role and are not credited as used. No subagent,
+paid schematic generator or external manuscript-review service was used.
+\clearpage
+
+\subsection{Verified instructions and their executed responses}
+P01 denotes \path{prompts/01_RESEARCH_IMPLEMENT_REPORT.md};
+P02 denotes \path{prompts/02_CRITICAL_REVIEW_AND_FIGURES.md}.
+A, C and D identify the named phases in P01; QA3 is step 3 of P02's required
+QA loop. Each row gives a verbatim extract, its purpose and the recorded response.
+The comparison extract begins mid-sentence; none of the extracts is a fabricated
+conversation or a claim that every available skill was invoked.
+\begin{table}[H]\centering
+\fontsize{9}{11}\selectfont
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{19mm}>{\raggedright\arraybackslash}p{67mm}>{\raggedright\arraybackslash}X}
+\toprule Source & Verbatim instruction & Purpose and actual response\\
+\midrule
+P01/D & ``Use only verified citations.'' & \textbf{Source verification.} Primary proceedings/manuscripts supplied metadata; queries and source URLs were recorded, and all eight references were rechecked in Prompt 02. \\
+P01/A & ``and compare: publication/year, mathematical basis, relevance to the course, reproducibility, compute/data requirements, evaluation protocol, and risk.'' & \textbf{Substantive comparison.} Codex compared Laplace Redux, NatPN and VBLL on these criteria before implementing conditional Laplace. \\
+P01/A & ``Prefer genuinely recent publications (approximately 2021--2026) while citing older foundational Bayesian/probabilistic work when appropriate.'' & \textbf{Honest recency.} The report identifies the 2021 choice as the older edge of this range, explains its practical contribution and treats MacKay as foundational background. \\
+P01/A & ``Verify important symbolic or numerical identities against the implementation.'' & \textbf{Mathematical accountability.} Analytic gradients/Hessians were checked against autograd; covariance sampling, normalization and a two-class example were tested. \\
+P01/C & ``Use a proper train/validation/test strategy; select models with validation only.'' & \textbf{Leakage prevention.} Saved split indices and selection records document validation-based checkpoint/prior choice before final test prediction, with three neural seeds. \\
+P02/QA3 & ``Re-run affected tests, figure generation, experiments where necessary, and bibliography/reference checks.'' & \textbf{Repair with evidence.} The loss-logging repair was tested and reproduced; nine tests passed, 18 primary arrays stayed identical, and citations were rechecked. \\
+P02/Figures & ``Use a controlled layout with informative whitespace; no unnecessary pages or enormous gaps.'' & \textbf{Final-size readability.} Codex enlarged labels, redesigned reliability/uncertainty displays and inspected exports on rendered report pages; later refinement corrected bounded F1 presentation. \\
+\bottomrule
+\end{tabularx}
+\caption{Selected instructions verified against the original prompt files.
+Responses are summaries of saved research, implementation and review records.}
+\end{table}
+
+\textbf{Recorded discovery queries (8 October 2026).}
+The research log retains these actual algorithm-search strings:
+\begin{itemize}[leftmargin=12pt,itemsep=1pt,topsep=2pt]
+\item \emph{Laplace Redux Effortless Bayesian Deep Learning NeurIPS 2021 Daxberger}
+\item \emph{Posterior Network uncertainty estimation without OOD samples NeurIPS 2020 Natural Posterior Network 2021}
+\item \emph{2022 Bayesian neural network classification variational inference last layer uncertainty paper}
+\end{itemize}
+The second query includes an older Posterior Network search term; the candidate
+actually compared was Natural Posterior Network (ICLR 2022). Additional recorded
+queries targeted Guo's calibration paper and MacKay's Bayesian interpolation
+paper for background, rather than treating them as recent candidate methods.
+
+\textbf{Verification and scope.}
+Codex opened primary proceedings, author manuscripts and dataset documentation,
+checking titles, authors, venues/years and available DOI/page metadata.
+Laplace's NeurIPS proceedings/PDF, NatPN's ICLR PDF/arXiv manuscript and VBLL's
+ICLR PDF/arXiv record supplied the candidate evidence. OpenReview forum pages
+returned a verification challenge and a NeurIPS BibTeX link returned a tool
+error; accessible primary PDFs/records supplied the missing metadata.
+This was a bounded narrative search, not an exhaustive systematic review.
+Verification was by the AI agent, not an independent human reviewer.
+\clearpage
+
+\subsection{Candidate comparison and final selection}
+
 \begin{table}[H]\centering\small
 \begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{25mm}>{\raggedright\arraybackslash}p{20mm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
 \toprule Method & Publication & Defining probability mechanism & Feasibility and main risk\\
@@ -128,20 +195,36 @@ default KFAC, empirical-Bayes and probit choices \cite{laplace}. The justificati
 therefore supports an educational adaptation, not a state-of-the-art or full
 benchmark-reproduction claim, and does not use test outcomes to change the method.
 
-\subsection{Actual skill contributions}
-The agent consulted literature-review, experimental-design, scikit-learn and
-scientific-visualization skills for provenance, matched comparisons, splitting,
-metric conventions and legible plots. Machine-learning and PyTorch guidance
-informed deterministic training, device handling and checkpoint checks.
-The PDF skill supplied extraction and page inspection practices; the LaTeX
-compile plugin supplied compilation. The Scientific Agent Skills reference
-acknowledges skills that materially contributed \cite{skills}.
-During Prompt 02, scientific-writing and statistical-analysis guidance informed
-claim boundaries, post hoc labeling and the distinction between seed variation,
-sampling variation and test-set uncertainty.
-Paid schematic generators, external manuscript review and multi-agent review
-were not used.
 
+\subsection{How staged review changed the outcome}
+Prompt 01 produced an executable study and a first compiled report. Prompt 02
+then required section-by-section criticism and repeated visual QA. It strengthened
+the distinction between an exact conditional Hessian and an approximate Gaussian
+posterior, added a tested two-class covariance example, and corrected the
+pre-update training versus post-update validation loss log. Reproduction retained
+the primary predictions. A separately recorded post hoc diagnostic executed
+72 fixed-model predictions to quantify Monte Carlo integration variation;
+it neither selected new models nor turned seed spread into a dataset confidence
+interval. The unfavorable probability-quality result was preserved.
+
+The review enlarged confusion labels, separated seed markers, replaced joined
+reliability lines with occupied-bin points, and normalized uncertainty displays
+within correct/error groups. Later refinement showed bounded F1 deficits as
+individual seed values and observed ranges, avoiding a misleading negative
+mean-minus-SD endpoint without deleting measurements. It also added covariance
+geometry and improved page layout. These were same-agent self-review and
+refinement, not independent peer review; Sections 2--4 give the technical detail.
+
+\textbf{Complete records and publication status.}
+The source tree preserves \texttt{AGENTS.md}, all four original files in
+\texttt{prompts/}, \texttt{docs/research.md}, \texttt{docs/ai\_usage.md},
+\texttt{docs/review\_02.md} and \texttt{docs/refinement\_02.md}.
+\texttt{docs/skill\_sources.md} identifies the actual skill documents, origins,
+local hashes and consultation status. These records and linked complete skill
+documentation are intended for the public repository created in Prompt 03;
+Section 6 will contain its verified URL after publication. Prompt 03 and
+\path{prompts/04_FINAL_SUBMISSION_AUDIT.md} remain pending. No public URL or
+completed publication is implied here.
 
 \section{Algorithm Description}
 \subsection{Task, notation and conditional model}

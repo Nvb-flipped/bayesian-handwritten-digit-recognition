@@ -80,6 +80,8 @@ docs/               Research, AI workflow and wiki sources
 - [Dataset/protocol](docs/wiki/Dataset-and-Protocol.md)
 - [Research and verified references](docs/research.md)
 - [Actual AI workflow](docs/ai_usage.md)
+- [Actual skill instructions and consultation status](docs/skill_sources.md)
+- [Verified prompt-excerpt ledger](docs/prompt_excerpts.json)
 - [Reproducibility audit](results/audit.json)
 - [Full-precision results](results/summary.json)
 - [Figure provenance](results/figure_manifest.json)
@@ -92,3 +94,5 @@ Prompt 02 corrected training-loss logging to use the same completed epoch as val
 This is UCI optdigits' **original test subset**, repartitioned, not the complete dataset or original benchmark protocol. [UCI provenance and CC BY 4.0 terms](https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits). Writer independence is not established. One split and three seeds do not justify broad deployment claims.
 
 The materially used skill guidance is acknowledged in the report: [Scientific Agent Skills, Kassis et al. (2026)](https://arxiv.org/abs/2609.00065).
+
+Section 1 now gives a self-contained three-page instruction/discovery account, seven verified prompt excerpts and a vector workflow diagram. Complete consulted skill instruction documents are archived with hashes; installed-but-unused skills are distinguished. The algorithm comparison, experimental evidence and supplied reflection remain unchanged. GitHub publication is still deferred to Prompt 03.

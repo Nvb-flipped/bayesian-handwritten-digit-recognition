@@ -1,6 +1,6 @@
 # Local technical acceptance through Prompt 02
 
-Updated on 8 October 2026 after Prompt 02 and its [final refinement](refinement_02.md). The original Prompt 01 acceptance snapshot is recoverable in Git a28a563. The student's supplied reflection is now included and verified. This records local technical completion; public publication remains pending.
+Updated on 9 October 2026 after Prompt 02, its [final refinement](refinement_02.md), student reflection insertion and [Section 1 refinement](instruction_section_review.md). The original Prompt 01 acceptance snapshot is recoverable in Git a28a563. The student's supplied reflection is included and verified. This records local technical completion; public publication remains pending.
 
 ## Verified deliverables
 
@@ -17,9 +17,9 @@ Updated on 8 October 2026 after Prompt 02 and its [final refinement](refinement_
 | Audit reproduction with separate computations | Metrics regenerated, checkpoints reloaded, full run repeated; all 18 arrays bitwise identical in this environment; [audit](../results/audit.json). Same AI agent performed this, not an independent human reviewer. |
 | Resolve technical/figure findings | [Prompt 02 record](review_02.md): logging repair, tested math example, 72 executed sampling repetitions and regenerated metrics; primary arrays remain unchanged. |
 | Generate meaningful figures | Nine numbered figures plus one tested toy geometry diagram, each PDF/SVG/300-DPI PNG; all inspected alone and in the report. [Per-figure review](figure_review_02.md). |
-| Compile and inspect report | Final Tectonic exit code 0; 16 pages, with all five student-supplied paragraphs verified on page 15. Every final rendered page (1–16) visually inspected for legibility, equations, cropping, captions and layout. |
+| Compile and inspect report | Final Tectonic exit code 0; 18 pages, Section 1 on pages 2–4, with all five student-supplied paragraphs verified on page 17. Every final rendered page (1–18) visually inspected for legibility, equations, cropping, captions and layout. |
 | Check Markdown | README/six wiki previews parsed as GFM and visually inspected with rendered math/tables. Local links checked; public rendering deferred. |
-| Document AI workflow | [Actual AI-use log](ai_usage.md), README and six wiki sources. No invented personal reflection or search history. |
+| Document AI workflow | [Actual AI-use log](ai_usage.md), seven verified prompt excerpts, vector workflow diagram, [twelve skill-document snapshots](skill_sources.md), README and six wiki sources. No invented personal reflection or search history. |
 | Version control | New independent local Git repository, branch codex/prompt-01. No publication or remote added in this phase. |
 
 ## Executed commands and checks

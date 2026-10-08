@@ -12,3 +12,5 @@
 *.pt binary
 *.npz binary
 *.joblib binary
+# Archived third-party instruction documents retain their original literal bytes.
+docs/skill_documents/** -text whitespace=cr-at-eol

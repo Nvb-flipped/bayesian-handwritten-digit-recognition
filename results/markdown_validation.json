@@ -63,12 +63,22 @@
       "mathErrors": 0,
       "horizontalOverflow": false,
       "tableOverflow": false
+    },
+    {
+      "page": "skill_sources.html",
+      "mathReady": true,
+      "tables": 1,
+      "mathNodes": 0,
+      "mathErrors": 0,
+      "horizontalOverflow": false,
+      "tableOverflow": false
     }
   ],
   "public_github_rendering": "Deferred to Prompt 03; no publication performed.",
   "source_sha256": {
-    "README.md": "24e7e95427b03a7521fb11e3abc06b866a54b45b562d4a55dc3abfadc45771ca",
-    "docs/wiki/AI-Workflow.md": "dcab5b7d606b3e9266cae2f86ccd2491286550a82067b95c85b209fd6e80fe5e",
+    "README.md": "3a5b8193269713f69221b6c08aaac363813f8ffb35dc4e2195c53d0b58c4fa50",
+    "docs/skill_sources.md": "a3b7908f2185e82931866ba6e5462d1d91801ce5a207d92bdc287729f65174d0",
+    "docs/wiki/AI-Workflow.md": "fe12befce0c552534f5d7234f71d52040d01e2786b541bc09f6863093cd51426",
     "docs/wiki/Dataset-and-Protocol.md": "ea0a7c1a7e56aa8eed2113de29622c5af582b4a76da30d890426f074b34bcdd4",
     "docs/wiki/Experiments-and-Results.md": "0267a866bf184e579ea2def9d269519351a791dcbe0d7b04275d1de4d56a0474",
     "docs/wiki/Home.md": "3ca6ad26972663c8a5fbb8d99112f8f31df951346822e0d7de822b48beb8a72c",
@@ -77,8 +87,8 @@
   },
   "visual_review": {
     "reviewer": "AI agent",
-    "date": "2026-10-08",
-    "pages_inspected": 7,
-    "outcome": "All screenshots inspected; readable equations/tables; no clipped prose or overlapping elements. Long code uses a scrollable code block."
+    "date": "2026-10-09",
+    "pages_inspected": 8,
+    "outcome": "All eight screenshots inspected; equations and four tables readable; no overlapping or clipped prose. Long code remains scrollable."
   }
 }

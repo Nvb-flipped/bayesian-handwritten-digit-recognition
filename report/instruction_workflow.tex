@@ -1,0 +1,54 @@
+% Vector workflow; independent caption counter preserves experimental figure numbering.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw=black!55,rounded corners=2pt,line width=.6pt,
+    text width=67mm,minimum height=29mm,inner sep=3mm,
+    align=left,font=\fontsize{9}{11}\selectfont},
+  human/.style={box,fill=orange!9,draw=orange!65!black},
+  activity/.style={box,fill=blue!5,draw=blue!55!black},
+  output/.style={box,fill=green!7,draw=green!40!black},
+  flow/.style={-{Stealth[length=2mm]},line width=.8pt,draw=black!65},
+  edge/.style={font=\fontsize{8}{9}\selectfont,fill=white,inner sep=1pt}
+]
+\node[human] (human) at (0,0) {\textbf{1. HUMAN: define requirements}\\
+  Assignment PDF: course requirements\\
+  \texttt{AGENTS.md}: persistent rules\\
+  Engineered Prompts 01/02: staged work};
+\node[activity] (agent) at (8.15,0) {\textbf{2. AI: Codex Desktop + skills}\\
+  Research and experimental design\\
+  ML/PyTorch; mathematics verification\\
+  Visualization, writing, PDF and LaTeX};
+\node[activity] (discovery) at (8.15,-3.65) {\textbf{3. AI: discover and select}\\
+  Search and verify primary literature\\
+  Compare Laplace Redux, NatPN, VBLL\\
+  Select conditional last-layer Laplace};
+\node[activity] (execute) at (0,-3.65) {\textbf{4. AI: implement and execute}\\
+  Derive prior, likelihood, MAP, Hessian\\
+  Generate code; test; train and evaluate\\
+  Validation selection; reproducibility checks};
+\node[activity] (review) at (0,-7.3) {\textbf{5. AI: review and refine}\\
+  Prompt 02 and later refinement requests\\
+  Verify mathematics; interpret evidence\\
+  Improve graphs/report; repeat visual QA};
+\node[output] (deliver) at (8.15,-7.3) {\textbf{6. OUTPUT: local deliverables}\\
+  Source code; saved experimental evidence\\
+  LaTeX/PDF report; student reflection\\[2pt]
+  \textbf{Pending:} GitHub/wiki (Prompt 03);\\
+  post-publication audit (Prompt 04)};
+\draw[flow] (human.east) -- node[edge,above]{guide} (agent.west);
+\draw[flow] (agent.south) -- node[edge,right]{research} (discovery.north);
+\draw[flow] (discovery.west) -- node[edge,above]{build} (execute.east);
+\draw[flow] (execute.south) -- node[edge,right]{review} (review.north);
+\draw[flow] (review.east) -- node[edge,above]{verify} (deliver.west);
+\draw[flow,dashed] (review.west) -- ++(-.55,0) |- (execute.west);
+\node[edge,rotate=90] at (-4.3,-5.47) {repair + recheck};
+\end{tikzpicture}
+\par\smallskip
+\refstepcounter{workflowdiagram}\label{fig:ai-workflow}
+{\small\textbf{Workflow diagram \theworkflowdiagram.}
+Human instructions (orange), AI activities (blue) and local outputs (green).
+Arrows trace executed work; the dashed loop denotes repair and rechecking.
+GitHub publication and its final audit are explicitly pending.
+Skill contributions and limits are identified in the accompanying text.}
+\end{figure}

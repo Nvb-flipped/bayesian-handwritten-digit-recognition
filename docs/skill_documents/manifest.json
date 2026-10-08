@@ -1,0 +1,122 @@
+[
+  {
+    "skill": "literature-review",
+    "source_document": "Assignment 2/.agents/skills/literature-review/SKILL.md",
+    "upstream_repository": "k-dense-ai/scientific-agent-skills",
+    "upstream_skill_path": "skills/literature-review/SKILL.md",
+    "snapshot": "docs/skill_documents/literature-review/SKILL.md.txt",
+    "sha256": "20ce73246d4b60038638b221ab1b6fea43e0eb81dd920dcc3ad4df4a2716730b",
+    "status": "Prompt 01; materially applied",
+    "contribution": "Primary-source provenance and bounded literature review"
+  },
+  {
+    "skill": "experimental-design",
+    "source_document": "Assignment 2/.agents/skills/experimental-design/SKILL.md",
+    "upstream_repository": "k-dense-ai/scientific-agent-skills",
+    "upstream_skill_path": "skills/experimental-design/SKILL.md",
+    "snapshot": "docs/skill_documents/experimental-design/SKILL.md.txt",
+    "sha256": "53bb303e2d1f127c0062a505b1b6abebd6e4de12e119953b89bdcc0bd93f1798",
+    "status": "Prompt 01; materially applied",
+    "contribution": "Matched controls and seed replication"
+  },
+  {
+    "skill": "scikit-learn",
+    "source_document": "Assignment 2/.agents/skills/scikit-learn/SKILL.md",
+    "upstream_repository": "k-dense-ai/scientific-agent-skills",
+    "upstream_skill_path": "skills/scikit-learn/SKILL.md",
+    "snapshot": "docs/skill_documents/scikit-learn/SKILL.md.txt",
+    "sha256": "fe68d54967aab64ee46533bd4efa749e748f6787b4096a2400e0968a52aaf562",
+    "status": "Prompt 01; materially applied",
+    "contribution": "Splits, baselines and metric conventions"
+  },
+  {
+    "skill": "scientific-visualization",
+    "source_document": "Assignment 2/.agents/skills/scientific-visualization/SKILL.md",
+    "upstream_repository": "k-dense-ai/scientific-agent-skills",
+    "upstream_skill_path": "skills/scientific-visualization/SKILL.md",
+    "snapshot": "docs/skill_documents/scientific-visualization/SKILL.md.txt",
+    "sha256": "bddc46cb5e027db1a0ddf7e9674cefe4f54bb259f78e77cf2960fe0368f0e5ae",
+    "status": "Prompts 01/02 and refinement; applied",
+    "contribution": "Honest encodings, vector export and final-size inspection"
+  },
+  {
+    "skill": "scientific-writing",
+    "source_document": "Assignment 2/.agents/skills/scientific-writing/SKILL.md",
+    "upstream_repository": "k-dense-ai/scientific-agent-skills",
+    "upstream_skill_path": "skills/scientific-writing/SKILL.md",
+    "snapshot": "docs/skill_documents/scientific-writing/SKILL.md.txt",
+    "sha256": "234b312260c19946fbe0975304ca20d76ed624f704569f763b94d0d1f35a2d74",
+    "status": "Inspected in 01; applied in 02",
+    "contribution": "Evidence-bound prose and claim limitations; no external review service"
+  },
+  {
+    "skill": "statistical-analysis",
+    "source_document": "Assignment 2/.agents/skills/statistical-analysis/SKILL.md",
+    "upstream_repository": "k-dense-ai/scientific-agent-skills",
+    "upstream_skill_path": "skills/statistical-analysis/SKILL.md",
+    "snapshot": "docs/skill_documents/statistical-analysis/SKILL.md.txt",
+    "sha256": "c5db9b7dd0735ef56354cecc3f23469bdac7395e9416497ed767ce5643a6fdc8",
+    "status": "Prompt 02; materially applied",
+    "contribution": "Replication units, seed spread and integration variability"
+  },
+  {
+    "skill": "latex-paper-en",
+    "source_document": "Assignment 2/.agents/skills/latex-paper-en/SKILL.md",
+    "upstream_repository": "bahayonghang/academic-writing-skills",
+    "upstream_skill_path": "academic-writing-skills/latex-paper-en/SKILL.md",
+    "snapshot": "docs/skill_documents/latex-paper-en/SKILL.md.txt",
+    "sha256": "128d2e47a2abf7fc6e54001b5fdeb29a5627ffbd3705435c4ab8702cb8a02b85",
+    "status": "Inspected in 01; applied in 02/refinement",
+    "contribution": "Mathematical exposition, captions and section review; external services unused"
+  },
+  {
+    "skill": "machine-learning",
+    "source_document": "Assignment 1/.agents/skills/machine-learning/SKILL.md (available to this session)",
+    "upstream_repository": null,
+    "upstream_skill_path": null,
+    "snapshot": "docs/skill_documents/machine-learning/SKILL.md.txt",
+    "sha256": "091451d62ce30ae8b2de101b63632368f29bb3512e9b71dae4ae4bb12e7f46d2",
+    "status": "Prompt 01; materially applied",
+    "contribution": "Deterministic training and model-evaluation guidance"
+  },
+  {
+    "skill": "pytorch-patterns",
+    "source_document": "Assignment 1/.agents/skills/pytorch-patterns/SKILL.md (available to this session)",
+    "upstream_repository": null,
+    "upstream_skill_path": null,
+    "snapshot": "docs/skill_documents/pytorch-patterns/SKILL.md.txt",
+    "sha256": "168c8740f548414a75f576265ddb03329be98ed57f06c5edaf79c7cd4b6a9cf4",
+    "status": "Prompt 01; materially applied",
+    "contribution": "Training, device handling and checkpoint checks"
+  },
+  {
+    "skill": "pytorch-training-recipe",
+    "source_document": "Assignment 1/.agents/skills/pytorch-training-recipe/SKILL.md (available to this session)",
+    "upstream_repository": null,
+    "upstream_skill_path": null,
+    "snapshot": "docs/skill_documents/pytorch-training-recipe/SKILL.md.txt",
+    "sha256": "240f4481ac09685c4787b9d779d80e5ad4973933ee992c48c4ad0678e14e0793",
+    "status": "Prompt 01; materially applied",
+    "contribution": "Reproducible training and small end-to-end checks"
+  },
+  {
+    "skill": "pdf",
+    "source_document": "Codex plugin/openai-primary-runtime/pdf/26.1007.11041/skills/pdf/SKILL.md",
+    "upstream_repository": null,
+    "upstream_skill_path": null,
+    "snapshot": "docs/skill_documents/pdf/SKILL.md.txt",
+    "sha256": "5e14b4b8f944dc5e678ee703dfacf583010431d64d5d829902c5b2541f736c89",
+    "status": "Prompts 01/02 and refinement; applied",
+    "contribution": "Extraction, Poppler rendering and page inspection"
+  },
+  {
+    "skill": "latex-compile",
+    "source_document": "Codex plugin/openai-bundled/latex/0.2.8/skills/latex-compile/SKILL.md",
+    "upstream_repository": null,
+    "upstream_skill_path": null,
+    "snapshot": "docs/skill_documents/latex-compile/SKILL.md.txt",
+    "sha256": "bf5e3837bd494edda28d512f653cb5097687aa12d061ea3c16115b56f5b9d1a1",
+    "status": "Prompts 01/02 and refinement; applied",
+    "contribution": "Compiler detection and actual project compilation"
+  }
+]

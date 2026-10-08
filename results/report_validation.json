@@ -1,7 +1,7 @@
 {
   "pdf": "report/main.pdf",
-  "sha256": "2da86af9b2c7551a1cfad9c8682f8ac081f508eda60d31916cd34f0af1d3c7bb",
-  "pages": 16,
+  "sha256": "2c132ee5bf4fd776692f06f1084ba7e6984d1b419f3eac1aeb9fc82ab8016009",
+  "pages": 18,
   "compiler_exit_code": 0,
   "layout_box_warnings": 0,
   "final_pass_unresolved_references": false,
@@ -11,12 +11,19 @@
   "student_supplied_reflection_preserved": true,
   "reflection_paragraphs_verified": 5,
   "reflection_pages": [
-    15
+    17
   ],
   "reflection_source_sha256": "a7e226a534b89f17b4a54e76409e3c0c4e2fc3071324f1d621087e1d8864f542",
+  "instruction_section_pages": [
+    2,
+    3,
+    4
+  ],
+  "vector_workflow_diagram_verified": true,
+  "prompt_excerpts_verified_in_compiled_pdf": 7,
   "visual_review": {
     "reviewer": "AI agent",
-    "date": "2026-10-08",
+    "date": "2026-10-09",
     "rendered_with": "Poppler pdftoppm; scale-to 1400",
     "pages_inspected": [
       1,
@@ -34,7 +41,9 @@
       13,
       14,
       15,
-      16
+      16,
+      17,
+      18
     ],
     "outcome": "All final pages readable; no clipped content or overlapping text/figures observed."
   },

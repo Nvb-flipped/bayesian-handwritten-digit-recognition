@@ -1,0 +1,20 @@
+{
+  "baseline_commit": "43b8acd",
+  "source_files_and_reflection_bitwise_unchanged": {
+    "AGENTS.md": "322fa5daa078f182517f858c1756a0d6caae2586de74321a6fcdce79847666aa",
+    "AIassign2.pdf": "6298135c8cc5e1ad052dd2ba1bb4f179ac252a266f11e31417fcb3f2ef0dffe3",
+    "prompts/01_RESEARCH_IMPLEMENT_REPORT.md": "4365eb0e259ebfc7883e24368ffceff58f51e980d5db3b617d28b33b079fb216",
+    "prompts/02_CRITICAL_REVIEW_AND_FIGURES.md": "3092ae77c2c9d1e80351417667f61c11233a09f4605d940e1d2aa76fdc0aef10",
+    "prompts/03_PUBLISH_GITHUB_AND_WIKI.md": "72d98e110cedc8234df25c816b2114e565c819c02c297aaef197c33defb443fd",
+    "prompts/04_FINAL_SUBMISSION_AUDIT.md": "93be52c81918ce15ac3932c5ee1d8426481c047673ba8d72c2ec57778977834d",
+    "report/student_reflection.txt": "a7e226a534b89f17b4a54e76409e3c0c4e2fc3071324f1d621087e1d8864f542",
+    "report/student_reflection.tex": "3e03a33951cb968fb390fc933882c60efa72328881630590bfa897e15e9ea413"
+  },
+  "sections_2_onward_source_unchanged": true,
+  "original_selection_justification_preserved": true,
+  "verified_verbatim_excerpts": 7,
+  "skill_document_snapshots_verified": 12,
+  "vector_diagram_source_sha256": "7f7331f89676d915f3b4f441066049ab42dcebb1f1faffd85c633b8a00894c14",
+  "github_publication_pending": true,
+  "independent_peer_review_claimed": false
+}
