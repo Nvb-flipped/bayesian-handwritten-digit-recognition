@@ -1,0 +1,10 @@
+{
+  "metrics_regenerated": true,
+  "checkpoint_predictions_bitwise_equal": true,
+  "full_reproduction_bitwise_equal": true,
+  "independent_command": [
+    "scripts/audit_results.py"
+  ],
+  "probability_arrays_checked": 18,
+  "tests": "Seven pytest tests; see execution log"
+}

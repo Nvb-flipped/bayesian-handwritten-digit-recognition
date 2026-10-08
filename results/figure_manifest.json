@@ -1,0 +1,97 @@
+[
+  {
+    "name": "dataset",
+    "sources": [
+      "splits.npz",
+      "sklearn.load_digits"
+    ],
+    "description": "Split balance and deterministic digit examples.",
+    "inches": [
+      7.0,
+      2.8
+    ]
+  },
+  {
+    "name": "inference",
+    "sources": [
+      "src/bayes_digits"
+    ],
+    "description": "Project inference stages, with training and validation roles.",
+    "inches": [
+      7.0,
+      2.6
+    ]
+  },
+  {
+    "name": "comparison",
+    "sources": [
+      "metrics.json",
+      "summary.json"
+    ],
+    "description": "Raw seed results and sample SD; GNB evaluated once.",
+    "inches": [
+      7.0,
+      2.6
+    ]
+  },
+  {
+    "name": "classes",
+    "sources": [
+      "metrics.json"
+    ],
+    "description": "Row-normalized confusion and class F1, 3 seeds on the same test set.",
+    "inches": [
+      7.0,
+      3.4
+    ]
+  },
+  {
+    "name": "calibration",
+    "sources": [
+      "metrics.json",
+      "predictions.npz"
+    ],
+    "description": "Reliability and posterior disagreement, prespecified seed 11.",
+    "inches": [
+      7.0,
+      2.9
+    ]
+  },
+  {
+    "name": "convergence",
+    "sources": [
+      "history_11.json",
+      "history_22.json",
+      "history_33.json"
+    ],
+    "description": "Feature network NLL, before convex last-layer refitting.",
+    "inches": [
+      7.0,
+      2.7
+    ]
+  },
+  {
+    "name": "sensitivity",
+    "sources": [
+      "sensitivity.json",
+      "metrics.json"
+    ],
+    "description": "Prior selection uses validation; frozen-prior ablations use test.",
+    "inches": [
+      7.0,
+      2.9
+    ]
+  },
+  {
+    "name": "errors",
+    "sources": [
+      "predictions.npz",
+      "sklearn.load_digits"
+    ],
+    "description": "First eight mistakes in ascending dataset index; seed 11 fixed before experiments.",
+    "inches": [
+      7.0,
+      3.5
+    ]
+  }
+]

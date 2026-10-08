@@ -1,0 +1,51 @@
+{
+  "name": "sklearn.load_digits (UCI optdigits test subset)",
+  "sha256": "f6d9e39f37dc45d327f6db33428ee58970ccceabb2535a5c179de35886b70443",
+  "shape": [
+    1797,
+    64
+  ],
+  "split_sizes": {
+    "train": 1077,
+    "validation": 360,
+    "test": 360
+  },
+  "class_counts": {
+    "train": [
+      106,
+      109,
+      107,
+      109,
+      109,
+      109,
+      109,
+      107,
+      104,
+      108
+    ],
+    "validation": [
+      36,
+      36,
+      35,
+      37,
+      36,
+      37,
+      36,
+      36,
+      35,
+      36
+    ],
+    "test": [
+      36,
+      37,
+      35,
+      37,
+      36,
+      36,
+      36,
+      36,
+      35,
+      36
+    ]
+  }
+}

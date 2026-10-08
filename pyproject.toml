@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bayesian-digits-laplace"
+version = "0.1.0"
+description = "Auditable last-layer Laplace classification experiment"
+requires-python = ">=3.12"
+dependencies = ["numpy", "scipy", "scikit-learn", "torch", "matplotlib"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "--basetemp=tmp/pytest"

@@ -1,0 +1,34 @@
+{
+  "pdf": "report/main.pdf",
+  "sha256": "7e5e640566066e44dd3bcc5ad2781fa798f120d97f8d97314a52c6488d83e31d",
+  "pages": 14,
+  "compiler_exit_code": 0,
+  "layout_box_warnings": 0,
+  "final_pass_unresolved_references": false,
+  "duplicate_pdf_destinations": false,
+  "title_metadata_verified": true,
+  "student_reflection_placeholder_present": true,
+  "visual_review": {
+    "reviewer": "AI agent",
+    "date": "2026-10-08",
+    "rendered_with": "Poppler pdftoppm; scale-to 1400",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "outcome": "All final pages readable; no clipped content or overlapping text/figures observed."
+  },
+  "diagnostic": "Initial Fontconfig configuration diagnostic; compilation and visual inspection succeeded."
+}

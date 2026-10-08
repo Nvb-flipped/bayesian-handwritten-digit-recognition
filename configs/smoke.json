@@ -1,0 +1,21 @@
+{
+  "split_seed": 3024,
+  "seeds": [
+    11
+  ],
+  "device": "cpu",
+  "threads": 2,
+  "hidden": 8,
+  "epochs": 3,
+  "learning_rate": 0.01,
+  "feature_weight_decay": 0.0001,
+  "prior_precisions": [
+    1
+  ],
+  "nb_smoothing": [
+    0.001
+  ],
+  "posterior_samples": 16,
+  "calibration_bins": 10,
+  "output": "tmp/smoke"
+}

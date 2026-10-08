@@ -1,0 +1,24 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "processor": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "sklearn": "1.9.1",
+  "torch": "2.11.0+cu128",
+  "cuda_available": true,
+  "detected_gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "used_device": "cpu",
+  "seconds": 5.972749200067483,
+  "command": "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\src\\bayes_digits\\experiment.py --config configs/default.json",
+  "git_revision": null,
+  "source_sha256": {
+    "src\\bayes_digits\\__init__.py": "4f0146c9095e350b28799ee44ea4f9c7b72afa8dd2c461f1651082414330e7ee",
+    "src\\bayes_digits\\data.py": "8e0c5390ebcd85fde6fc7706767e517c4e283d0751b0fc8d0afa4199d79d6a53",
+    "src\\bayes_digits\\experiment.py": "7a2f2f58a47de82e55f1030ef407eda6a245b06e426d09e48be21a6ee6915fcd",
+    "src\\bayes_digits\\features.py": "bcfda426d9514007c8b03ae7f5d97a974dffb5b22d78b9ee5a4e85d883d397a0",
+    "src\\bayes_digits\\figures.py": "fc6b97500eb54c7021af53056c123087b42ed30baa672da59e9b410079c5c900",
+    "src\\bayes_digits\\laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c",
+    "src\\bayes_digits\\metrics.py": "1a7f92c8f485fa58668bebe1d74cb96c4e95ef7e9ed48f53f0e04742c544141e"
+  }
+}

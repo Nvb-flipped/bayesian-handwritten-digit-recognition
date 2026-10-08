@@ -1,0 +1,34 @@
+{
+  "rule": "minimum validation NLL; grid order breaks ties",
+  "nb_smoothing": 0.1,
+  "nb_validation_nll": 0.6098594213780807,
+  "selections": [
+    {
+      "seed": 11,
+      "feature_epoch": 120,
+      "map_alpha": 0.1,
+      "laplace_alpha": 1,
+      "map_validation_nll": 0.09580899132810347,
+      "laplace_validation_nll": 0.15161434217249162,
+      "training_seconds": 3.1472592999925837
+    },
+    {
+      "seed": 22,
+      "feature_epoch": 120,
+      "map_alpha": 0.1,
+      "laplace_alpha": 1,
+      "map_validation_nll": 0.09418890798660144,
+      "laplace_validation_nll": 0.1519112482480165,
+      "training_seconds": 0.9545586999738589
+    },
+    {
+      "seed": 33,
+      "feature_epoch": 120,
+      "map_alpha": 1,
+      "laplace_alpha": 1,
+      "map_validation_nll": 0.11108426609518599,
+      "laplace_validation_nll": 0.16483082649426853,
+      "training_seconds": 0.9268341000424698
+    }
+  ]
+}
