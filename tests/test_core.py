@@ -96,6 +96,13 @@ def test_symmetric_binary_map_and_logit_covariance():
     contrast=np.array([1.,-1.])
     assert np.isclose(contrast@np.linalg.solve(expected,contrast),1.)
     assert np.isclose(np.sum(contrast**2/np.diag(expected)),4/3)
+    from bayes_digits.figures import covariance_example
+    precision,full,diagonal,contours=covariance_example()
+    assert np.allclose(precision,expected)
+    assert np.isclose(contrast@full@contrast,1.)
+    assert np.isclose(contrast@diagonal@contrast,4/3)
+    for covariance,points in zip([full,diagonal],contours):
+        assert np.allclose(np.einsum('ni,ij,nj->n',points,np.linalg.inv(covariance),points),1.)
 
 
 def test_positive_prior_required():

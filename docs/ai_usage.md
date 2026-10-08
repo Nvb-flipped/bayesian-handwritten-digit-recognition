@@ -50,3 +50,7 @@ A post hoc diagnostic plan/config was recorded before executing 72 fixed-model p
 ## Student authorship
 
 The agent authored all technical code/report prose. The named learning-reflection section contains **STUDENT REFLECTION REQUIRED**. It must be replaced by student-authored text. No personal experiences were invented.
+
+## Final publication-quality refinement
+
+The user requested another visual and technical pass focused on Figures 2/4/5/6, bounded F1 variation, whitespace and the rationale for the 2021 method. The agent revised plotting and LaTeX layout, added numerically tested toy covariance geometry, rechecked relevant primary sources and retained the Scientific Agent Skills acknowledgment. It did not retune or modify the saved experiment evidence. New audits compare against commit 93b625e; the final 15-page PDF and all ten individual exports were inspected. The initial refinement preview exposed crowded confusion annotations and a clipped toy-panel title; both were corrected before delivery. This remains AI self-review, not external peer review. The student reflection and Prompt 03 publication remain pending.

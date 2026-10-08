@@ -9,11 +9,11 @@
     "description": "Split balance and deterministic digit examples; images from sklearn.load_digits.",
     "inches": [
       7.0,
-      3.0
+      2.9
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
     "source_sha256": {
       "splits.npz": "b08b1d81d8c0fe3d3353ab9298eee147926f690832f9d29798cc971ae0579240",
       "dataset.json": "b2b16450457c9e94e5b89196b8d63b8e0f3e1833b5d8aab0565b59b65a2de44a",
@@ -32,9 +32,26 @@
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
     "source_sha256": {
       "config.json": "4beafe7e50d2ac0b3097f77a899344ed7c7feaf0e06b72745f687cb3e761f923"
+    }
+  },
+  {
+    "name": "covariance_geometry",
+    "sources": [
+      "../src/bayes_digits/laplace.py"
+    ],
+    "description": "Worked-example radius-one Mahalanobis contours and exact Gaussian logit-contrast densities; toy calculation, not ten-class measurements.",
+    "inches": [
+      7.0,
+      2.7
+    ],
+    "raster_dpi": 300,
+    "generator": "src/bayes_digits/figures.py",
+    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
+    "source_sha256": {
+      "../src/bayes_digits/laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c"
     }
   },
   {
@@ -46,11 +63,11 @@
     "description": "Raw seed results and sample SD; GNB evaluated once.",
     "inches": [
       7.0,
-      3.0
+      2.6
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
     "source_sha256": {
       "metrics.json": "fb99d9500c5d4f5bd569e2c5b68396998461494e3b52ec9f4cfdb40a22cfff27",
       "summary.json": "187cf6d58d35a6f0235ac8afafe3556b07286aad244cfc62b092b66e17a91708"
@@ -61,14 +78,14 @@
     "sources": [
       "metrics.json"
     ],
-    "description": "Row-normalized confusion and F1 deficit (1 minus F1), 3 seeds on the same test set.",
+    "description": "Row-normalized confusion; all three seed F1 deficits, arithmetic means and observed min-max ranges. No SD/CI bars.",
     "inches": [
       7.0,
-      3.7
+      3.9
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
     "source_sha256": {
       "metrics.json": "fb99d9500c5d4f5bd569e2c5b68396998461494e3b52ec9f4cfdb40a22cfff27"
     }
@@ -79,14 +96,14 @@
       "metrics.json",
       "predictions.npz"
     ],
-    "description": "Unconnected reliability bins with occupancy-scaled markers; within-group MI ECDFs, fixed seed 11.",
+    "description": "Unconnected, equal-size reliability points with exact bin-count table; within-group MI ECDFs, fixed seed 11.",
     "inches": [
       7.0,
-      3.2
+      3.8
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
     "source_sha256": {
       "metrics.json": "fb99d9500c5d4f5bd569e2c5b68396998461494e3b52ec9f4cfdb40a22cfff27",
       "predictions.npz": "73695f0f3b742c9d7db725d2ea1adf903e5129c24746ddab5d4a38a09fb2ceea"
@@ -102,11 +119,11 @@
     "description": "Feature network NLL, before convex last-layer refitting.",
     "inches": [
       7.0,
-      2.7
+      2.9
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
     "source_sha256": {
       "history_11.json": "9184599fa0519ef69d6c247fe9504b9a912587df50f649b7cde352f795c18495",
       "history_22.json": "68b2578729b85f9e2995503dfa7064e5d16f39998eec43f11bf4cfea478ee70d",
@@ -126,7 +143,7 @@
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
     "source_sha256": {
       "sensitivity.json": "f27feb8748cf8ba807ed8628d43d02f781532c2a95229a18e78103bfb4b78609",
       "metrics.json": "fb99d9500c5d4f5bd569e2c5b68396998461494e3b52ec9f4cfdb40a22cfff27"
@@ -145,7 +162,7 @@
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
     "source_sha256": {
       "predictions.npz": "73695f0f3b742c9d7db725d2ea1adf903e5129c24746ddab5d4a38a09fb2ceea"
     }
@@ -163,7 +180,7 @@
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
     "source_sha256": {
       "review_diagnostics/summary.json": "85ab7c10630dbfdde40840d4a937b169c83a07af0e9bcf0f9d3c953213e2d166",
       "review_diagnostics/matched_map.json": "1c11a453660256643c437f1800cc3ea1551134cfd8436f5657067a698dd4c192"

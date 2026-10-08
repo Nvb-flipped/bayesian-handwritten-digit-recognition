@@ -4,19 +4,19 @@
       "name": "dataset",
       "files": {
         "pdf": {
-          "bytes": 33191,
-          "sha256": "1ad421247308943b19f5e6a6f2179b5e840f097ac9f7236695d3657cdfc8563e"
+          "bytes": 39148,
+          "sha256": "cce42c13702e23a52a632780d95fa41770a232cead847080866bad0358951088"
         },
         "svg": {
-          "bytes": 100126,
-          "sha256": "9378026f70eb243d0541cb2519185d1b6573551083017948c0384c75c1a30fd2"
+          "bytes": 114162,
+          "sha256": "bfc7ce1ad624b9475d06190b12127cb0f74baa48dff6a1b0c5684abb8dd57382"
         },
         "png": {
-          "bytes": 71025,
-          "sha256": "063ec11e259922cee517d92114b80f588ece17be653c28ea8d0fa8e0867e5255",
+          "bytes": 74485,
+          "sha256": "bd9b22c2cb0882560bec0c6f0943383728b9324701cf8f7739eee249a05895fd",
           "pixels": [
             2100,
-            900
+            870
           ],
           "dpi": [
             299.9994,
@@ -32,16 +32,16 @@
       "name": "inference",
       "files": {
         "pdf": {
-          "bytes": 18194,
-          "sha256": "11e8beb6e846405a4645277b1d5baea9dbb618afa9258f70f2cf8551c177b283"
+          "bytes": 18202,
+          "sha256": "fce14b4d454caec6d1e22060b1564f0f75266e6fc3e4cf3c546ccd7e64ff00c1"
         },
         "svg": {
           "bytes": 9584,
-          "sha256": "4cc0ecb1b15f0dc3888f0e1c38748efd1c66bf587604cac96168c8adc7c1ae9b"
+          "sha256": "aa1b77deb6c8af0572932e27d3b26f3508fe5c8f7d1b6ad3e416d555f6a63c1f"
         },
         "png": {
-          "bytes": 95486,
-          "sha256": "47cb57de26af28e8752a2671243df3061a9753f37f8ba06e8a1ad00b3ca5c0d3",
+          "bytes": 95536,
+          "sha256": "c9b0d0420e7e560f3f4b29486a76b135d7d4720f3ea93d44fc043b37045d2b14",
           "pixels": [
             2100,
             780
@@ -57,103 +57,19 @@
       "inspected_in_final_report": true
     },
     {
-      "name": "comparison",
+      "name": "covariance_geometry",
       "files": {
         "pdf": {
-          "bytes": 21055,
-          "sha256": "249bf5b40d49f7da32c9578a2ed03d82984b7b4ab3bc3e7eee25f899d8f119dd"
+          "bytes": 29756,
+          "sha256": "b1d501a3f60c7ed5bcbe7e36c225743e59f221b8ceee1d3cf70adca5e34289e9"
         },
         "svg": {
-          "bytes": 36676,
-          "sha256": "3d0320b3c0e369afc654832c8e5a41c34995fde6beed51adf9d82e6540b981a9"
+          "bytes": 30893,
+          "sha256": "b6316982e40c91c4980e2483097e959336eea61131688601189bcd1ca14ed222"
         },
         "png": {
-          "bytes": 106859,
-          "sha256": "2e03461029e11aefe7b92cd761117394502ce7367a2b01ef85bc68daf39ced61",
-          "pixels": [
-            2100,
-            900
-          ],
-          "dpi": [
-            299.9994,
-            299.9994
-          ]
-        }
-      },
-      "fonts_embedded": true,
-      "individually_inspected": true,
-      "inspected_in_final_report": true
-    },
-    {
-      "name": "classes",
-      "files": {
-        "pdf": {
-          "bytes": 35821,
-          "sha256": "b227a835a5bd8a315c26d64d8f7a666146c89072f9f2be5a3058a3078afc2d50"
-        },
-        "svg": {
-          "bytes": 61001,
-          "sha256": "0b998fb055e83728bc865feba7997e2c14c96e59e94ced893f3c2d41133d3239"
-        },
-        "png": {
-          "bytes": 139892,
-          "sha256": "41844dc820fe25e3abb3ca619ad774023087e11008d598177c3bb6e64c9e6ab7",
-          "pixels": [
-            2100,
-            1110
-          ],
-          "dpi": [
-            299.9994,
-            299.9994
-          ]
-        }
-      },
-      "fonts_embedded": true,
-      "individually_inspected": true,
-      "inspected_in_final_report": true
-    },
-    {
-      "name": "calibration",
-      "files": {
-        "pdf": {
-          "bytes": 30616,
-          "sha256": "26e1c868c5e1a1f12544321bcba6f9a0b8eb50fd39f714c2e963db809eb93d0c"
-        },
-        "svg": {
-          "bytes": 41038,
-          "sha256": "bcbfb70821037994661af49bc03fa26aa610be1c6f1038294a2102651fd1f126"
-        },
-        "png": {
-          "bytes": 138399,
-          "sha256": "0ba0734abfe79de1f74dd103ba7d5f168fcc1c43cfd7866d3cd98afc3c70e639",
-          "pixels": [
-            2100,
-            960
-          ],
-          "dpi": [
-            299.9994,
-            299.9994
-          ]
-        }
-      },
-      "fonts_embedded": true,
-      "individually_inspected": true,
-      "inspected_in_final_report": true
-    },
-    {
-      "name": "convergence",
-      "files": {
-        "pdf": {
-          "bytes": 29332,
-          "sha256": "d24e1d2b4dbe71251d96b7d72c1fa349781d9589d58b9f521a1a6b28aaa23041"
-        },
-        "svg": {
-          "bytes": 46935,
-          "sha256": "7b696b1bf742b4e9d7d7eee3a8cbb22cc68b521340eed038abc521a8df959c92"
-        },
-        "png": {
-          "bytes": 110426,
-          "sha256": "1e53652180f85ed5d3d33fb38161ed48c5513bc20bada8036e9cd1b7a51aef24",
+          "bytes": 141484,
+          "sha256": "ef853988c87a99df32fde655f1d50fa988a8e6009005a32381c1cd970aa67521",
           "pixels": [
             2100,
             810
@@ -169,19 +85,131 @@
       "inspected_in_final_report": true
     },
     {
+      "name": "comparison",
+      "files": {
+        "pdf": {
+          "bytes": 20963,
+          "sha256": "b0c7cb62bb26279cefc278ff8c82d6563cb5642cb1024e520afdeafa7ad9d0a7"
+        },
+        "svg": {
+          "bytes": 31150,
+          "sha256": "e52ccd2143b98dab350faa28a239ca59f2052b6685940b3f553354a0955b0bb0"
+        },
+        "png": {
+          "bytes": 91850,
+          "sha256": "20c41cba4f20130ba1f1d1576a37d2254e20d38a3ea9a996c22d9d41c44d513d",
+          "pixels": [
+            2100,
+            780
+          ],
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        }
+      },
+      "fonts_embedded": true,
+      "individually_inspected": true,
+      "inspected_in_final_report": true
+    },
+    {
+      "name": "classes",
+      "files": {
+        "pdf": {
+          "bytes": 37662,
+          "sha256": "e6b699cb6b5647e28f6211ceea3e71dc69a6df5757faed7d95911d8659e4d29c"
+        },
+        "svg": {
+          "bytes": 65836,
+          "sha256": "dc37a4f6e745b5877833e08061e2e34d50f93772b433968c93a5c99f3e069116"
+        },
+        "png": {
+          "bytes": 151867,
+          "sha256": "18b5d173d9f5df4c2a15b22000cd9d8e771a464f34e72f795c10df244928cfee",
+          "pixels": [
+            2100,
+            1170
+          ],
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        }
+      },
+      "fonts_embedded": true,
+      "individually_inspected": true,
+      "inspected_in_final_report": true
+    },
+    {
+      "name": "calibration",
+      "files": {
+        "pdf": {
+          "bytes": 31766,
+          "sha256": "6836ba7a2753ca923ea0e355c182479da7afc8c78faff671277cbeaf85e77680"
+        },
+        "svg": {
+          "bytes": 56588,
+          "sha256": "162e78d05ed7050845a23d26d6ac8b44116e0f1148c6f1b280c1c93aaed82ac3"
+        },
+        "png": {
+          "bytes": 190846,
+          "sha256": "4b65b1ba8ceb9b04d856e51b6f812f49243a7693bd1694fe95d65886dc6a2935",
+          "pixels": [
+            2100,
+            1140
+          ],
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        }
+      },
+      "fonts_embedded": true,
+      "individually_inspected": true,
+      "inspected_in_final_report": true
+    },
+    {
+      "name": "convergence",
+      "files": {
+        "pdf": {
+          "bytes": 28793,
+          "sha256": "163c1f3ef9da46b60f3e7e280c2c2fa308085310e68dbe50066f19a630c94c85"
+        },
+        "svg": {
+          "bytes": 47055,
+          "sha256": "3e32399f7554497ba5e33c59e6dd3cf110569e8f5bd821f0f305e0f7b4a02213"
+        },
+        "png": {
+          "bytes": 117354,
+          "sha256": "a4585aa3a9c0a723f31412eb80aa46b7fd8ad28805328a1bdf4a4282c6622360",
+          "pixels": [
+            2100,
+            870
+          ],
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        }
+      },
+      "fonts_embedded": true,
+      "individually_inspected": true,
+      "inspected_in_final_report": true
+    },
+    {
       "name": "sensitivity",
       "files": {
         "pdf": {
-          "bytes": 25124,
-          "sha256": "0f5855bc9e9462f0169ee115d9e270dab495610b1a1eedee80586ba66bb64bd5"
+          "bytes": 25296,
+          "sha256": "11110bab0e48d02244407517d34e4f2f445baa67cf7807aa1e02dababc3802dd"
         },
         "svg": {
-          "bytes": 30482,
-          "sha256": "87bf3cd68cf023f2f1073f96cd926586ac9df2d6695c3a072ac235907a9f7019"
+          "bytes": 30530,
+          "sha256": "763800887649b6843ed678d1e1e8382c7effd9af035ad8cc2c1d207a40e91ed0"
         },
         "png": {
-          "bytes": 125217,
-          "sha256": "0ab2af88673c7fc4c9262cc311644d7ddade9f9d8268e035789dd07e4bb53fa0",
+          "bytes": 127634,
+          "sha256": "607cb4e354ee8b3f47bb1bc398428ba2404f6e5375a19c5dcbf331d092a46e37",
           "pixels": [
             2100,
             870
@@ -201,11 +229,11 @@
       "files": {
         "pdf": {
           "bytes": 21966,
-          "sha256": "6d0cb8fc2e8b672104977488ae5d972ef10f7d40ac765d3cece23ffdb68126d2"
+          "sha256": "d897403b94c133b97ca152bde3943c0188df4395f60dc7402e034721053365bb"
         },
         "svg": {
           "bytes": 27023,
-          "sha256": "1622a00446e89102002760a00e61886a654c7ff930d952c1ef46110b882ffc3d"
+          "sha256": "202f227e6f11f2de83f1acd52ae37c82dec51799c067d4754c08d058b4d9b806"
         },
         "png": {
           "bytes": 48803,
@@ -228,16 +256,16 @@
       "name": "monte_carlo",
       "files": {
         "pdf": {
-          "bytes": 22952,
-          "sha256": "d3a1caf74fdd7453117e3dd5391a615aa529e9fccced0032593717f0420acb9b"
+          "bytes": 23050,
+          "sha256": "2ca28100061807c929e168693f97b80dd957dba8452dd722fe8bf3953f24a8e8"
         },
         "svg": {
-          "bytes": 28949,
-          "sha256": "5057c04161ac138e5c70937ffa490a8373a1217c76c5c1bd32904752502a6293"
+          "bytes": 27234,
+          "sha256": "ea07c4f72858696d64e11143cd319a33ceccc4955af47acddee738d848fe8f9b"
         },
         "png": {
-          "bytes": 151064,
-          "sha256": "3590b81f02a33cbedf1fc852d4e0baab612a5208736054d5d26cb716ed9b16bb",
+          "bytes": 147491,
+          "sha256": "5e0cde7fd2ab323881d348a09842e0353332cb0edcfc25f8c54520ab09c25eda",
           "pixels": [
             2100,
             840
@@ -255,5 +283,5 @@
   ],
   "review_date": "2026-10-08",
   "reviewer": "AI agent",
-  "outcome": "Nine individually reviewed figures; embedded fonts, DPI and provenance verified."
+  "outcome": "Ten individually reviewed figures; embedded fonts, DPI and provenance verified."
 }

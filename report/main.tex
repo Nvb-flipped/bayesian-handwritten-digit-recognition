@@ -3,11 +3,19 @@
 \usepackage{amsmath,amssymb,booktabs,graphicx,tabularx,array}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,microtype,xcolor}
-\usepackage{enumitem,float}
+\usepackage{enumitem,float,placeins}
 \usepackage[colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,citecolor=blue!45!black]{hyperref}
 \setlist{itemsep=2pt,topsep=4pt}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{4pt}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.8}
+\raggedbottom
 \setcounter{tocdepth}{1}
 \emergencystretch=2em
 \brokenpenalty=10000
@@ -91,15 +99,34 @@ Efficient last-layer training; its variational objective adds implementation wor
 \caption{Candidate methods verified from primary sources \cite{laplace,natpn,vbll}.
 All address probabilistic prediction and can be evaluated on image recognition.}
 \end{table}
-The selected framework supports last-layer inference, allowing inspection of
-a complete covariance matrix and independent verification of its derivatives.
-The alternatives are suitable, more recent methods; the choice was driven by
-mathematical transparency and reliable local execution. The 2021 publication is
-at the older end of Prompt 01's approximately 2021--2026 range. Its contribution
-is a practical synthesis, implementation library and evaluation of Laplace
-variants; neither Bayes' theorem nor the Laplace approximation was invented
-in 2021. Earlier Bayesian neural-network work is acknowledged \cite{mackay}.
-No state-of-the-art claim is made for this small dataset.
+\textbf{Why Laplace Redux rather than a newer method?}
+The original choice prioritized an auditable probability model and controlled
+approximation comparisons. Section 2 of Laplace Redux separates the uncertain
+weight subset, curvature structure, prior selection and predictive integration
+\cite{laplace}. These choices directly support this study's fixed-feature,
+matched-MAP and diagonal-precision controls. With only 330 head parameters,
+the complete conditional Hessian can be derived, stored and checked against
+autograd; linear head logits also make the conditional Hessian equal to the
+generalized Gauss--Newton curvature. This gives a concrete route from prior and
+likelihood to a testable posterior calculation.
+
+Newer alternatives remain credible. VBLL offers efficient sampling-free
+variational training and explicitly supports frozen-feature post-training
+\cite{vbll}; it was not rejected as infeasible. Its learned variational
+mean/covariance and bound-based objective would change the inference question
+from local curvature at a conditional MAP optimum. NatPN instead converts learned
+feature densities into conjugate posterior updates \cite{natpn}, adding a density
+estimation mechanism suited to a different uncertainty study. The preference
+here is mathematical inspectability, not an empirical claim that these methods
+are less accurate or less calibrated; neither was run in this project.
+
+The 2021 paper is at the older edge of the requested 2021--2026 range. Its recent
+contribution is a practical framework/library and evaluation, not the invention
+of Bayes or Laplace theory \cite{mackay}. This implementation chooses full
+curvature, validation tuning and Monte Carlo prediction instead of the paper's
+default KFAC, empirical-Bayes and probit choices \cite{laplace}. The justification
+therefore supports an educational adaptation, not a state-of-the-art or full
+benchmark-reproduction claim, and does not use test outcomes to change the method.
 
 \subsection{Actual skill contributions}
 The agent consulted literature-review, experimental-design, scikit-learn and
@@ -256,6 +283,19 @@ the contrast direction $(1,-1)$ has curvature 2. A unit test verifies the
 MAP, Hessian and both contrast variances. This exact toy calculation illustrates
 correlation cancellation; it does not measure the ten-class experiment's mechanism.
 
+\begin{center}
+\begin{minipage}{\linewidth}\centering
+\includegraphics[width=\linewidth]{covariance_geometry.pdf}
+\parbox{\linewidth}{\small\textbf{Worked-example geometry (not experimental data).}
+Radius-one Mahalanobis contours of the two Gaussian approximations have the same
+center. Diagonalizing precision before inversion shrinks marginal variances
+from $3/4$ to $2/3$, yet the contrast $w_1-w_0$ becomes wider: variance 1 versus
+$4/3$. These contours are not 68\% joint credible regions; the exact Gaussian
+contrast densities at right explain why smaller marginal variance need not mean
+more certain class probabilities. The contour equation is verified numerically.}
+\end{minipage}
+\end{center}
+
 
 \subsection{Posterior predictive classification}
 A Bayesian prediction integrates the uncertain head:
@@ -335,7 +375,7 @@ training, inference, evaluation and presentation are separated.
 \texttt{laplace.py} & Objective, gradient, Eq.~\ref{eq:hessian}, Cholesky draws.\\
 \texttt{metrics.py} & Classification metrics, NLL, Brier, calibration bins.\\
 \texttt{experiment.py} & Candidates, selection lock, final test predictions.\\
-\texttt{figures.py} & Nine figures derived from saved evidence.\\
+\texttt{figures.py} & Nine evidence figures and one tested toy geometry diagram.\\
 \texttt{audit\_results.py} & Metrics, checkpoint reload and full-run verification.\\
 \texttt{build\_report.py} & Numerical LaTeX tables generated from JSON.\\
 \texttt{review\_diagnostics.py} & Fixed-model posterior sampling repetitions.\\
@@ -409,7 +449,7 @@ Integer rounding gives 1,077 training, 360 validation and 360 test images.
 Indices and per-class counts are saved. Test support ranges from 35 to 37
 images per class. Figure~\ref{fig:data} uses those saved indices.
 \begin{figure}[H]\centering\includegraphics[width=\linewidth]{dataset.pdf}
-\caption{Class counts by split and the first training image of each digit.
+\caption{Class counts by split and the first training image of each digit, enlarged in two rows.
 The classes are nearly balanced. The range and nearest-neighbor display are fixed; examples are chosen
 deterministically.}\label{fig:data}
 \end{figure}
@@ -525,16 +565,16 @@ Empty bins contribute zero. This is a usual top-label calibration convention
 \cite{guo}; ECE depends on binning and is not a proper scoring rule. NLL and
 Brier carry more weight in evaluating probability quality.
 
-\begin{table}[H]\centering\small\input{performance.tex}
+\begin{table}[!htbp]\centering\small\input{performance.tex}
 \caption{Neural results are mean $\pm$ sample SD across three seeds.
 The deterministic NB baseline was evaluated once. SD describes seed variability
 on a shared test set, not a confidence interval.}
 \end{table}
-\begin{table}[H]\centering\input{probability_metrics.tex}
+\begin{table}[!htbp]\centering\input{probability_metrics.tex}
 \caption{Additional classification and calibration metrics.
 Lower ECE is better under the specified ten-bin estimator.}
 \end{table}
-\begin{figure}[H]\centering\includegraphics[width=\linewidth]{comparison.pdf}
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{comparison.pdf}
 \caption{Recognition error counts, NLL and class-summed Brier score; lower is better.
 Horizontally offset shapes show each neural seed, black bars show mean $\pm$
 sample SD, and GNB has one observation. All use the same 360 test images.
@@ -550,25 +590,30 @@ statistical equivalence claim is made.
 
 
 \subsection{Class-level results and feature training}
-\begin{figure}[H]\centering\includegraphics[width=\linewidth]{classes.pdf}
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{classes.pdf}
 \caption{Laplace confusion is normalized by true-class support within each seed,
-then averaged. Entries below 0.005 are unlabeled. The right panel plots
-$1-F_1$ (lower is better), with mean $\pm$ seed SD; the table below gives untransformed F1.
-SD bars are descriptive and can extend below zero; none are clipped.
+then averaged. Cell labels are percentages rounded to the nearest integer;
+entries below 0.5\% are unlabeled. The color scale uses proportions.
+The right panel plots
+$1-F_1$ (lower is better) for every seed: filled MAP and open Laplace points,
+with seed-specific shapes. Black dashes are means; vertical spans are the observed
+min--max across three seeds, not SD bars or confidence intervals.
+All observations remain visible on a nonnegative scale; Table~\ref{tab:class} gives raw F1.
 Digit 8 is the weakest class. There are 360 unique test images.}
 \end{figure}
-\begin{table}[H]\centering\input{per_class.tex}
+\begin{table}[!htbp]\centering\input{per_class.tex}
 \caption{Mean Laplace per-class metrics across three seeds.
 Support counts unique images, not three times that number.}
+\label{tab:class}
 \end{table}
 Digit 8 has the weakest class F1 (0.931), with recall 0.905. Its averaged
 mistakes are spread across several labels, including 1 and 3.
 Digit 1 has perfect recall but lower precision because other digits are
 sometimes assigned to it. Thus recall alone does not establish reliable
 predictions of a label.
-\begin{figure}[H]\centering\includegraphics[width=.91\linewidth]{convergence.pdf}
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{convergence.pdf}
 \caption{Recorded feature-training and validation mean NLL on base-10 logarithmic axes.
-Both are evaluated after each epoch's optimizer update, using the original
+Both panels share the same positive NLL limits and are evaluated after each epoch's optimizer update, using the original
 training head before conditional MAP refitting. Line styles and markers identify
 seeds. Loss continues to improve over the fixed budget; these curves do not
 establish asymptotic convergence.}
@@ -580,10 +625,12 @@ has no stochastic training trajectory in this implementation.
 
 
 \subsection{Calibration, uncertainty and ablations}
-\begin{figure}[H]\centering\includegraphics[width=\linewidth]{calibration.pdf}
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{calibration.pdf}
 \caption{Reliability and posterior mutual information for prespecified seed 11.
-Ten equal-width confidence bins are used; point area increases with bin count.
-Empty bins are omitted and points are not joined. Laplace is often underconfident.
+Ten equal-width confidence bins are used. Reliability points have equal size;
+the aligned table gives every bin's image count, including zeros, for each method.
+Empty-bin points are omitted and occupied points are not joined. Laplace is often underconfident,
+but several bins contain few observations.
 Right: empirical cumulative distributions normalized separately over 352 correct
 and eight erroneous predictions. Errors often have greater disagreement, but
 the distributions overlap and eight errors provide limited precision.}
@@ -596,12 +643,12 @@ broader range; within-group normalization exposes both distributions despite
 their unequal sample counts. Overlap prevents a guaranteed error detector.
 The representative seed was fixed before training.
 
-\begin{table}[H]\centering\input{ablation.tex}
+\begin{table}[!htbp]\centering\input{ablation.tex}
 \caption{Features and Laplace-selected prior are held fixed. Matched MAP removes
 averaging; diagonal Laplace drops off-diagonal precision terms before inversion.
 This differs from taking the diagonal of the full covariance.}
 \end{table}
-\begin{figure}[H]\centering\includegraphics[width=\linewidth]{sensitivity.pdf}
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{sensitivity.pdf}
 \caption{Left: validation-only prior sensitivity. Right: predeclared frozen-prior
 test NLL and seed SD, with offset seed points. $\alpha=1$ gives the lowest validation
 NLL in this grid; full Laplace has lower test NLL than diagonal precision but
@@ -629,7 +676,7 @@ it, \texttt{configs/review\_diagnostics.json} specified sample counts
 $2002000+10000r+10S+j$ for feature seed $r$, sample count $S$ and
 repetition $j\in\{0,\ldots,7\}$. Repetition SD measures numerical integration
 variation conditional on a fitted posterior, not test-set or retraining uncertainty.
-\begin{figure}[H]\centering\includegraphics[width=\linewidth]{monte_carlo.pdf}
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{monte_carlo.pdf}
 \caption{Post hoc fixed-model sampling diagnostic. Left: mean NLL penalty
 against matched MAP with sampling-repeat SD, eight repetitions per point.
 Right: the same SD alone. The penalty persists at 2048 samples while numerical
@@ -642,7 +689,7 @@ cannot establish the accuracy of the Laplace posterior approximation itself.
 
 
 \subsection{Failure cases, interpretation and limits}
-\begin{figure}[H]\centering\includegraphics[width=\linewidth]{errors.pdf}
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{errors.pdf}
 \caption{All eight Laplace errors for seed 11, ordered by original dataset index.
 Titles show true digit, prediction and maximum posterior probability.
 Native $8\times8$ pixels are displayed without smoothing.}
@@ -676,14 +723,11 @@ data or a second dataset. They were not executed and do not justify revising
 the current conclusion using test outcomes. The negative calibration result
 belongs in the evidence.
 
-\textbf{Reproducibility.} Source hashes bind each run to its actual
-modules; the original pre-review run preceded the first commit.
-\texttt{audit.json} records
-metric regeneration, checkpoint reloads and an identical full rerun.
-Numerical tables read \texttt{summary.json} and \texttt{metrics.json};
-figure provenance records inputs and dimensions. These checks establish
-local reproducibility under the observed environment, not bitwise portability
-across every platform or library version.
+\textbf{Reproducibility.} \texttt{audit.json} verifies regenerated metrics,
+checkpoint reloads and an identical full rerun. Tables read saved JSON;
+figure provenance binds plots to source code and evidence. The original
+execution hashes are preserved separately from revised plotting code.
+These checks establish local reproducibility, not bitwise portability.
 Unlike the large-network benchmarks in Laplace Redux \cite{laplace}, this study
 uses a small head, frozen features and validation-grid prior selection.
 The negative probability-quality result therefore evaluates this adaptation
@@ -692,31 +736,22 @@ lesson is to compare probability scores and numerical sensitivity alongside
 recognition accuracy before drawing conclusions about uncertainty quality.
 
 
+\FloatBarrier
 \section{What I Have Learnt from This AI Assignment}
 \begin{center}\fbox{\parbox{.91\linewidth}{\textbf{STUDENT REFLECTION REQUIRED}}}\end{center}
 This section is reserved for the student's own learning account.
 The AI agent has not supplied personal experiences or reflections.
 
 \section{Webpage Link of the Source Codes}
-Publication is deliberately deferred to Prompt 03, after quality review and
-the student's reflection. No public URL has been created for this Assignment 2
-project during Prompt 01. The GitHub CLI check reported an invalid stored token;
-publication and wiki verification require functioning authenticated access.
-
-The local source is in the \texttt{AI Assignment 2} directory. A new public
-repository must be used; Assignment 1's repository is unrelated. Wiki sources
-under \texttt{docs/wiki/} cover the method, protocol, results, reproduction and
-AI workflow. This is the actual publication status, not an invented link.
+GitHub publication and public wiki verification are deferred to Prompt 03;
+no public URL exists yet. The earlier CLI authentication check reported an
+invalid stored token. Source code and wiki pages are preserved locally in
+\texttt{AI Assignment 2} and \texttt{docs/wiki/}, respectively.
 
 \subsection*{Local reproduction}
 After installing the pinned requirements, execute from the project root:
 \begin{verbatim}
-$env:PYTHONPATH = "src"                  # PowerShell
-.venv\Scripts\python.exe -m pytest -q
-.venv\Scripts\python.exe -m bayes_digits.experiment
-.venv\Scripts\python.exe scripts/review_diagnostics.py
-.venv\Scripts\python.exe -m bayes_digits.figures --results results
-.venv\Scripts\python.exe scripts/build_report.py
+.\scripts\reproduce.ps1                 # PowerShell
 .venv\Scripts\python.exe scripts/audit_results.py
 .venv\Scripts\python.exe scripts/audit_review.py
 \end{verbatim}

@@ -13,12 +13,15 @@ for f in [Path("README.md"),*Path("docs").rglob("*.md")]:
         assert dest.exists(),f"Broken local link: {f} -> {target}"
         links+=1
 env=json.loads(Path("results/environment.json").read_text())
+manifest=json.loads(Path("results/figure_manifest.json").read_text())
 for name,digest in env["source_sha256"].items():
+    # Keep the original experiment record immutable. Plotting is regenerated
+    # separately and its current code hash is verified by the figure manifest.
+    if name==manifest[0]['generator']: continue
     assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==digest,name
 for name in ["main.tex","main.pdf","performance.tex","ablation.tex","selection.tex","per_class.tex"]:
     assert (Path("report")/name).exists(),name
-manifest=json.loads(Path("results/figure_manifest.json").read_text())
-expected=8+int(Path('results/review_diagnostics/summary.json').exists())
+expected=9+int(Path('results/review_diagnostics/summary.json').exists())
 assert len(manifest)==expected
 for figure in manifest:
     assert hashlib.sha256(Path(figure['generator']).read_bytes()).hexdigest()==figure['generator_sha256']

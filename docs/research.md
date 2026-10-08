@@ -26,7 +26,7 @@ Sources:
 - [NatPN manuscript](https://arxiv.org/abs/2105.04471), [ICLR 2022 PDF](https://openreview.net/pdf?id=tV3N0DWMxCg). Authors: Bertrand Charpentier, Oliver Borchert, Daniel Zügner, Simon Geisler, Stephan Günnemann.
 - [VBLL manuscript and ICLR 2024 metadata](https://arxiv.org/abs/2404.11599), [conference PDF](https://openreview.net/pdf?id=Sx7BIiPzys). Authors: James Harrison, John Willes, Jasper Snoek.
 
-Selected: conditional last-layer Laplace, at the older end of the requested 2021–2026 range. Selection prioritized transparent mathematics and feasible execution. The paper makes established Laplace inference practical; Bayes and Laplace theory are older. No test result was used to select the algorithm.
+Selected: conditional last-layer Laplace, at the older end of the requested 2021–2026 range. Selection prioritized an inspectable posterior construction and matched approximation controls. Laplace Redux Section 2 separates weight subset, curvature, prior selection and prediction choices; those choices permit the fixed-feature, matched-MAP and diagonal-precision comparisons, with all 330 head parameters auditable. VBLL is a credible efficient alternative that explicitly supports frozen-feature post-training (Section 3.4/Appendix B.2), not an infeasible method. Its variational objective and learned posterior would answer a different inference question. NatPN uses learned feature densities/normalizing flows for conjugate evidence updates (Sections 3.2–3.5), adding a different uncertainty mechanism. Neither alternative was run here; selection implies no measured ranking against them. The paper makes established Laplace inference practical; Bayes and Laplace theory are older. No test result was used to select the algorithm.
 
 ## Adaptation and protocol
 
@@ -47,3 +47,7 @@ Verification was by the AI agent opening source content, not by an independent h
 ## Prompt 02 reference recheck
 
 On 8 October 2026 the AI re-opened the eight primary records above: Laplace proceedings/PDF, NatPN and VBLL arXiv records, Caltech's MacKay bibliography, UCI dataset page, current loader documentation, Guo's PMLR page and the Scientific Agent Skills arXiv record. Author order, titles, years/venues and available DOI/page metadata agree with the report. All eight used citation keys match bibliography entries. No new classifier citation was added to explain away the negative measured result; the skills reference acknowledges actual guidance only.
+
+## Final refinement source check
+
+The Laplace Redux proceedings PDF, [VBLL full manuscript](https://arxiv.org/html/2404.11599v1), [NatPN PDF](https://arxiv.org/pdf/2105.04471) and Scientific Agent Skills record were reopened on 8 October 2026. NatPN HTML access returned an internal tool error; its primary PDF supplied the required density/update details. The revised justification distinguishes project full curvature, validation prior tuning and Monte Carlo prediction from the Laplace paper’s default KFAC, empirical-Bayes and probit choices. VBLL sampling-free training does not imply that all classification prediction is sampling-free. No new reference or empirical superiority claim was added.

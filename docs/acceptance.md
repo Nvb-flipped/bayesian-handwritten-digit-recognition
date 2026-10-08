@@ -1,6 +1,6 @@
 # Local technical acceptance through Prompt 02
 
-Updated on 8 October 2026 after Prompt 02. The original Prompt 01 acceptance snapshot is recoverable in Git a28a563. This records local technical completion; the overall coursework still requires the student's reflection and subsequent publication.
+Updated on 8 October 2026 after Prompt 02 and its [final refinement](refinement_02.md). The original Prompt 01 acceptance snapshot is recoverable in Git a28a563. This records local technical completion; the overall coursework still requires the student's reflection and subsequent publication.
 
 ## Verified deliverables
 
@@ -16,7 +16,7 @@ Updated on 8 October 2026 after Prompt 02. The original Prompt 01 acceptance sna
 | Verify documented execution | scripts/reproduce.ps1 executed successfully; [reproduction log](../results/logs/reproduction.log). |
 | Audit reproduction with separate computations | Metrics regenerated, checkpoints reloaded, full run repeated; all 18 arrays bitwise identical in this environment; [audit](../results/audit.json). Same AI agent performed this, not an independent human reviewer. |
 | Resolve technical/figure findings | [Prompt 02 record](review_02.md): logging repair, tested math example, 72 executed sampling repetitions and regenerated metrics; primary arrays remain unchanged. |
-| Generate meaningful figures | Nine evidence figures, each PDF/SVG/300-DPI PNG; all inspected alone and in the report. [Per-figure review](figure_review_02.md). |
+| Generate meaningful figures | Nine numbered figures plus one tested toy geometry diagram, each PDF/SVG/300-DPI PNG; all inspected alone and in the report. [Per-figure review](figure_review_02.md). |
 | Compile and inspect report | Final Tectonic exit code 0; 15 pages. Every final rendered page (1–15) visually inspected for legibility, equations, cropping, captions and layout. |
 | Check Markdown | README/six wiki previews parsed as GFM and visually inspected with rendered math/tables. Local links checked; public rendering deferred. |
 | Document AI workflow | [Actual AI-use log](ai_usage.md), README and six wiki sources. No invented personal reflection or search history. |
