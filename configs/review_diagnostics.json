@@ -1,0 +1,8 @@
+{
+  "results": "results",
+  "output": "results/review_diagnostics",
+  "sample_counts": [128, 512, 2048],
+  "repetitions": 8,
+  "sampling_seed_base": 2002000,
+  "purpose": "Post hoc integration-variability diagnostic on frozen selected models; no retuning"
+}

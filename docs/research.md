@@ -44,3 +44,6 @@ Research questions: retained recognition accuracy; proper-score effect of averag
 
 Verification was by the AI agent opening source content, not by an independent human reviewer.
 
+## Prompt 02 reference recheck
+
+On 8 October 2026 the AI re-opened the eight primary records above: Laplace proceedings/PDF, NatPN and VBLL arXiv records, Caltech's MacKay bibliography, UCI dataset page, current loader documentation, Guo's PMLR page and the Scientific Agent Skills arXiv record. Author order, titles, years/venues and available DOI/page metadata agree with the report. All eight used citation keys match bibliography entries. No new classifier citation was added to explain away the negative measured result; the skills reference acknowledges actual guidance only.

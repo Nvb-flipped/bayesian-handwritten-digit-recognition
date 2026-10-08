@@ -1,5 +1,5 @@
-.......                                                                  [100%]
-7 passed in 7.94s
+.........                                                                [100%]
+9 passed in 8.24s
 Seed 11: feature epoch 120; MAP alpha 0.1, Laplace alpha 1
 Seed 22: feature epoch 120; MAP alpha 0.1, Laplace alpha 1
 Seed 33: feature epoch 120; MAP alpha 1, Laplace alpha 1
@@ -160,5 +160,15 @@ Seed 33: feature epoch 120; MAP alpha 1, Laplace alpha 1
     "runs": 3
   }
 }
-Generated 8 figures in PDF/SVG/PNG: results\figures
+Fixed feature seed 11: 128 draws, 8 repetitions
+Fixed feature seed 11: 512 draws, 8 repetitions
+Fixed feature seed 11: 2048 draws, 8 repetitions
+Fixed feature seed 22: 128 draws, 8 repetitions
+Fixed feature seed 22: 512 draws, 8 repetitions
+Fixed feature seed 22: 2048 draws, 8 repetitions
+Fixed feature seed 33: 128 draws, 8 repetitions
+Fixed feature seed 33: 512 draws, 8 repetitions
+Fixed feature seed 33: 2048 draws, 8 repetitions
+Saved 72 fixed-model diagnostic predictions; model hashes unchanged.
+Generated 9 figures in PDF/SVG/PNG: results\figures
 Report tables generated from recorded results.

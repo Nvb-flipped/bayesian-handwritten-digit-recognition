@@ -29,9 +29,11 @@ python -m venv .venv
 $env:PYTHONPATH = "src"
 .\.venv\Scripts\python.exe -m pytest -q
 .\.venv\Scripts\python.exe -m bayes_digits.experiment --config configs/default.json
+.\.venv\Scripts\python.exe scripts/review_diagnostics.py
 .\.venv\Scripts\python.exe -m bayes_digits.figures --results results
 .\.venv\Scripts\python.exe scripts/build_report.py
 .\.venv\Scripts\python.exe scripts/audit_results.py
+.\.venv\Scripts\python.exe scripts/audit_review.py
 ~~~
 
 The executed local venv reuses existing Assignment 1 PyTorch/scientific packages **read-only** through a path file; missing scikit-learn dependencies were installed into Assignment 2. The standalone setup above does not require Assignment 1. GPU is optional; the recorded run uses CPU and four PyTorch threads.
@@ -83,9 +85,10 @@ docs/               Research, AI workflow and wiki sources
 - [Figure provenance](results/figure_manifest.json)
 - [Acceptance record](docs/acceptance.md)
 
-All eight figures are generated from saved evidence in PDF/SVG/PNG. The raw NPZ holds test indices, labels, probabilities and mutual information. Reloads and a fresh full run reproduce all 18 arrays exactly in the recorded environment.
+All nine figures are generated from saved evidence in PDF/SVG/PNG, with 300-DPI PNG exports and vector analytical plots. The raw NPZ holds test indices, labels, probabilities and mutual information. Reloads and a fresh full run reproduce all 18 arrays exactly in the recorded environment.
+
+Prompt 02 corrected training-loss logging to use the same completed epoch as validation. All 18 primary arrays remain bitwise identical to the original Git snapshot a28a563. Nine tests pass, including a verified covariance example. The post hoc fixed-model diagnostic runs eight independent sampling repetitions at each of 128/512/2048 draws for all three fitted models (72 predictions), without retuning. At 512 draws, NLL repeat SD is 0.0013–0.0019 nats; at 2048, the mean NLL penalty against matched MAP remains 0.0511–0.0555 nats. Sampling noise alone does not explain the primary negative probability-quality finding. [Review record](docs/review_02.md).
 
 This is UCI optdigits' **original test subset**, repartitioned, not the complete dataset or original benchmark protocol. [UCI provenance and CC BY 4.0 terms](https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits). Writer independence is not established. One split and three seeds do not justify broad deployment claims.
 
 The materially used skill guidance is acknowledged in the report: [Scientific Agent Skills, Kassis et al. (2026)](https://arxiv.org/abs/2609.00065).
-

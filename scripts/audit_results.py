@@ -41,6 +41,5 @@ assert all(np.array_equal(saved[k],again[k]) for k in saved.files)
 assert json.loads((root/"summary.json").read_text())==json.loads(Path("tmp/reproduction/summary.json").read_text())
 save_json(root/"audit.json",dict(metrics_regenerated=True,checkpoint_predictions_bitwise_equal=True,
     full_reproduction_bitwise_equal=True,independent_command=sys.argv,
-    probability_arrays_checked=len(saved.files),tests="Seven pytest tests; see execution log"))
+    probability_arrays_checked=len(saved.files),tests="Nine pytest tests; see results/logs/tests.log"))
 print("Audit passed: metrics, checkpoint reloads, and full rerun match exactly.")
-

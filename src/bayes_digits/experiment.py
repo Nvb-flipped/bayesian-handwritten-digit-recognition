@@ -20,7 +20,7 @@ from .metrics import evaluate
 
 
 def save_json(path, value):
-    Path(path).write_text(json.dumps(value, indent=2, allow_nan=False), encoding="utf-8")
+    Path(path).write_text(json.dumps(value, indent=2, allow_nan=False), encoding="utf-8", newline="\n")
 
 
 def reproduce(config_path):
@@ -42,7 +42,7 @@ def reproduce(config_path):
     candidates = []
     for smoothing in config["nb_smoothing"]:
         model = GaussianNB(var_smoothing=smoothing).fit(x[tr],y[tr])
-        score = evaluate(y[va], model.predict_proba(x[va]))["nll"]
+        score = evaluate(y[va], model.predict_proba(x[va]),config["calibration_bins"])["nll"]
         candidates.append((score,smoothing,model))
     nb_nll, nb_smoothing, nb = min(candidates,key=lambda r:r[0])
     joblib.dump(nb, models/"gaussian_nb.joblib")
@@ -111,14 +111,17 @@ def reproduce(config_path):
                        numpy=np.__version__,scipy=scipy.__version__,sklearn=sklearn.__version__,
                        torch=torch.__version__,cuda_available=torch.cuda.is_available(),
                        detected_gpu=torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
-                       used_device=config["device"],seconds=time.perf_counter()-started,
+                       requested_device=config["device"],
+                       used_device=("cuda" if torch.cuda.is_available() else "cpu")
+                       if config["device"]=="auto" else config["device"],
+                       seconds=time.perf_counter()-started,
                        command=" ".join(sys.argv))
     try:
         environment["git_revision"]=subprocess.check_output(
             ["git","rev-parse","HEAD"],stderr=subprocess.DEVNULL,text=True).strip()
     except subprocess.CalledProcessError:
         environment["git_revision"]=None
-    environment["source_sha256"]={str(p):hashlib.sha256(p.read_bytes()).hexdigest()
+    environment["source_sha256"]={p.as_posix():hashlib.sha256(p.read_bytes()).hexdigest()
         for p in sorted(Path("src").rglob("*.py"))}
     save_json(out/"environment.json",environment)
     print(json.dumps(summary,indent=2),flush=True)
@@ -134,4 +137,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

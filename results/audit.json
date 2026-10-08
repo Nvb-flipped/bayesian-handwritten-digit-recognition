@@ -6,5 +6,5 @@
     "scripts/audit_results.py"
   ],
   "probability_arrays_checked": 18,
-  "tests": "Seven pytest tests; see execution log"
+  "tests": "Nine pytest tests; see results/logs/tests.log"
 }

@@ -62,6 +62,8 @@ student-authored reflection. The user invoked
 \path{01_RESEARCH_IMPLEMENT_REPORT.md}, which decomposed work into literature
 choice, implementation, execution and report preparation. These were instructions
 actually received, rather than a reconstruction of an earlier dialogue.
+Prompt 02 subsequently requested adversarial technical review and figure editing.
+The same agent performed that self-review; it was not independent human peer review.
 
 On 8 October 2026, searches included \emph{Laplace Redux Effortless Bayesian
 Deep Learning NeurIPS 2021 Daxberger}, \emph{Posterior Network uncertainty
@@ -107,6 +109,9 @@ informed deterministic training, device handling and checkpoint checks.
 The PDF skill supplied extraction and page inspection practices; the LaTeX
 compile plugin supplied compilation. The Scientific Agent Skills reference
 acknowledges skills that materially contributed \cite{skills}.
+During Prompt 02, scientific-writing and statistical-analysis guidance informed
+claim boundaries, post hoc labeling and the distinction between seed variation,
+sampling variation and test-set uncertainty.
 Paid schematic generators, external manuscript review and multi-agent review
 were not used.
 
@@ -232,13 +237,24 @@ $330\times330$ precision matrix in double precision. No diagonal or Kronecker
 curvature approximation is used for the primary method. The small problem
 makes its full covariance practical and indexing testable.
 
-\textbf{Illustrative example.} In binary logistic regression with one
-coefficient, one observation, feature $f=1$, probability $p=1/2$ and
-$\alpha=1$, scalar curvature is
-$H=p(1-p)f^2+\alpha=1.25$ and local variance is $0.8$.
-This is an algebraic illustration, not an experimental metric. Increasing
-$\alpha$ to 10 gives variance $1/10.25$ if likelihood curvature is held fixed.
-When refitting, the optimum and likelihood curvature also change.
+\textbf{Worked conditional example.} Consider two classes, one scalar feature
+$f=1$, two training observations with labels 0 and 1, and $\alpha=1$.
+Symmetry and strict convexity give $\hat W=(0,0)^\top$ and $p=(1/2,1/2)$.
+Each observation contributes $B=\frac14\left[\begin{smallmatrix}1&-1\\-1&1\end{smallmatrix}\right]$;
+summing both contributions and adding the prior gives
+\begin{equation}
+H=\begin{bmatrix}1.5&-0.5\\-0.5&1.5\end{bmatrix},\qquad
+\Sigma=H^{-1}=\begin{bmatrix}0.75&0.25\\0.25&0.75\end{bmatrix}.
+\end{equation}
+The probability depends on the logit difference $d=w_1-w_0$, not their
+common offset. Its variance is $0.75+0.75-2(0.25)=1$.
+Dropping off-diagonal precision first gives covariance $(2/3)I$ and
+$\operatorname{Var}(d)=4/3$. Thus the diagonal approximation can increase
+\emph{contrast} variance even though each marginal variance decreases.
+The common direction $(1,1)$ has curvature 1, supplied solely by the prior;
+the contrast direction $(1,-1)$ has curvature 2. A unit test verifies the
+MAP, Hessian and both contrast variances. This exact toy calculation illustrates
+correlation cancellation; it does not measure the ten-class experiment's mechanism.
 
 
 \subsection{Posterior predictive classification}
@@ -265,6 +281,10 @@ seed $r\in\{11,22,33\}$. Averaged class probabilities remain normalized.
 In general $\E[\operatorname{softmax}(z)]\neq
 \operatorname{softmax}(\E[z])$, so MAP and Laplace may disagree on probabilities
 even when their class predictions agree.
+For intuition, two illustrative equally weighted logit differences 0 and 4 give
+mean class-1 probability $(0.5+0.9820)/2=0.7410$, whereas the probability at
+their mean difference 2 is $0.8808$. These chosen values illustrate nonlinear
+averaging, not actual Gaussian draws or dataset results.
 
 \subsection{Uncertainty and interpretation}
 Predictive entropy summarizes total uncertainty:
@@ -315,9 +335,10 @@ training, inference, evaluation and presentation are separated.
 \texttt{laplace.py} & Objective, gradient, Eq.~\ref{eq:hessian}, Cholesky draws.\\
 \texttt{metrics.py} & Classification metrics, NLL, Brier, calibration bins.\\
 \texttt{experiment.py} & Candidates, selection lock, final test predictions.\\
-\texttt{figures.py} & Eight figures derived from saved evidence.\\
+\texttt{figures.py} & Nine figures derived from saved evidence.\\
 \texttt{audit\_results.py} & Metrics, checkpoint reload and full-run verification.\\
 \texttt{build\_report.py} & Numerical LaTeX tables generated from JSON.\\
+\texttt{review\_diagnostics.py} & Fixed-model posterior sampling repetitions.\\
 \bottomrule\end{tabularx}
 \caption{Modules reside under \texttt{src/bayes\_digits/}, scripts under
 \texttt{scripts/}.}
@@ -344,10 +365,11 @@ Save test probabilities, indices, labels, confusion matrices and metrics.
 \end{enumerate}
 
 \subsection{Checks, repairs and evidence}
-Seven tests passed. They verify split coverage/disjointness, analytic derivatives
+Nine tests passed. They verify portable JSON evidence bytes, split coverage/disjointness, analytic derivatives
 against independent PyTorch autograd, precision-to-covariance sampling,
 normalization and serialization, known metric values and bin boundaries,
 deterministic tiny-batch optimization, and rejection of invalid priors.
+The binary example additionally checks the exact MAP and logit-contrast covariance.
 The tiny-batch test achieves perfect training classification and loss below 0.02
 on 20 images; repeated seeded feature training matches exactly.
 
@@ -359,6 +381,11 @@ and evaluated after its selection lock; its test results were not used to change
 the already specified full configuration. The audit then reloaded all primary
 checkpoints, regenerated recorded metrics, and repeated the full pipeline.
 All 18 saved arrays matched bit for bit in this environment.
+Prompt 02 corrected loss logging: both training and validation NLL are now
+evaluated after the completed epoch's optimizer update. Rerunning preserved
+all 18 original prediction/label/index/MI arrays bit for bit against Git
+snapshot \texttt{a28a563}; only the training-loss history and execution provenance
+changed. The original results remain recoverable from that snapshot.
 
 
 \section{Experiment Settings and Results}
@@ -383,7 +410,7 @@ Indices and per-class counts are saved. Test support ranges from 35 to 37
 images per class. Figure~\ref{fig:data} uses those saved indices.
 \begin{figure}[H]\centering\includegraphics[width=\linewidth]{dataset.pdf}
 \caption{Class counts by split and the first training image of each digit.
-The range and nearest-neighbor display are fixed; examples are chosen
+The classes are nearly balanced. The range and nearest-neighbor display are fixed; examples are chosen
 deterministically.}\label{fig:data}
 \end{figure}
 
@@ -402,7 +429,15 @@ representation and prior. The diagonal ablation isolates curvature structure
 with the same mean, selected prior and sample count.
 
 Gaussian NB is a simple statistical baseline with conditionally independent
-Gaussian pixels and empirically estimated class priors. Spatial pixel
+Gaussian pixels and empirically estimated class priors:
+\begin{equation}
+p(y=k\mid x)\propto\frac{N_k}{N}\prod_{d=1}^{64}
+\mathcal N(x_d;\mu_{kd},\sigma_{kd}^2+\epsilon),\quad
+\epsilon=v\max_d\operatorname{Var}_{\rm train}(x_d).
+\end{equation}
+Class means and maximum-likelihood variances use training images only;
+validation selects smoothing $v$. Normalized log-joint scores produce probabilities.
+The selected $v=0.1$ stabilizes near-constant pixels. Spatial pixel
 correlations challenge its assumptions. The separately tuned MAP head is a
 discriminative comparison. All methods use identical partitions and a
 validation-NLL selection rule. Equal architecture or search difficulty between
@@ -436,7 +471,7 @@ Detected GPU & NVIDIA GeForce RTX 5060 Ti; available but unused\\
 imply GPU execution. Complete provenance is in \texttt{environment.json}.}
 \end{table}
 CPU computation was chosen because this small full-batch problem and its dense
-conditional Hessian are inexpensive. The original training/selection/evaluation
+conditional Hessian are inexpensive. The review training/selection/evaluation
 command took \RunSeconds\ seconds, excluding setup, tests, plotting and
 compilation. This is one observed wall-clock duration, not a controlled hardware
 benchmark. Existing PyTorch/scientific packages were reused read-only through
@@ -500,8 +535,11 @@ on a shared test set, not a confidence interval.}
 Lower ECE is better under the specified ten-bin estimator.}
 \end{table}
 \begin{figure}[H]\centering\includegraphics[width=\linewidth]{comparison.pdf}
-\caption{Per-run primary results and sample SD. Axes start at zero.
-GNB has one observation; MAP and LA have three, using the same 360 test images.}
+\caption{Recognition error counts, NLL and class-summed Brier score; lower is better.
+Horizontally offset shapes show each neural seed, black bars show mean $\pm$
+sample SD, and GNB has one observation. All use the same 360 test images.
+Axes start at zero. Neural methods make fewer errors than GNB, but MAP has
+better probability scores than Laplace (LA).}
 \end{figure}
 The neural methods recognize digits more accurately than NB. MAP and Laplace
 have similar accuracy, but MAP has lower NLL and Brier; Laplace ECE is higher.
@@ -514,8 +552,10 @@ statistical equivalence claim is made.
 \subsection{Class-level results and feature training}
 \begin{figure}[H]\centering\includegraphics[width=\linewidth]{classes.pdf}
 \caption{Laplace confusion is normalized by true-class support within each seed,
-then averaged. The right panel shows class F1 means and seed SD.
-There are 360 unique test images. Entries below 0.005 are unlabeled.}
+then averaged. Entries below 0.005 are unlabeled. The right panel plots
+$1-F_1$ (lower is better), with mean $\pm$ seed SD; the table below gives untransformed F1.
+SD bars are descriptive and can extend below zero; none are clipped.
+Digit 8 is the weakest class. There are 360 unique test images.}
 \end{figure}
 \begin{table}[H]\centering\input{per_class.tex}
 \caption{Mean Laplace per-class metrics across three seeds.
@@ -527,9 +567,11 @@ Digit 1 has perfect recall but lower precision because other digits are
 sometimes assigned to it. Thus recall alone does not establish reliable
 predictions of a label.
 \begin{figure}[H]\centering\includegraphics[width=.91\linewidth]{convergence.pdf}
-\caption{Recorded feature-training and validation mean NLL on logarithmic axes.
-These are losses of the original training head, before the conditional
-MAP head is refitted.}
+\caption{Recorded feature-training and validation mean NLL on base-10 logarithmic axes.
+Both are evaluated after each epoch's optimizer update, using the original
+training head before conditional MAP refitting. Line styles and markers identify
+seeds. Loss continues to improve over the fixed budget; these curves do not
+establish asymptotic convergence.}
 \end{figure}
 Both losses decrease through the prescribed budget. The curves do not prove
 asymptotic feature-network convergence. Conditional head optimization is a
@@ -540,14 +582,18 @@ has no stochastic training trajectory in this implementation.
 \subsection{Calibration, uncertainty and ablations}
 \begin{figure}[H]\centering\includegraphics[width=\linewidth]{calibration.pdf}
 \caption{Reliability and posterior mutual information for prespecified seed 11.
-Ten equal-width confidence bins are used; sparse bins can be unstable.
-Histograms show counts of 352 correct and eight incorrect predictions.}
+Ten equal-width confidence bins are used; point area increases with bin count.
+Empty bins are omitted and points are not joined. Laplace is often underconfident.
+Right: empirical cumulative distributions normalized separately over 352 correct
+and eight erroneous predictions. Errors often have greater disagreement, but
+the distributions overlap and eight errors provide limited precision.}
 \end{figure}
 Several populated Laplace reliability bins lie above the identity line:
 confidence is lower than observed success frequency. This agrees with higher
 ECE/NLL, although sparse bins and only eight mistakes limit conclusions.
 Many correct images have low posterior disagreement, while errors span a
-broader range; overlap prevents a guaranteed error detector.
+broader range; within-group normalization exposes both distributions despite
+their unequal sample counts. Overlap prevents a guaranteed error detector.
 The representative seed was fixed before training.
 
 \begin{table}[H]\centering\input{ablation.tex}
@@ -557,7 +603,9 @@ This differs from taking the diagonal of the full covariance.}
 \end{table}
 \begin{figure}[H]\centering\includegraphics[width=\linewidth]{sensitivity.pdf}
 \caption{Left: validation-only prior sensitivity. Right: predeclared frozen-prior
-test NLL and seed SD. Test scores were not used to retune the prior.}
+test NLL and seed SD, with offset seed points. $\alpha=1$ gives the lowest validation
+NLL in this grid; full Laplace has lower test NLL than diagonal precision but
+higher NLL than matched MAP. Test scores were not used to retune the prior.}
 \end{figure}
 Matched MAP has lower NLL than full Laplace with essentially identical aggregate
 accuracy, isolating the effect of averaging rather than a different prior.
@@ -570,6 +618,27 @@ the results, not a separately measured causal decomposition.
 Both $\alpha=0.1$ and $\alpha=10$ give worse Laplace validation NLL than
 $\alpha=1$ for every seed. This demonstrates prior sensitivity within the
 specified grid, not a globally optimal precision or an empirical-Bayes result.
+
+\subsection{Post hoc Monte Carlo integration diagnostic}
+Prompt 02 identified unmeasured sampling variation as a threat to interpreting
+finite-sample predictions. The diagnostic held all selected features, heads,
+priors and splits fixed; it did not perform model selection. Before executing
+it, \texttt{configs/review\_diagnostics.json} specified sample counts
+128/512/2048 and eight independent repetitions per model/count, giving
+72 probability arrays on the same 360 test images. Sampling seed is
+$2002000+10000r+10S+j$ for feature seed $r$, sample count $S$ and
+repetition $j\in\{0,\ldots,7\}$. Repetition SD measures numerical integration
+variation conditional on a fitted posterior, not test-set or retraining uncertainty.
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{monte_carlo.pdf}
+\caption{Post hoc fixed-model sampling diagnostic. Left: mean NLL penalty
+against matched MAP with sampling-repeat SD, eight repetitions per point.
+Right: the same SD alone. The penalty persists at 2048 samples while numerical
+variation decreases; sampling noise alone does not account for the observed gap.
+Models were not retuned and primary 512-sample results remain unchanged.}
+\end{figure}
+\input{diagnostic_text.tex}
+Independent repetitions sample the same approximate Gaussian, so this check
+cannot establish the accuracy of the Laplace posterior approximation itself.
 
 
 \subsection{Failure cases, interpretation and limits}
@@ -596,23 +665,31 @@ one architecture and three initialization seeds cannot establish a general
 ranking of Bayesian classifiers. The Gaussian is local and omits representation
 uncertainty. The prior grid is coarse and feature-scale dependent. Checkpoint
 and prior selection reuse the same validation partition; there is no nested
-validation estimate. Monte Carlo sampling error is not separately quantified.
+validation estimate. The post hoc diagnostic quantifies integration variation
+at three sample counts, but not uncertainty over representation or data sampling.
 Writer independence, natural-image recognition, corruption and OOD detection
 were not tested.
 
 Prospective extensions include a wider validation-selected prior grid,
-empirical-Bayes tuning, independent Monte Carlo repetitions, writer-separated
+empirical-Bayes tuning, writer-separated
 data or a second dataset. They were not executed and do not justify revising
 the current conclusion using test outcomes. The negative calibration result
 belongs in the evidence.
 
-\textbf{Reproducibility.} Source hashes bind the original run to its actual
-modules, even though no commit existed then. \texttt{audit.json} records
+\textbf{Reproducibility.} Source hashes bind each run to its actual
+modules; the original pre-review run preceded the first commit.
+\texttt{audit.json} records
 metric regeneration, checkpoint reloads and an identical full rerun.
 Numerical tables read \texttt{summary.json} and \texttt{metrics.json};
 figure provenance records inputs and dimensions. These checks establish
 local reproducibility under the observed environment, not bitwise portability
 across every platform or library version.
+Unlike the large-network benchmarks in Laplace Redux \cite{laplace}, this study
+uses a small head, frozen features and validation-grid prior selection.
+The negative probability-quality result therefore evaluates this adaptation
+and protocol, rather than refuting the paper's broader framework. The practical
+lesson is to compare probability scores and numerical sensitivity alongside
+recognition accuracy before drawing conclusions about uncertainty quality.
 
 
 \section{What I Have Learnt from This AI Assignment}
@@ -637,9 +714,11 @@ After installing the pinned requirements, execute from the project root:
 $env:PYTHONPATH = "src"                  # PowerShell
 .venv\Scripts\python.exe -m pytest -q
 .venv\Scripts\python.exe -m bayes_digits.experiment
+.venv\Scripts\python.exe scripts/review_diagnostics.py
 .venv\Scripts\python.exe -m bayes_digits.figures --results results
 .venv\Scripts\python.exe scripts/build_report.py
 .venv\Scripts\python.exe scripts/audit_results.py
+.venv\Scripts\python.exe scripts/audit_review.py
 \end{verbatim}
 Compile \texttt{report/main.tex} with its tables and figures available.
 The executed compiler was Tectonic 0.17.0 via the installed LaTeX plugin.

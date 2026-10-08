@@ -1,0 +1,84 @@
+{
+  "renderer": "marked 17.0.5, GFM; headless Chrome with MathJax 3",
+  "records": [
+    {
+      "page": "AI-Workflow.html",
+      "mathReady": true,
+      "tables": 0,
+      "mathNodes": 0,
+      "mathErrors": 0,
+      "horizontalOverflow": false,
+      "tableOverflow": false
+    },
+    {
+      "page": "Dataset-and-Protocol.html",
+      "mathReady": true,
+      "tables": 0,
+      "mathNodes": 0,
+      "mathErrors": 0,
+      "horizontalOverflow": false,
+      "tableOverflow": false
+    },
+    {
+      "page": "Experiments-and-Results.html",
+      "mathReady": true,
+      "tables": 2,
+      "mathNodes": 1,
+      "mathErrors": 0,
+      "horizontalOverflow": false,
+      "tableOverflow": false
+    },
+    {
+      "page": "Home.html",
+      "mathReady": true,
+      "tables": 0,
+      "mathNodes": 0,
+      "mathErrors": 0,
+      "horizontalOverflow": false,
+      "tableOverflow": false
+    },
+    {
+      "page": "Method-and-Mathematics.html",
+      "mathReady": true,
+      "tables": 0,
+      "mathNodes": 25,
+      "mathErrors": 0,
+      "horizontalOverflow": false,
+      "tableOverflow": false
+    },
+    {
+      "page": "README.html",
+      "mathReady": true,
+      "tables": 1,
+      "mathNodes": 0,
+      "mathErrors": 0,
+      "horizontalOverflow": false,
+      "tableOverflow": false
+    },
+    {
+      "page": "Reproduction.html",
+      "mathReady": true,
+      "tables": 0,
+      "mathNodes": 0,
+      "mathErrors": 0,
+      "horizontalOverflow": false,
+      "tableOverflow": false
+    }
+  ],
+  "public_github_rendering": "Deferred to Prompt 03; no publication performed.",
+  "source_sha256": {
+    "README.md": "e2e21f93ff4ba5faa3a6bffeb77e51090dfad5eb44deb1070039ef5113f79ca3",
+    "docs/wiki/AI-Workflow.md": "ee55bd76e00676caf24c2be2ab73fa16da0bdac6c0bd276ffd63dcb30a060913",
+    "docs/wiki/Dataset-and-Protocol.md": "ea0a7c1a7e56aa8eed2113de29622c5af582b4a76da30d890426f074b34bcdd4",
+    "docs/wiki/Experiments-and-Results.md": "74faadbdeb6e9e7483a4407a6ca3c8b5b04e6bea13dabc9511635c4b0e757cce",
+    "docs/wiki/Home.md": "3ca6ad26972663c8a5fbb8d99112f8f31df951346822e0d7de822b48beb8a72c",
+    "docs/wiki/Method-and-Mathematics.md": "5d0c8a4af0f67152f7b694d7a3d660409842c22a97acf1bb2c1fe01e34a84e70",
+    "docs/wiki/Reproduction.md": "21bdba03c00bf0e58ffeb3daa24df2c184baaef357d20026b56bda250c111d09"
+  },
+  "visual_review": {
+    "reviewer": "AI agent",
+    "date": "2026-10-08",
+    "pages_inspected": 7,
+    "outcome": "All screenshots inspected; readable equations/tables; no clipped prose or overlapping elements. Long code uses a scrollable code block."
+  }
+}

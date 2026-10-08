@@ -3,24 +3,39 @@
     "name": "dataset",
     "sources": [
       "splits.npz",
-      "sklearn.load_digits"
+      "dataset.json",
+      "config.json"
     ],
-    "description": "Split balance and deterministic digit examples.",
+    "description": "Split balance and deterministic digit examples; images from sklearn.load_digits.",
     "inches": [
       7.0,
-      2.8
-    ]
+      3.0
+    ],
+    "raster_dpi": 300,
+    "generator": "src/bayes_digits/figures.py",
+    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "source_sha256": {
+      "splits.npz": "b08b1d81d8c0fe3d3353ab9298eee147926f690832f9d29798cc971ae0579240",
+      "dataset.json": "b2b16450457c9e94e5b89196b8d63b8e0f3e1833b5d8aab0565b59b65a2de44a",
+      "config.json": "4beafe7e50d2ac0b3097f77a899344ed7c7feaf0e06b72745f687cb3e761f923"
+    }
   },
   {
     "name": "inference",
     "sources": [
-      "src/bayes_digits"
+      "config.json"
     ],
     "description": "Project inference stages, with training and validation roles.",
     "inches": [
       7.0,
       2.6
-    ]
+    ],
+    "raster_dpi": 300,
+    "generator": "src/bayes_digits/figures.py",
+    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "source_sha256": {
+      "config.json": "4beafe7e50d2ac0b3097f77a899344ed7c7feaf0e06b72745f687cb3e761f923"
+    }
   },
   {
     "name": "comparison",
@@ -31,19 +46,32 @@
     "description": "Raw seed results and sample SD; GNB evaluated once.",
     "inches": [
       7.0,
-      2.6
-    ]
+      3.0
+    ],
+    "raster_dpi": 300,
+    "generator": "src/bayes_digits/figures.py",
+    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "source_sha256": {
+      "metrics.json": "fb99d9500c5d4f5bd569e2c5b68396998461494e3b52ec9f4cfdb40a22cfff27",
+      "summary.json": "187cf6d58d35a6f0235ac8afafe3556b07286aad244cfc62b092b66e17a91708"
+    }
   },
   {
     "name": "classes",
     "sources": [
       "metrics.json"
     ],
-    "description": "Row-normalized confusion and class F1, 3 seeds on the same test set.",
+    "description": "Row-normalized confusion and F1 deficit (1 minus F1), 3 seeds on the same test set.",
     "inches": [
       7.0,
-      3.4
-    ]
+      3.7
+    ],
+    "raster_dpi": 300,
+    "generator": "src/bayes_digits/figures.py",
+    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "source_sha256": {
+      "metrics.json": "fb99d9500c5d4f5bd569e2c5b68396998461494e3b52ec9f4cfdb40a22cfff27"
+    }
   },
   {
     "name": "calibration",
@@ -51,11 +79,18 @@
       "metrics.json",
       "predictions.npz"
     ],
-    "description": "Reliability and posterior disagreement, prespecified seed 11.",
+    "description": "Unconnected reliability bins with occupancy-scaled markers; within-group MI ECDFs, fixed seed 11.",
     "inches": [
       7.0,
-      2.9
-    ]
+      3.2
+    ],
+    "raster_dpi": 300,
+    "generator": "src/bayes_digits/figures.py",
+    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "source_sha256": {
+      "metrics.json": "fb99d9500c5d4f5bd569e2c5b68396998461494e3b52ec9f4cfdb40a22cfff27",
+      "predictions.npz": "73695f0f3b742c9d7db725d2ea1adf903e5129c24746ddab5d4a38a09fb2ceea"
+    }
   },
   {
     "name": "convergence",
@@ -68,7 +103,15 @@
     "inches": [
       7.0,
       2.7
-    ]
+    ],
+    "raster_dpi": 300,
+    "generator": "src/bayes_digits/figures.py",
+    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "source_sha256": {
+      "history_11.json": "9184599fa0519ef69d6c247fe9504b9a912587df50f649b7cde352f795c18495",
+      "history_22.json": "68b2578729b85f9e2995503dfa7064e5d16f39998eec43f11bf4cfea478ee70d",
+      "history_33.json": "91a69dc188091c37c46e7619bc48b8851d930e06b2b3091aa2e57ce2ac7d1d00"
+    }
   },
   {
     "name": "sensitivity",
@@ -80,7 +123,14 @@
     "inches": [
       7.0,
       2.9
-    ]
+    ],
+    "raster_dpi": 300,
+    "generator": "src/bayes_digits/figures.py",
+    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "source_sha256": {
+      "sensitivity.json": "f27feb8748cf8ba807ed8628d43d02f781532c2a95229a18e78103bfb4b78609",
+      "metrics.json": "fb99d9500c5d4f5bd569e2c5b68396998461494e3b52ec9f4cfdb40a22cfff27"
+    }
   },
   {
     "name": "errors",
@@ -92,6 +142,31 @@
     "inches": [
       7.0,
       3.5
-    ]
+    ],
+    "raster_dpi": 300,
+    "generator": "src/bayes_digits/figures.py",
+    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "source_sha256": {
+      "predictions.npz": "73695f0f3b742c9d7db725d2ea1adf903e5129c24746ddab5d4a38a09fb2ceea"
+    }
+  },
+  {
+    "name": "monte_carlo",
+    "sources": [
+      "review_diagnostics/summary.json",
+      "review_diagnostics/matched_map.json"
+    ],
+    "description": "Post hoc fixed-model diagnostic; eight independent sampling repetitions per model/count, not a test-set CI.",
+    "inches": [
+      7.0,
+      2.8
+    ],
+    "raster_dpi": 300,
+    "generator": "src/bayes_digits/figures.py",
+    "generator_sha256": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "source_sha256": {
+      "review_diagnostics/summary.json": "85ab7c10630dbfdde40840d4a937b169c83a07af0e9bcf0f9d3c953213e2d166",
+      "review_diagnostics/matched_map.json": "1c11a453660256643c437f1800cc3ea1551134cfd8436f5657067a698dd4c192"
+    }
   }
 ]

@@ -1,0 +1,9 @@
+{
+  "primary_prediction_arrays_bitwise_unchanged": 18,
+  "baseline_commit": "a28a563",
+  "diagnostic_metrics_regenerated": 72,
+  "fixed_checkpoint_hashes_verified": true,
+  "citation_keys_verified": 8,
+  "markdown_files_checked": 7,
+  "reflection_placeholder_preserved": true
+}

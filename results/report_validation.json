@@ -1,7 +1,7 @@
 {
   "pdf": "report/main.pdf",
-  "sha256": "7e5e640566066e44dd3bcc5ad2781fa798f120d97f8d97314a52c6488d83e31d",
-  "pages": 14,
+  "sha256": "9e6186afe7288ca477cc8a2e4a222f3f116ef989008cdd6769ea401dc41f10fa",
+  "pages": 15,
   "compiler_exit_code": 0,
   "layout_box_warnings": 0,
   "final_pass_unresolved_references": false,
@@ -26,7 +26,8 @@
       11,
       12,
       13,
-      14
+      14,
+      15
     ],
     "outcome": "All final pages readable; no clipped content or overlapping text/figures observed."
   },

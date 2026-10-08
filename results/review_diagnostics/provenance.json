@@ -1,0 +1,21 @@
+{
+  "analysis": "Post hoc; fixed models; no selection",
+  "checkpoint_sha256": {
+    "results/models/features_11.pt": "6f0ba98f2530fa75201bffe8303429b73449e34ff247e10853bb6b3973c68ffe",
+    "results/models/features_22.pt": "014ee2bab90c34b257527faae9400e888871b4689000f9f8f02e771c4c70d40b",
+    "results/models/features_33.pt": "3e73a6640097bf2a8e59a3aebacc103418c3667d87b9013d5e441750847f958f",
+    "results/models/gaussian_nb.joblib": "ae2c66303fae5b1a2cc5ccac1381086b614b669dec33fe6a4c57cd5947fe1658",
+    "results/models/posterior_11.npz": "d47e3e30486b89fee441bfeffa8bebb21e3659b35225a9e42360bf40884351cf",
+    "results/models/posterior_22.npz": "7ef31766cc758aec5cd3fbfefd1d9a2621151186bc3382dd89c97751c6b83dae",
+    "results/models/posterior_33.npz": "b125a70f2f05173f544b41b5852b8ec50fc1ff910279a3e3f3c7f7a7d4b4bbf1"
+  },
+  "config_sha256": "9eaafc4cbcfa34a56c7c66bfb05aff8bc1bad5c3a7837f0220ccf00770579012",
+  "script_sha256": "aa9f257ac9b75cf0294898f1a61208db6e7d35fbf50e84596a928be012415f72",
+  "command": [
+    "scripts/review_diagnostics.py"
+  ],
+  "seconds": 9.57209689996671,
+  "records": 72,
+  "test_images": 360,
+  "variability_unit": "Independent posterior sampling repetitions conditional on each fitted model/test set"
+}

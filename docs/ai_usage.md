@@ -12,7 +12,7 @@ The entire course PDF was extracted with pypdf and its page rendered with Popple
 
 Materially applied: literature-review (primary sources/provenance), experimental-design (matched controls/seed replication), scikit-learn (splits/baselines/metrics), scientific-visualization plus publication guidelines (scales, vector output, sample sizes), machine-learning/PyTorch patterns/training recipe (seeding, tiny-batch, checkpoints), PDF (extraction/rendering), LaTeX compile (compiler detection/build).
 
-Latex-paper-en and scientific-writing were inspected as candidates; their review services/scripts were not used. No subagent or paid image generator was used. The Scientific Agent Skills reference is acknowledged in the report, following the materially applied local skills' instructions.
+During Prompt 01, latex-paper-en and scientific-writing were inspected as candidates; their review services/scripts were not used. Prompt 02 materially applied scientific-writing (evidence-bound revisions), statistical-analysis (dependence and variability units), latex-paper-en caption/experiment/reviewer guidance, scientific-visualization, PDF and the LaTeX compile plugin. No subagent or paid image generator was used. The Scientific Agent Skills reference is acknowledged in the report, following the materially applied local skills' instructions.
 
 ## Actual sequence
 
@@ -38,6 +38,14 @@ Initial ensurepip initialization returned nonzero; the environment interpreter a
 Initial Tectonic compile could not retrieve an uncached TeX bundle under sandbox restrictions; the build was retried with network access. Outcomes are supported by the actual compiler log, not invocation alone.
 
 GitHub CLI reported invalid authentication. No token was displayed or saved. Publication is deferred and no repository URL is fabricated.
+
+## Prompt 02 review
+
+The user subsequently requested full technical review and figure improvement. The agent reread AGENTS.md, Prompt 02 and the course PDF, audited code/configs/evidence and opened all eight primary reference records again. Bibliographic metadata and the selected paper's inference description agree with the cited sources. Verification is by the AI, not an independent human verifier.
+
+The initial prioritized issue list is in review_02.md. The review corrected pre-update training versus post-update validation loss logging, added a verified two-class covariance example, enlarged confusion annotations, separated seed points, changed near-perfect accuracy/F1 plots to error counts/F1 deficits, replaced joined reliability lines with occupied-bin scatter, and replaced imbalanced count histograms with within-group empirical MI distributions. The selected models and all 18 primary saved arrays remain unchanged against the original commit.
+
+A post hoc diagnostic plan/config was recorded before executing 72 fixed-model predictions at 128/512/2048 samples with eight independent repetitions per fitted model/count. It quantified integration variability without retuning. Nine tests passed; full reproduction, reload and metric audits were run. Nine figures were inspected individually and in the compiled report, which is rendered page by page again after final revisions. The reference acknowledgment remains; no independent peer-review certification is claimed.
 
 ## Student authorship
 

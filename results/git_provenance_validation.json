@@ -1,0 +1,9 @@
+{
+  "review_date": "2026-10-08",
+  "recorded_hash_checks": 77,
+  "working_files_match_recorded_hashes": true,
+  "staged_git_blobs_match_recorded_hashes": true,
+  "scope": ["experiment source", "figure generator and source data", "diagnostic configuration and script", "model checkpoints", "README and wiki sources", "report PDF", "all 27 figure exports"],
+  "portable_text_policy": "LF for generated JSON and TeX and source Markdown; literal generated SVG bytes preserved with -text.",
+  "claim_boundary": "Checks verify preserved bytes in this local Git snapshot; they do not promise identical floating-point reruns across platforms."
+}

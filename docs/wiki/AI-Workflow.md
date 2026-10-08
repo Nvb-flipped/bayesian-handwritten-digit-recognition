@@ -12,3 +12,4 @@ Windows temporary-directory access was repaired without weakening tests. Package
 
 The AI did not invent student learning. The report has **STUDENT REFLECTION REQUIRED** in its named reflection section. Publication is deferred to Prompt 03. GitHub CLI reported invalid authentication.
 
+Prompt 02 added adversarial AI self-review, with scientific-writing/statistical-analysis guidance, corrected end-of-epoch loss logging, a tested covariance example, redesigned figures and a post hoc fixed-model sampling diagnostic. This was performed by the same agent, not independent human peer review. Primary predictions did not change. The final report is rendered page by page again after revision.

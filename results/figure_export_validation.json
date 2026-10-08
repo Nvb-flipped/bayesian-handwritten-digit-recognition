@@ -1,0 +1,259 @@
+{
+  "figures": [
+    {
+      "name": "dataset",
+      "files": {
+        "pdf": {
+          "bytes": 33191,
+          "sha256": "1ad421247308943b19f5e6a6f2179b5e840f097ac9f7236695d3657cdfc8563e"
+        },
+        "svg": {
+          "bytes": 100126,
+          "sha256": "9378026f70eb243d0541cb2519185d1b6573551083017948c0384c75c1a30fd2"
+        },
+        "png": {
+          "bytes": 71025,
+          "sha256": "063ec11e259922cee517d92114b80f588ece17be653c28ea8d0fa8e0867e5255",
+          "pixels": [
+            2100,
+            900
+          ],
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        }
+      },
+      "fonts_embedded": true,
+      "individually_inspected": true,
+      "inspected_in_final_report": true
+    },
+    {
+      "name": "inference",
+      "files": {
+        "pdf": {
+          "bytes": 18194,
+          "sha256": "11e8beb6e846405a4645277b1d5baea9dbb618afa9258f70f2cf8551c177b283"
+        },
+        "svg": {
+          "bytes": 9584,
+          "sha256": "4cc0ecb1b15f0dc3888f0e1c38748efd1c66bf587604cac96168c8adc7c1ae9b"
+        },
+        "png": {
+          "bytes": 95486,
+          "sha256": "47cb57de26af28e8752a2671243df3061a9753f37f8ba06e8a1ad00b3ca5c0d3",
+          "pixels": [
+            2100,
+            780
+          ],
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        }
+      },
+      "fonts_embedded": true,
+      "individually_inspected": true,
+      "inspected_in_final_report": true
+    },
+    {
+      "name": "comparison",
+      "files": {
+        "pdf": {
+          "bytes": 21055,
+          "sha256": "249bf5b40d49f7da32c9578a2ed03d82984b7b4ab3bc3e7eee25f899d8f119dd"
+        },
+        "svg": {
+          "bytes": 36676,
+          "sha256": "3d0320b3c0e369afc654832c8e5a41c34995fde6beed51adf9d82e6540b981a9"
+        },
+        "png": {
+          "bytes": 106859,
+          "sha256": "2e03461029e11aefe7b92cd761117394502ce7367a2b01ef85bc68daf39ced61",
+          "pixels": [
+            2100,
+            900
+          ],
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        }
+      },
+      "fonts_embedded": true,
+      "individually_inspected": true,
+      "inspected_in_final_report": true
+    },
+    {
+      "name": "classes",
+      "files": {
+        "pdf": {
+          "bytes": 35821,
+          "sha256": "b227a835a5bd8a315c26d64d8f7a666146c89072f9f2be5a3058a3078afc2d50"
+        },
+        "svg": {
+          "bytes": 61001,
+          "sha256": "0b998fb055e83728bc865feba7997e2c14c96e59e94ced893f3c2d41133d3239"
+        },
+        "png": {
+          "bytes": 139892,
+          "sha256": "41844dc820fe25e3abb3ca619ad774023087e11008d598177c3bb6e64c9e6ab7",
+          "pixels": [
+            2100,
+            1110
+          ],
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        }
+      },
+      "fonts_embedded": true,
+      "individually_inspected": true,
+      "inspected_in_final_report": true
+    },
+    {
+      "name": "calibration",
+      "files": {
+        "pdf": {
+          "bytes": 30616,
+          "sha256": "26e1c868c5e1a1f12544321bcba6f9a0b8eb50fd39f714c2e963db809eb93d0c"
+        },
+        "svg": {
+          "bytes": 41038,
+          "sha256": "bcbfb70821037994661af49bc03fa26aa610be1c6f1038294a2102651fd1f126"
+        },
+        "png": {
+          "bytes": 138399,
+          "sha256": "0ba0734abfe79de1f74dd103ba7d5f168fcc1c43cfd7866d3cd98afc3c70e639",
+          "pixels": [
+            2100,
+            960
+          ],
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        }
+      },
+      "fonts_embedded": true,
+      "individually_inspected": true,
+      "inspected_in_final_report": true
+    },
+    {
+      "name": "convergence",
+      "files": {
+        "pdf": {
+          "bytes": 29332,
+          "sha256": "d24e1d2b4dbe71251d96b7d72c1fa349781d9589d58b9f521a1a6b28aaa23041"
+        },
+        "svg": {
+          "bytes": 46935,
+          "sha256": "7b696b1bf742b4e9d7d7eee3a8cbb22cc68b521340eed038abc521a8df959c92"
+        },
+        "png": {
+          "bytes": 110426,
+          "sha256": "1e53652180f85ed5d3d33fb38161ed48c5513bc20bada8036e9cd1b7a51aef24",
+          "pixels": [
+            2100,
+            810
+          ],
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        }
+      },
+      "fonts_embedded": true,
+      "individually_inspected": true,
+      "inspected_in_final_report": true
+    },
+    {
+      "name": "sensitivity",
+      "files": {
+        "pdf": {
+          "bytes": 25124,
+          "sha256": "0f5855bc9e9462f0169ee115d9e270dab495610b1a1eedee80586ba66bb64bd5"
+        },
+        "svg": {
+          "bytes": 30482,
+          "sha256": "87bf3cd68cf023f2f1073f96cd926586ac9df2d6695c3a072ac235907a9f7019"
+        },
+        "png": {
+          "bytes": 125217,
+          "sha256": "0ab2af88673c7fc4c9262cc311644d7ddade9f9d8268e035789dd07e4bb53fa0",
+          "pixels": [
+            2100,
+            870
+          ],
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        }
+      },
+      "fonts_embedded": true,
+      "individually_inspected": true,
+      "inspected_in_final_report": true
+    },
+    {
+      "name": "errors",
+      "files": {
+        "pdf": {
+          "bytes": 21966,
+          "sha256": "6d0cb8fc2e8b672104977488ae5d972ef10f7d40ac765d3cece23ffdb68126d2"
+        },
+        "svg": {
+          "bytes": 27023,
+          "sha256": "1622a00446e89102002760a00e61886a654c7ff930d952c1ef46110b882ffc3d"
+        },
+        "png": {
+          "bytes": 48803,
+          "sha256": "97c8c6845cd6d4fdcd7a0b5e1b5dd09f1a598c9af2d7beb844fc66617fa068e6",
+          "pixels": [
+            2100,
+            1050
+          ],
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        }
+      },
+      "fonts_embedded": true,
+      "individually_inspected": true,
+      "inspected_in_final_report": true
+    },
+    {
+      "name": "monte_carlo",
+      "files": {
+        "pdf": {
+          "bytes": 22952,
+          "sha256": "d3a1caf74fdd7453117e3dd5391a615aa529e9fccced0032593717f0420acb9b"
+        },
+        "svg": {
+          "bytes": 28949,
+          "sha256": "5057c04161ac138e5c70937ffa490a8373a1217c76c5c1bd32904752502a6293"
+        },
+        "png": {
+          "bytes": 151064,
+          "sha256": "3590b81f02a33cbedf1fc852d4e0baab612a5208736054d5d26cb716ed9b16bb",
+          "pixels": [
+            2100,
+            840
+          ],
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        }
+      },
+      "fonts_embedded": true,
+      "individually_inspected": true,
+      "inspected_in_final_report": true
+    }
+  ],
+  "review_date": "2026-10-08",
+  "reviewer": "AI agent",
+  "outcome": "Nine individually reviewed figures; embedded fonts, DPI and provenance verified."
+}

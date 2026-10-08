@@ -1,6 +1,6 @@
-# Prompt 01 local acceptance
+# Local technical acceptance through Prompt 02
 
-Recorded on 8 October 2026. This records local technical completion; the overall coursework still requires the student's reflection and subsequent publication.
+Updated on 8 October 2026 after Prompt 02. The original Prompt 01 acceptance snapshot is recoverable in Git a28a563. This records local technical completion; the overall coursework still requires the student's reflection and subsequent publication.
 
 ## Verified deliverables
 
@@ -12,11 +12,13 @@ Recorded on 8 October 2026. This records local technical completion; the overall
 | Prevent selection leakage | Saved stratified 1,077/360/360 indices, validation checkpoint/prior selection, selection lock before full-run test predictions. |
 | Execute meaningful comparisons | Three neural seeds; deterministic Gaussian NB baseline; separately selected MAP baseline; matched-prior MAP and diagonal-precision ablations. |
 | Preserve evidence | Configurations, versions, hashes, selections, checkpoints, per-example predictions, classification/probability metrics and figure provenance in results/. |
-| Test mathematical/data/model behavior | Seven tests passed; [test log](../results/logs/tests.log). |
+| Test mathematical/data/model behavior | Nine tests passed, including the exact covariance example and corrected epoch-loss logging; [test log](../results/logs/tests.log). |
 | Verify documented execution | scripts/reproduce.ps1 executed successfully; [reproduction log](../results/logs/reproduction.log). |
-| Independently audit reproduction | Metrics regenerated, checkpoints reloaded, full run repeated; all 18 arrays bitwise identical in this environment; [audit](../results/audit.json). |
-| Generate meaningful figures | Eight evidence figures, each PDF/SVG/PNG; all inspected alone and in the report. |
-| Compile and inspect report | Final Tectonic exit code 0; 14 pages. Every final rendered page (1–14) visually inspected for legibility, equations, cropping, captions and layout. |
+| Audit reproduction with separate computations | Metrics regenerated, checkpoints reloaded, full run repeated; all 18 arrays bitwise identical in this environment; [audit](../results/audit.json). Same AI agent performed this, not an independent human reviewer. |
+| Resolve technical/figure findings | [Prompt 02 record](review_02.md): logging repair, tested math example, 72 executed sampling repetitions and regenerated metrics; primary arrays remain unchanged. |
+| Generate meaningful figures | Nine evidence figures, each PDF/SVG/300-DPI PNG; all inspected alone and in the report. [Per-figure review](figure_review_02.md). |
+| Compile and inspect report | Final Tectonic exit code 0; 15 pages. Every final rendered page (1–15) visually inspected for legibility, equations, cropping, captions and layout. |
+| Check Markdown | README/six wiki previews parsed as GFM and visually inspected with rendered math/tables. Local links checked; public rendering deferred. |
 | Document AI workflow | [Actual AI-use log](ai_usage.md), README and six wiki sources. No invented personal reflection or search history. |
 | Version control | New independent local Git repository, branch codex/prompt-01. No publication or remote added in this phase. |
 
@@ -40,8 +42,7 @@ The quantitative result is not uniformly favorable to the Bayesian method: Lapla
 ## Exact remaining work
 
 1. Student supplies their own reflection to replace **STUDENT REFLECTION REQUIRED**; then rebuild and inspect the affected report pages.
-2. Perform the next requested quality-review phase (Prompt 02) before publication.
-3. In Prompt 03, repair GitHub authentication, create a new public Assignment 2 repository, publish source/report and wiki when available, verify public pages, and insert the real code URL into the report. The inspected GitHub CLI authentication is invalid. Publication was explicitly deferred by Prompt 01.
-4. Perform the final submission audit (Prompt 04) after those changes.
+2. In Prompt 03, repair GitHub authentication, create a new public Assignment 2 repository, publish source/report and wiki when available, verify public pages, and insert the real code URL into the report. The inspected GitHub CLI authentication is invalid. Publication was explicitly deferred by Prompts 01 and 02.
+3. Perform the final submission audit (Prompt 04) after those changes.
 
 There is no unresolved local execution or compilation blocker. The reflection and public code URL are pending as explicitly required by this phase's scope. No personal experiences or public URL have been fabricated.

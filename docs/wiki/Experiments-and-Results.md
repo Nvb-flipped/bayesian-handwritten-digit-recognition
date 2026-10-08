@@ -24,7 +24,10 @@ Correlations help relative to diagonal precision, but averaging worsens proper s
 
 Digit 8 mean F1: 0.931; recall: 0.905. Seed 11 has eight errors/352 correct cases. All its mistakes are displayed in ascending original index. Averaging confusion over seeds does not increase unique test support beyond 360.
 
-Eight evidence figures cover dataset, inference, comparison, classes, calibration/disagreement, convergence, prior/curvature sensitivity and errors. JSON/NPZ and plot scripts supply their provenance.
+Nine evidence figures cover dataset, inference, comparison, classes, calibration/disagreement, convergence, prior/curvature sensitivity, sampling diagnostics and errors. The comparison plots error counts from zero and offsets seed points. Class errors use $1-F_1$, with raw F1 available in the report/table. Reliability uses unconnected points with marker area increasing with occupied-bin count; MI uses separately normalized empirical cumulative distributions for correct/error groups. Curve losses are both measured after each epoch update. JSON/NPZ, transformed figure_data.json, source hashes and plot scripts supply provenance.
+
+## Post hoc integration diagnostic
+
+After the initial test results were known, Prompt 02 fixed the existing models/priors and specified 128/512/2048 draws with eight independent repetitions per model/count (72 predictions). This is a numerical diagnostic, not model selection. At 512 draws, within-model NLL SD is 0.0013–0.0019 nats. At 2048 draws, mean Laplace-minus-matched-MAP NLL remains 0.0511–0.0555 nats across the three models. It supports a persistent probability-score penalty in this setting. Repetition SD describes integration variation, not data-sampling uncertainty. All 18 primary arrays remain bitwise unchanged from a28a563.
 
 Limits: one small dataset, one split, no writer separation, point-estimated features, local Gaussian, coarse prior grid, reused validation partition and finite Monte Carlo samples. No general algorithm ranking is claimed.
-

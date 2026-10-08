@@ -8,17 +8,18 @@
   "torch": "2.11.0+cu128",
   "cuda_available": true,
   "detected_gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "requested_device": "cpu",
   "used_device": "cpu",
-  "seconds": 5.972749200067483,
+  "seconds": 6.451542199938558,
   "command": "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\src\\bayes_digits\\experiment.py --config configs/default.json",
-  "git_revision": null,
+  "git_revision": "a28a563b7f68e3db71176c96d49f7049634d179a",
   "source_sha256": {
-    "src\\bayes_digits\\__init__.py": "4f0146c9095e350b28799ee44ea4f9c7b72afa8dd2c461f1651082414330e7ee",
-    "src\\bayes_digits\\data.py": "8e0c5390ebcd85fde6fc7706767e517c4e283d0751b0fc8d0afa4199d79d6a53",
-    "src\\bayes_digits\\experiment.py": "7a2f2f58a47de82e55f1030ef407eda6a245b06e426d09e48be21a6ee6915fcd",
-    "src\\bayes_digits\\features.py": "bcfda426d9514007c8b03ae7f5d97a974dffb5b22d78b9ee5a4e85d883d397a0",
-    "src\\bayes_digits\\figures.py": "fc6b97500eb54c7021af53056c123087b42ed30baa672da59e9b410079c5c900",
-    "src\\bayes_digits\\laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c",
-    "src\\bayes_digits\\metrics.py": "1a7f92c8f485fa58668bebe1d74cb96c4e95ef7e9ed48f53f0e04742c544141e"
+    "src/bayes_digits/__init__.py": "4f0146c9095e350b28799ee44ea4f9c7b72afa8dd2c461f1651082414330e7ee",
+    "src/bayes_digits/data.py": "8e0c5390ebcd85fde6fc7706767e517c4e283d0751b0fc8d0afa4199d79d6a53",
+    "src/bayes_digits/experiment.py": "cc193b393136b4dbeff2cc8e55092ebc797ae5cc8e2df00382cca1acc8bfed8a",
+    "src/bayes_digits/features.py": "7e2abc6fb265070a2591b46b910db79a2187ab112e5063ba801b62e4ec8915bc",
+    "src/bayes_digits/figures.py": "37bd49fe39895c5b8cd508ac76c1e537201393bf19f87561240fa20de15dbae8",
+    "src/bayes_digits/laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c",
+    "src/bayes_digits/metrics.py": "1a7f92c8f485fa58668bebe1d74cb96c4e95ef7e9ed48f53f0e04742c544141e"
   }
 }

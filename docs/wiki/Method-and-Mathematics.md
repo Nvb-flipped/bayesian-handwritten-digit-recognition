@@ -27,3 +27,13 @@ Posterior disagreement equals $\mathcal H(\bar p)-\frac1S\sum_s\mathcal H(p^{(s)
 
 Full matrix storage is $O(P^2)$ and factorization $O(P^3)$. The diagonal ablation drops off-diagonal **precision** entries before inversion. Matched MAP uses the same prior/features while omitting averaging. Validation prior tuning is not empirical-Bayes evidence optimization. The approximation is local and prior-sensitive.
 
+## Verified numerical example
+
+Two classes with scalar feature 1, one observation of each label and prior precision 1 have the unique MAP $W=(0,0)^\top$. Each observation contributes categorical curvature $\frac14\begin{bmatrix}1&-1\\-1&1\end{bmatrix}$. Thus:
+
+$$
+H=\begin{bmatrix}1.5&-0.5\\-0.5&1.5\end{bmatrix},\qquad
+H^{-1}=\begin{bmatrix}0.75&0.25\\0.25&0.75\end{bmatrix}.
+$$
+
+The logit difference $w_1-w_0$ has variance $0.75+0.75-2(0.25)=1$. Diagonalizing precision before inversion gives $(2/3)I$ and difference variance $4/3$. Marginal variances become smaller but difference variance increases. This shows how correlations cancel a shared logit shift. A unit test verifies the exact MAP/Hessian and both contrast variances. It is a toy calculation, not an empirical causal explanation of the ten-class results.

@@ -81,9 +81,31 @@ def test_feature_training_reproduces_and_overfits():
         logits=a(torch.tensor(x[idx],dtype=torch.float32))
     assert (logits.argmax(1).numpy()==y[idx]).all()
     assert ha[-1]["train_nll"]<0.02
+    assert np.isclose(ha[-1]["train_nll"],torch.nn.functional.cross_entropy(
+        logits,torch.tensor(y[idx])).item(),atol=1e-7)
+    assert ha[-1]["train_nll"]==ha[-1]["validation_nll"]
+
+
+def test_symmetric_binary_map_and_logit_covariance():
+    # Two labels at the same scalar feature have a unique zero MAP under alpha=1.
+    f=np.ones((2,1))
+    posterior=fit_posterior(f,np.array([0,1]),1.,2)
+    expected=np.array([[1.5,-0.5],[-0.5,1.5]])
+    assert np.allclose(posterior.mean,0,atol=1e-10)
+    assert np.allclose(posterior.precision,expected,atol=1e-10)
+    contrast=np.array([1.,-1.])
+    assert np.isclose(contrast@np.linalg.solve(expected,contrast),1.)
+    assert np.isclose(np.sum(contrast**2/np.diag(expected)),4/3)
 
 
 def test_positive_prior_required():
     with pytest.raises(ValueError):
         fit_posterior(np.ones((3,1)),np.array([0,1,0]),0,2)
-
+def test_json_evidence_has_portable_newlines(tmp_path):
+    from bayes_digits.experiment import save_json
+    import json
+    path = tmp_path / "evidence.json"
+    save_json(path, {"setting": [1, 2], "description": "recorded"})
+    raw = path.read_bytes()
+    assert b"\n" in raw and b"\r" not in raw
+    assert json.loads(raw) == {"setting": [1, 2], "description": "recorded"}

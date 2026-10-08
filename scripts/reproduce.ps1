@@ -4,8 +4,9 @@ $env:PYTHONPATH = "src"
 if ($LASTEXITCODE -ne 0) { throw "Tests failed" }
 & .venv/Scripts/python.exe -m bayes_digits.experiment --config configs/default.json
 if ($LASTEXITCODE -ne 0) { throw "Experiment failed" }
+& .venv/Scripts/python.exe scripts/review_diagnostics.py
+if ($LASTEXITCODE -ne 0) { throw "Review diagnostic failed" }
 & .venv/Scripts/python.exe -m bayes_digits.figures --results results
 if ($LASTEXITCODE -ne 0) { throw "Figures failed" }
 & .venv/Scripts/python.exe scripts/build_report.py
 if ($LASTEXITCODE -ne 0) { throw "Report assets failed" }
-

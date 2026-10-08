@@ -41,8 +41,9 @@ def train_features(x, y, xv, yv, config, seed):
         optimizer.step()
         model.eval()
         with torch.no_grad():
+            training = nn.functional.cross_entropy(model(xt), yt).item()
             validation = nn.functional.cross_entropy(model(vt), vy).item()
-        history.append(dict(epoch=epoch, train_nll=loss.item(), validation_nll=validation))
+        history.append(dict(epoch=epoch, train_nll=training, validation_nll=validation))
         if validation < best:
             best, epoch_best = validation, epoch
             best_state = copy.deepcopy(model.state_dict())
@@ -54,4 +55,3 @@ def train_features(x, y, xv, yv, config, seed):
 def transform(model, x):
     f = model.features(torch.tensor(x, dtype=torch.float32)).numpy().astype(np.float64)
     return np.column_stack([f, np.ones(len(f))])
-

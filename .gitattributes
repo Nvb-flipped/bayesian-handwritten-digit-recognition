@@ -3,6 +3,10 @@
 *.py text eol=lf
 *.json text eol=lf
 *.tex text eol=lf
+*.md text eol=lf
+*.ps1 text eol=lf
+# Preserve literal generated SVG bytes recorded in export validation hashes.
+*.svg -text
 *.pdf binary
 *.png binary
 *.pt binary

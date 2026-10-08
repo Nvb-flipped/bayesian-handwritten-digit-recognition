@@ -1,0 +1,14 @@
+[
+  {
+    "feature_seed": 11,
+    "matched_map_nll": 0.09754241007609707
+  },
+  {
+    "feature_seed": 22,
+    "matched_map_nll": 0.09431289719082894
+  },
+  {
+    "feature_seed": 33,
+    "matched_map_nll": 0.09900042807523646
+  }
+]
