@@ -1,6 +1,6 @@
 # Local technical acceptance through Prompt 02
 
-Updated on 8 October 2026 after Prompt 02 and its [final refinement](refinement_02.md). The original Prompt 01 acceptance snapshot is recoverable in Git a28a563. This records local technical completion; the overall coursework still requires the student's reflection and subsequent publication.
+Updated on 8 October 2026 after Prompt 02 and its [final refinement](refinement_02.md). The original Prompt 01 acceptance snapshot is recoverable in Git a28a563. The student's supplied reflection is now included and verified. This records local technical completion; public publication remains pending.
 
 ## Verified deliverables
 
@@ -17,7 +17,7 @@ Updated on 8 October 2026 after Prompt 02 and its [final refinement](refinement_
 | Audit reproduction with separate computations | Metrics regenerated, checkpoints reloaded, full run repeated; all 18 arrays bitwise identical in this environment; [audit](../results/audit.json). Same AI agent performed this, not an independent human reviewer. |
 | Resolve technical/figure findings | [Prompt 02 record](review_02.md): logging repair, tested math example, 72 executed sampling repetitions and regenerated metrics; primary arrays remain unchanged. |
 | Generate meaningful figures | Nine numbered figures plus one tested toy geometry diagram, each PDF/SVG/300-DPI PNG; all inspected alone and in the report. [Per-figure review](figure_review_02.md). |
-| Compile and inspect report | Final Tectonic exit code 0; 15 pages. Every final rendered page (1–15) visually inspected for legibility, equations, cropping, captions and layout. |
+| Compile and inspect report | Final Tectonic exit code 0; 16 pages, with all five student-supplied paragraphs verified on page 15. Every final rendered page (1–16) visually inspected for legibility, equations, cropping, captions and layout. |
 | Check Markdown | README/six wiki previews parsed as GFM and visually inspected with rendered math/tables. Local links checked; public rendering deferred. |
 | Document AI workflow | [Actual AI-use log](ai_usage.md), README and six wiki sources. No invented personal reflection or search history. |
 | Version control | New independent local Git repository, branch codex/prompt-01. No publication or remote added in this phase. |
@@ -41,8 +41,8 @@ The quantitative result is not uniformly favorable to the Bayesian method: Lapla
 
 ## Exact remaining work
 
-1. Student supplies their own reflection to replace **STUDENT REFLECTION REQUIRED**; then rebuild and inspect the affected report pages.
-2. In Prompt 03, repair GitHub authentication, create a new public Assignment 2 repository, publish source/report and wiki when available, verify public pages, and insert the real code URL into the report. The inspected GitHub CLI authentication is invalid. Publication was explicitly deferred by Prompts 01 and 02.
-3. Perform the final submission audit (Prompt 04) after those changes.
+Completed: the student supplied their own reflection; all five paragraphs are preserved in report/student_reflection.txt and included through report/student_reflection.tex. Compilation, extracted-text comparison and visual inspection passed.
+1. In Prompt 03, repair GitHub authentication, create a new public Assignment 2 repository, publish source/report and wiki when available, verify public pages, and insert the real code URL into the report. The inspected GitHub CLI authentication is invalid. Publication was explicitly deferred by Prompts 01 and 02.
+2. Perform the final submission audit (Prompt 04) after those changes.
 
-There is no unresolved local execution or compilation blocker. The reflection and public code URL are pending as explicitly required by this phase's scope. No personal experiences or public URL have been fabricated.
+There is no unresolved local execution or compilation blocker. The public code URL remains pending for Prompt 03; the reflection has been supplied and verified. No personal experiences or public URL have been fabricated.

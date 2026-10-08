@@ -26,7 +26,8 @@ def audit():
         original = subprocess.check_output(["git", "show", f"{baseline}:{name}"])
         assert original == path.read_bytes(), f"Executed evidence changed: {name}"
         hashes[name] = hashlib.sha256(original).hexdigest()
-    tables = sorted(p for p in Path("report").glob("*.tex") if p.name != "main.tex")
+    tables = sorted(p for p in Path("report").glob("*.tex")
+                    if p.name not in {"main.tex", "student_reflection.tex"})
     for path in tables:
         original = subprocess.check_output(["git", "show", f"{baseline}:{path.as_posix()}"])
         assert original == path.read_bytes(), f"Numerical table changed: {path}"

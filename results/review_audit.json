@@ -5,5 +5,7 @@
   "fixed_checkpoint_hashes_verified": true,
   "citation_keys_verified": 8,
   "markdown_files_checked": 7,
-  "reflection_placeholder_preserved": true
+  "reflection_placeholder_preserved": false,
+  "supplied_student_reflection_preserved": true,
+  "reflection_source_sha256": "a7e226a534b89f17b4a54e76409e3c0c4e2fc3071324f1d621087e1d8864f542"
 }

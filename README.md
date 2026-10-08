@@ -17,7 +17,7 @@ The 1,797-image scikit-learn digits subset is split into **1,077 train / 360 val
 
 Variation is sample SD across three initialization seeds on **the same** 360 test images. NB is deterministic and evaluated once. Brier sums over classes. Laplace retains strong recognition accuracy but has worse probability quality than MAP. [Detailed results and ablations](docs/wiki/Experiments-and-Results.md).
 
-[Compiled report](report/main.pdf). Its only intentionally incomplete section is **STUDENT REFLECTION REQUIRED**. Public repository/wiki publication is deliberately deferred to Prompt 03; no Assignment 2 public URL exists yet.
+[Compiled report](report/main.pdf). The student's five-paragraph reflection has been inserted faithfully and verified in the compiled PDF. Public repository/wiki publication is deliberately deferred to Prompt 03; no Assignment 2 public URL exists yet.
 
 ## Reproduce
 

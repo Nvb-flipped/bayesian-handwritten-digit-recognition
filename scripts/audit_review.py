@@ -32,7 +32,11 @@ tex=Path('report/main.tex').read_text()
 citations=set(k for group in re.findall(r'\\cite\{([^}]+)\}',tex) for k in group.split(','))
 bib=set(re.findall(r'\\bibitem\{([^}]+)\}',tex))
 assert citations==bib,(citations-bib,bib-citations)
-assert tex.count('STUDENT REFLECTION REQUIRED')==1
+assert 'STUDENT REFLECTION REQUIRED' not in tex
+assert r'\input{student_reflection.tex}' in tex
+reflection=Path('report/student_reflection.txt').read_text(encoding='utf8')
+reflection_tex=Path('report/student_reflection.tex').read_text(encoding='utf8')
+assert reflection_tex.replace(r'\%','%').replace(r'\textquoteright{}','’')==reflection
 markdown=list(Path('docs/wiki').glob('*.md'))+[Path('README.md')]
 for path in markdown:
     text=path.read_text(encoding='utf8')
@@ -44,6 +48,8 @@ for path in markdown:
 save_json('results/review_audit.json',dict(primary_prediction_arrays_bitwise_unchanged=len(current.files),
     baseline_commit=snapshot,diagnostic_metrics_regenerated=len(records),
     fixed_checkpoint_hashes_verified=True,citation_keys_verified=len(bib),
-    markdown_files_checked=len(markdown),reflection_placeholder_preserved=True))
+    markdown_files_checked=len(markdown),reflection_placeholder_preserved=False,
+    supplied_student_reflection_preserved=True,
+    reflection_source_sha256=hashlib.sha256(reflection.encode('utf8')).hexdigest()))
 print(f'Review audit passed: {len(current.files)} unchanged arrays; {len(records)} diagnostic records; '
       f'{len(bib)} citation keys; {len(markdown)} Markdown pages.')

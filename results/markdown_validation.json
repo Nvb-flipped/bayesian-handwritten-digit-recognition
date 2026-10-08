@@ -67,8 +67,8 @@
   ],
   "public_github_rendering": "Deferred to Prompt 03; no publication performed.",
   "source_sha256": {
-    "README.md": "ed3baa81f918e857152d77390fd41b8ade00d61483d55617b86f25b08cefee46",
-    "docs/wiki/AI-Workflow.md": "a3af6f69d0df803095c4b8cef47c00b71feca0704672d6a6263fabe04180b344",
+    "README.md": "24e7e95427b03a7521fb11e3abc06b866a54b45b562d4a55dc3abfadc45771ca",
+    "docs/wiki/AI-Workflow.md": "dcab5b7d606b3e9266cae2f86ccd2491286550a82067b95c85b209fd6e80fe5e",
     "docs/wiki/Dataset-and-Protocol.md": "ea0a7c1a7e56aa8eed2113de29622c5af582b4a76da30d890426f074b34bcdd4",
     "docs/wiki/Experiments-and-Results.md": "0267a866bf184e579ea2def9d269519351a791dcbe0d7b04275d1de4d56a0474",
     "docs/wiki/Home.md": "3ca6ad26972663c8a5fbb8d99112f8f31df951346822e0d7de822b48beb8a72c",

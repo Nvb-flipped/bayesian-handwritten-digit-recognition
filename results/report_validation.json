@@ -1,13 +1,19 @@
 {
   "pdf": "report/main.pdf",
-  "sha256": "e1d03ab1b851173d87d673d046cfe5904d4555db67f0b80ff525413b51f71d75",
-  "pages": 15,
+  "sha256": "2da86af9b2c7551a1cfad9c8682f8ac081f508eda60d31916cd34f0af1d3c7bb",
+  "pages": 16,
   "compiler_exit_code": 0,
   "layout_box_warnings": 0,
   "final_pass_unresolved_references": false,
   "duplicate_pdf_destinations": false,
   "title_metadata_verified": true,
-  "student_reflection_placeholder_present": true,
+  "student_reflection_placeholder_present": false,
+  "student_supplied_reflection_preserved": true,
+  "reflection_paragraphs_verified": 5,
+  "reflection_pages": [
+    15
+  ],
+  "reflection_source_sha256": "a7e226a534b89f17b4a54e76409e3c0c4e2fc3071324f1d621087e1d8864f542",
   "visual_review": {
     "reviewer": "AI agent",
     "date": "2026-10-08",
@@ -27,7 +33,8 @@
       12,
       13,
       14,
-      15
+      15,
+      16
     ],
     "outcome": "All final pages readable; no clipped content or overlapping text/figures observed."
   },
