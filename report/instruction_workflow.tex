@@ -14,7 +14,7 @@
 \node[human] (human) at (0,0) {\textbf{1. HUMAN: define requirements}\\
   Assignment PDF: course requirements\\
   \texttt{AGENTS.md}: persistent rules\\
-  Engineered Prompts 01/02: staged work};
+  Engineered Prompts 01--03: staged work};
 \node[activity] (agent) at (8.15,0) {\textbf{2. AI: Codex Desktop + skills}\\
   Research and experimental design\\
   ML/PyTorch; mathematics verification\\
@@ -31,11 +31,11 @@
   Prompt 02 and later refinement requests\\
   Verify mathematics; interpret evidence\\
   Improve graphs/report; repeat visual QA};
-\node[output] (deliver) at (8.15,-7.3) {\textbf{6. OUTPUT: local deliverables}\\
+\node[output] (deliver) at (8.15,-7.3) {\textbf{6. OUTPUT: verified deliverables}\\
   Source code; saved experimental evidence\\
   LaTeX/PDF report; student reflection\\[2pt]
-  \textbf{Pending:} GitHub/wiki (Prompt 03);\\
-  post-publication audit (Prompt 04)};
+  Public GitHub + six wiki pages (Prompt 03)\\
+  \textbf{Pending:} Prompt 04 submission audit};
 \draw[flow] (human.east) -- node[edge,above]{guide} (agent.west);
 \draw[flow] (agent.south) -- node[edge,right]{research} (discovery.north);
 \draw[flow] (discovery.west) -- node[edge,above]{build} (execute.east);
@@ -47,8 +47,8 @@
 \par\smallskip
 \refstepcounter{workflowdiagram}\label{fig:ai-workflow}
 {\small\textbf{Workflow diagram \theworkflowdiagram.}
-Human instructions (orange), AI activities (blue) and local outputs (green).
+Human instructions (orange), AI activities (blue) and generated outputs (green).
 Arrows trace executed work; the dashed loop denotes repair and rechecking.
-GitHub publication and its final audit are explicitly pending.
+Repository and wiki publication are verified; Prompt 04 remains pending.
 Skill contributions and limits are identified in the accompanying text.}
 \end{figure}

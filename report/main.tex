@@ -53,7 +53,8 @@ report drafting; the personal reflection remains student-authored.
 \textbf{Scope.} This is an independently coded, educational adaptation of a
 recent practical Bayesian framework, not a reproduction of its published
 benchmark results. All numerical results come from this project's saved
-outputs. Public publication is deliberately deferred to Prompt 03.
+outputs. Source code and evidence are publicly available at the verified
+repository linked in Section 6.
 \tableofcontents
 \clearpage
 
@@ -74,7 +75,7 @@ The student explicitly invoked Prompt 01 for research, implementation,
 experiments and reporting, then Prompt 02 for technical and figure review.
 Later requests refined the report and supplied the student's own reflection.
 Workflow diagram~\ref{fig:ai-workflow} distinguishes these executed activities
-from the deferred publication and post-publication audit. Descriptions below
+and the public repository from the pending post-publication audit. Descriptions below
 are evidence-based paraphrases; only the quotation column reproduces prompt text.
 \input{instruction_workflow.tex}
 
@@ -221,10 +222,12 @@ The source tree preserves \texttt{AGENTS.md}, all four original files in
 \texttt{docs/review\_02.md} and \texttt{docs/refinement\_02.md}.
 \texttt{docs/skill\_sources.md} identifies the actual skill documents, origins,
 local hashes and consultation status. These records and linked complete skill
-documentation are intended for the public repository created in Prompt 03;
-Section 6 will contain its verified URL after publication. Prompt 03 and
-\path{prompts/04_FINAL_SUBMISSION_AUDIT.md} remain pending. No public URL or
-completed publication is implied here.
+documentation are available in the public repository linked in Section 6.
+Prompt 03 published the audited Git history on 9 October 2026, following the
+student's explicit approval of public disclosure. After the student initialized
+Home, the CLI published six wiki pages; their public mathematics, figures,
+tables and navigation were checked. Both verified URLs appear in Section 6.
+\path{prompts/04_FINAL_SUBMISSION_AUDIT.md} remains a subsequent submission audit.
 
 \section{Algorithm Description}
 \subsection{Task, notation and conditional model}
@@ -824,10 +827,16 @@ recognition accuracy before drawing conclusions about uncertainty quality.
 \input{student_reflection.tex}
 
 \section{Webpage Link of the Source Codes}
-GitHub publication and public wiki verification are deferred to Prompt 03;
-no public URL exists yet. The earlier CLI authentication check reported an
-invalid stored token. Source code and wiki pages are preserved locally in
-\texttt{AI Assignment 2} and \texttt{docs/wiki/}, respectively.
+The public source repository is:
+
+\url{https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition}.
+It contains source code, tests, configurations, experimental evidence, original
+prompts, skill documentation and this report. GitHub confirms public visibility.
+The populated public wiki is:
+
+\url{https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/wiki}.
+Six technical pages are synchronized from \texttt{docs/wiki/}; equations,
+results, figures and navigation were verified on GitHub.
 
 \subsection*{Local reproduction}
 After installing the pinned requirements, execute from the project root:

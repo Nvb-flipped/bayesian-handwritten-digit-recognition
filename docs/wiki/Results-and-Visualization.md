@@ -1,6 +1,6 @@
 # Experiments and results
 
-[Home](Home.md) · [Method](Method-and-Mathematics.md) · [Protocol](Dataset-and-Protocol.md)
+[Home](Home.md) · [Method](Algorithm-and-Mathematics.md) · [Protocol](Dataset-and-Experiment-Protocol.md)
 
 32 tanh features; 120 full-batch Adam epochs; learning rate 0.01; feature decay 0.0001; seeds 11/22/33; CPU/four PyTorch threads. Prior grid 0.1/1/10; NB smoothing 1e-9/0.001/0.1; selection by validation NLL. 512 posterior draws, full 330×330 conditional Hessian.
 
@@ -31,3 +31,7 @@ Nine evidence figures cover dataset, inference, comparison, classes, calibration
 After the initial test results were known, Prompt 02 fixed the existing models/priors and specified 128/512/2048 draws with eight independent repetitions per model/count (72 predictions). This is a numerical diagnostic, not model selection. At 512 draws, within-model NLL SD is 0.0013–0.0019 nats. At 2048 draws, mean Laplace-minus-matched-MAP NLL remains 0.0511–0.0555 nats across the three models. It supports a persistent probability-score penalty in this setting. Repetition SD describes integration variation, not data-sampling uncertainty. All 18 primary arrays remain bitwise unchanged from a28a563.
 
 Limits: one small dataset, one split, no writer separation, point-estimated features, local Gaussian, coarse prior grid, reused validation partition and finite Monte Carlo samples. No general algorithm ranking is claimed.
+
+![Measured classifier comparison](https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/main/results/figures/comparison.png)
+
+![Per-class confusion and all measured F1 deficits](https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/main/results/figures/classes.png)

@@ -1,10 +1,12 @@
 # Reproduction
 
-[Home](Home.md) · [Method](Method-and-Mathematics.md) · [Results](Experiments-and-Results.md)
+[Home](Home.md) · [Method](Algorithm-and-Mathematics.md) · [Results](Results-and-Visualization.md)
 
 Python 3.12; install pinned requirements. GPU optional; actual run used CPU.
 
 ~~~powershell
+git clone https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition.git
+Set-Location bayesian-handwritten-digit-recognition
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 $env:PYTHONPATH = "src"
@@ -27,4 +29,4 @@ The first build may download its TeX bundle. Figures/tables must exist. Nine tes
 
 The review diagnostic adds 72 fixed-model sampling repetitions, with settings and raw probabilities preserved in results/review_diagnostics/. Run it before figures to reproduce the ninth figure and generated diagnostic text. The review audit compares primary arrays against the original Git commit a28a563 and checks all diagnostic metrics. It requires that commit in local history; a shallow clone must fetch it first. Final presentation invariance is checked with `python scripts/audit_refinement.py` against Prompt 02 commit `93b625e`; that commit is also required. The original environment hashes describe the executed experiment; current plotting hashes are verified separately in figure_manifest.json.
 
-Preserved evidence: config, dataset hash, splits, histories, prior scores, selection lock, metrics, predictions, summary, environment, audit and figure manifest. Public clone URL will be verified during Prompt 03.
+Preserved evidence: config, dataset hash, splits, histories, prior scores, selection lock, metrics, predictions, summary, environment, audit and figure manifest. The public clone URL above was verified in Prompt 03; clone the complete history for the historical evidence audits.

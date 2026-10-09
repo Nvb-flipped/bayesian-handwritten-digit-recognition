@@ -1,0 +1,60 @@
+{
+  "attempts": [
+    {
+      "command": [
+        "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.1002.7124.0_x64__2p2nqsd0c76g0\\app\\resources\\tectonic\\tectonic.exe",
+        "-X",
+        "compile",
+        "--outdir",
+        "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report",
+        "--outfmt",
+        "pdf",
+        "--print",
+        "--untrusted",
+        "main.tex"
+      ],
+      "compiler": "tectonic",
+      "exitCode": 101,
+      "log": "note: \"version 2\" Tectonic command-line interface activated\n\nthread 'main' (30332) panicked at src\\config.rs:154:18:\ncalled `Result::unwrap()` on an `Err` value: this bundle isn't cached, and we couldn't get it from the internet. Error: error sending request for url (https://relay.fullyjustified.net/default_bundle_v33.tar.index.gz)\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n",
+      "pdfExists": true,
+      "pdfPath": "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\main.pdf"
+    }
+  ],
+  "command": null,
+  "compiler": null,
+  "exitCode": 1,
+  "log": "note: \"version 2\" Tectonic command-line interface activated\n\nthread 'main' (30332) panicked at src\\config.rs:154:18:\ncalled `Result::unwrap()` on an `Err` value: this bundle isn't cached, and we couldn't get it from the internet. Error: error sending request for url (https://relay.fullyjustified.net/default_bundle_v33.tar.index.gz)\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n",
+  "pdfExists": true,
+  "pdfPath": "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\main.pdf",
+  "rootFile": "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\main.tex",
+  "tectonic": {
+    "checked": [
+      {
+        "path": "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.1002.7124.0_x64__2p2nqsd0c76g0\\app\\resources\\tectonic\\tectonic.exe",
+        "source": "app"
+      }
+    ],
+    "path": "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.1002.7124.0_x64__2p2nqsd0c76g0\\app\\resources\\tectonic\\tectonic.exe",
+    "reason": "Tectonic executable is available.",
+    "source": "app",
+    "status": "available",
+    "version": "Tectonic 0.17.0+20260731"
+  },
+  "tectonicSuitability": {
+    "reasons": [],
+    "scannedFiles": [
+      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\main.tex",
+      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\student_reflection.tex",
+      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\diagnostic_text.tex",
+      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\ablation.tex",
+      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\per_class.tex",
+      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\probability_metrics.tex",
+      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\performance.tex",
+      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\selection.tex",
+      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\instruction_workflow.tex",
+      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\results.tex"
+    ],
+    "suitable": true
+  },
+  "texliveDetection": null
+}

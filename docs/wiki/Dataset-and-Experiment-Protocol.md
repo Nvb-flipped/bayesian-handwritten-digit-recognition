@@ -1,6 +1,6 @@
 # Dataset and protocol
 
-[Home](Home.md) · [Method](Method-and-Mathematics.md) · [Results](Experiments-and-Results.md)
+[Home](Home.md) · [Method](Algorithm-and-Mathematics.md) · [Results](Results-and-Visualization.md)
 
 The loader supplies 1,797 8×8 digit images, pixel values 0–16, ten classes. It contains UCI optdigits' original **test subset**. We repartition this subset, not the complete UCI collection.
 

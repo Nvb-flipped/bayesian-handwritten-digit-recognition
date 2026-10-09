@@ -10,7 +10,9 @@ def audit():
     main = Path('report/main.tex').read_text(encoding='utf8')
     original = subprocess.check_output(['git', 'show', f'{baseline}:report/main.tex']).decode('utf8')
     anchor = r'\section{Algorithm Description}'
-    assert main.split(anchor, 1)[1] == original.split(anchor, 1)[1], 'Sections 2 onward changed'
+    end = r'\section{Webpage Link of the Source Codes}'
+    assert main.split(anchor, 1)[1].split(end, 1)[0] == original.split(anchor, 1)[1].split(end, 1)[0], 'Sections 2 through 5 changed'
+    assert main.split(r'\begin{thebibliography}', 1)[1] == original.split(r'\begin{thebibliography}', 1)[1], 'Bibliography changed'
     start = r'\textbf{Why Laplace Redux rather than a newer method?}'
     rationale = original.split(start, 1)[1].split(r'\subsection{Actual skill contributions}', 1)[0]
     assert start + rationale in main, 'Existing selection justification changed'
@@ -38,14 +40,14 @@ def audit():
     assert all(text in diagram for text in ['HUMAN', 'Codex Desktop', 'Laplace Redux, NatPN, VBLL',
         'Prompt 02', 'Pending:', 'Prompt 03', 'Prompt 04'])
     record = dict(baseline_commit=baseline, source_files_and_reflection_bitwise_unchanged=preserved,
-        sections_2_onward_source_unchanged=True, original_selection_justification_preserved=True,
+        sections_2_through_5_source_unchanged=True, bibliography_preserved=True, original_selection_justification_preserved=True,
         verified_verbatim_excerpts=len(quotes), skill_document_snapshots_verified=len(skills),
         vector_diagram_source_sha256=hashlib.sha256(diagram.encode('utf8')).hexdigest(),
-        github_publication_pending=True, independent_peer_review_claimed=False)
+        github_publication_pending=False, independent_peer_review_claimed=False)
     Path('results/instruction_section_audit.json').write_text(json.dumps(record, indent=2)+'\n',
         encoding='utf8', newline='\n')
     print(f'Instruction audit passed: {len(quotes)} verified excerpts, {len(skills)} skill snapshots; '
-          'original prompts, reflection, selection rationale and Sections 2 onward preserved.')
+          'original prompts, reflection, selection rationale and Sections 2 through 5 and bibliography preserved.')
 
 
 if __name__ == '__main__':

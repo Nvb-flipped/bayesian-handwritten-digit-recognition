@@ -15,15 +15,17 @@ The 1,797-image scikit-learn digits subset is split into **1,077 train / 360 val
 | MAP | 97.78 ± 0.28 | 0.978 ± 0.003 | 0.099 ± 0.003 | 0.040 ± 0.002 |
 | Full Laplace | 97.69 ± 0.16 | 0.977 ± 0.002 | 0.151 ± 0.003 | 0.055 ± 0.001 |
 
-Variation is sample SD across three initialization seeds on **the same** 360 test images. NB is deterministic and evaluated once. Brier sums over classes. Laplace retains strong recognition accuracy but has worse probability quality than MAP. [Detailed results and ablations](docs/wiki/Experiments-and-Results.md).
+Variation is sample SD across three initialization seeds on **the same** 360 test images. NB is deterministic and evaluated once. Brier sums over classes. Laplace retains strong recognition accuracy but has worse probability quality than MAP. [Detailed results and ablations](docs/wiki/Results-and-Visualization.md).
 
-[Compiled report](report/main.pdf). The student's five-paragraph reflection has been inserted faithfully and verified in the compiled PDF. Public repository/wiki publication is deliberately deferred to Prompt 03; no Assignment 2 public URL exists yet.
+[Compiled report](report/main.pdf). The student's five-paragraph reflection has been inserted faithfully and verified in the compiled PDF. [Public source repository](https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition). [Public wiki](https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/wiki), populated with six technical pages. [Version-controlled wiki sources](docs/wiki/Home.md).
 
 ## Reproduce
 
 Python 3.12 was used. Create an independent environment:
 
 ~~~powershell
+git clone https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition.git
+Set-Location bayesian-handwritten-digit-recognition
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 $env:PYTHONPATH = "src"
@@ -76,8 +78,8 @@ report/             LaTeX, generated tables and PDF
 docs/               Research, AI workflow and wiki sources
 ~~~
 
-- [Method](docs/wiki/Method-and-Mathematics.md)
-- [Dataset/protocol](docs/wiki/Dataset-and-Protocol.md)
+- [Method](docs/wiki/Algorithm-and-Mathematics.md)
+- [Dataset/protocol](docs/wiki/Dataset-and-Experiment-Protocol.md)
 - [Research and verified references](docs/research.md)
 - [Actual AI workflow](docs/ai_usage.md)
 - [Actual skill instructions and consultation status](docs/skill_sources.md)
@@ -95,4 +97,4 @@ This is UCI optdigits' **original test subset**, repartitioned, not the complete
 
 The materially used skill guidance is acknowledged in the report: [Scientific Agent Skills, Kassis et al. (2026)](https://arxiv.org/abs/2609.00065).
 
-Section 1 now gives a self-contained three-page instruction/discovery account, seven verified prompt excerpts and a vector workflow diagram. Complete consulted skill instruction documents are archived with hashes; installed-but-unused skills are distinguished. The algorithm comparison, experimental evidence and supplied reflection remain unchanged. GitHub publication is still deferred to Prompt 03.
+Section 1 now gives a self-contained three-page instruction/discovery account, seven verified prompt excerpts and a vector workflow diagram. Complete consulted skill instruction documents are archived with hashes; installed-but-unused skills are distinguished. The algorithm comparison, experimental evidence and supplied reflection remain unchanged. The audited Git history is now public. [Publication and verification record](docs/publication_03.md). Prompt 04 remains a subsequent submission audit.

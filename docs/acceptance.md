@@ -1,6 +1,6 @@
-# Local technical acceptance through Prompt 02
+# Technical acceptance and Prompt 03 publication
 
-Updated on 9 October 2026 after Prompt 02, its [final refinement](refinement_02.md), student reflection insertion and [Section 1 refinement](instruction_section_review.md). The original Prompt 01 acceptance snapshot is recoverable in Git a28a563. The student's supplied reflection is included and verified. This records local technical completion; public publication remains pending.
+Updated on 9 October 2026 after Prompt 02, its [final refinement](refinement_02.md), student reflection insertion and [Section 1 refinement](instruction_section_review.md). The original Prompt 01 acceptance snapshot is recoverable in Git a28a563. The student's supplied reflection is included and verified. This records technical completion and verified public repository publication; the separate wiki is populated and publicly verified.
 
 ## Verified deliverables
 
@@ -18,9 +18,9 @@ Updated on 9 October 2026 after Prompt 02, its [final refinement](refinement_02.
 | Resolve technical/figure findings | [Prompt 02 record](review_02.md): logging repair, tested math example, 72 executed sampling repetitions and regenerated metrics; primary arrays remain unchanged. |
 | Generate meaningful figures | Nine numbered figures plus one tested toy geometry diagram, each PDF/SVG/300-DPI PNG; all inspected alone and in the report. [Per-figure review](figure_review_02.md). |
 | Compile and inspect report | Final Tectonic exit code 0; 18 pages, Section 1 on pages 2–4, with all five student-supplied paragraphs verified on page 17. Every final rendered page (1–18) visually inspected for legibility, equations, cropping, captions and layout. |
-| Check Markdown | README/six wiki previews parsed as GFM and visually inspected with rendered math/tables. Local links checked; public rendering deferred. |
+| Check Markdown | README/six wiki previews parsed as GFM and visually inspected with rendered math/tables. Local links checked; public README and repository Markdown rendering checked in Prompt 03. Public wiki mathematics, matrices, figures, results tables and navigation are verified. |
 | Document AI workflow | [Actual AI-use log](ai_usage.md), seven verified prompt excerpts, vector workflow diagram, [twelve skill-document snapshots](skill_sources.md), README and six wiki sources. No invented personal reflection or search history. |
-| Version control | New independent local Git repository, branch codex/prompt-01. No publication or remote added in this phase. |
+| Version control | Independent Git history uploaded to the new public topic-named repository, remote origin and public main branch; local branch codex/prompt-01 tracks origin/main. |
 
 ## Executed commands and checks
 
@@ -42,7 +42,8 @@ The quantitative result is not uniformly favorable to the Bayesian method: Lapla
 ## Exact remaining work
 
 Completed: the student supplied their own reflection; all five paragraphs are preserved in report/student_reflection.txt and included through report/student_reflection.tex. Compilation, extracted-text comparison and visual inspection passed.
-1. In Prompt 03, repair GitHub authentication, create a new public Assignment 2 repository, publish source/report and wiki when available, verify public pages, and insert the real code URL into the report. The inspected GitHub CLI authentication is invalid. Publication was explicitly deferred by Prompts 01 and 02.
-2. Perform the final submission audit (Prompt 04) after those changes.
+1. Perform the final submission audit (Prompt 04).
 
-There is no unresolved local execution or compilation blocker. The public code URL remains pending for Prompt 03; the reflection has been supplied and verified. No personal experiences or public URL have been fabricated.
+The student initialized Home through the Codex browser. CLI synchronization then published all six pages to the separate wiki master branch; public Home, mathematical and results pages were verified. GitHub rejected an operator macro and Markdown escaped matrix row separators in the first wiki rendering; supported upright notation and fenced math repaired both without changing the equations.
+
+The public repository and report URL are verified. No local execution or final compilation blocker remains. See [publication record](publication_03.md) for resolved initialization/rendering issues and the retained initial compile failure.

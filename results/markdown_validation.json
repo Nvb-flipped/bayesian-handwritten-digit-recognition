@@ -1,94 +1,90 @@
 {
-  "renderer": "marked 17.0.5, GFM; headless Chrome with MathJax 3",
+  "renderer": "Published GitHub wiki browser inspection; GFM source structure audit",
   "records": [
     {
-      "page": "AI-Workflow.html",
-      "mathReady": true,
-      "tables": 0,
-      "mathNodes": 0,
-      "mathErrors": 0,
-      "horizontalOverflow": false,
-      "tableOverflow": false
+      "source": "README.md",
+      "gfm_structure_checked": true,
+      "tables": 1,
+      "math_fences": 0,
+      "display_dollar_delimiters": 0
     },
     {
-      "page": "Dataset-and-Protocol.html",
-      "mathReady": true,
-      "tables": 0,
-      "mathNodes": 0,
-      "mathErrors": 0,
-      "horizontalOverflow": false,
-      "tableOverflow": false
+      "source": "docs/skill_sources.md",
+      "gfm_structure_checked": true,
+      "tables": 1,
+      "math_fences": 0,
+      "display_dollar_delimiters": 0
     },
     {
-      "page": "Experiments-and-Results.html",
-      "mathReady": true,
+      "source": "docs/wiki/AI-Workflow.md",
+      "gfm_structure_checked": true,
+      "tables": 0,
+      "math_fences": 0,
+      "display_dollar_delimiters": 0
+    },
+    {
+      "source": "docs/wiki/Algorithm-and-Mathematics.md",
+      "gfm_structure_checked": true,
+      "tables": 0,
+      "math_fences": 5,
+      "display_dollar_delimiters": 0
+    },
+    {
+      "source": "docs/wiki/Dataset-and-Experiment-Protocol.md",
+      "gfm_structure_checked": true,
+      "tables": 0,
+      "math_fences": 0,
+      "display_dollar_delimiters": 0
+    },
+    {
+      "source": "docs/wiki/Home.md",
+      "gfm_structure_checked": true,
+      "tables": 0,
+      "math_fences": 0,
+      "display_dollar_delimiters": 0
+    },
+    {
+      "source": "docs/wiki/Reproduction.md",
+      "gfm_structure_checked": true,
+      "tables": 0,
+      "math_fences": 0,
+      "display_dollar_delimiters": 0
+    },
+    {
+      "source": "docs/wiki/Results-and-Visualization.md",
+      "gfm_structure_checked": true,
       "tables": 2,
-      "mathNodes": 1,
-      "mathErrors": 0,
-      "horizontalOverflow": false,
-      "tableOverflow": false
-    },
-    {
-      "page": "Home.html",
-      "mathReady": true,
-      "tables": 0,
-      "mathNodes": 0,
-      "mathErrors": 0,
-      "horizontalOverflow": false,
-      "tableOverflow": false
-    },
-    {
-      "page": "Method-and-Mathematics.html",
-      "mathReady": true,
-      "tables": 0,
-      "mathNodes": 26,
-      "mathErrors": 0,
-      "horizontalOverflow": false,
-      "tableOverflow": false
-    },
-    {
-      "page": "README.html",
-      "mathReady": true,
-      "tables": 1,
-      "mathNodes": 0,
-      "mathErrors": 0,
-      "horizontalOverflow": false,
-      "tableOverflow": false
-    },
-    {
-      "page": "Reproduction.html",
-      "mathReady": true,
-      "tables": 0,
-      "mathNodes": 0,
-      "mathErrors": 0,
-      "horizontalOverflow": false,
-      "tableOverflow": false
-    },
-    {
-      "page": "skill_sources.html",
-      "mathReady": true,
-      "tables": 1,
-      "mathNodes": 0,
-      "mathErrors": 0,
-      "horizontalOverflow": false,
-      "tableOverflow": false
+      "math_fences": 0,
+      "display_dollar_delimiters": 0
     }
   ],
-  "public_github_rendering": "Deferred to Prompt 03; no publication performed.",
   "source_sha256": {
-    "README.md": "3a5b8193269713f69221b6c08aaac363813f8ffb35dc4e2195c53d0b58c4fa50",
-    "docs/skill_sources.md": "a3b7908f2185e82931866ba6e5462d1d91801ce5a207d92bdc287729f65174d0",
-    "docs/wiki/AI-Workflow.md": "fe12befce0c552534f5d7234f71d52040d01e2786b541bc09f6863093cd51426",
-    "docs/wiki/Dataset-and-Protocol.md": "ea0a7c1a7e56aa8eed2113de29622c5af582b4a76da30d890426f074b34bcdd4",
-    "docs/wiki/Experiments-and-Results.md": "0267a866bf184e579ea2def9d269519351a791dcbe0d7b04275d1de4d56a0474",
-    "docs/wiki/Home.md": "3ca6ad26972663c8a5fbb8d99112f8f31df951346822e0d7de822b48beb8a72c",
-    "docs/wiki/Method-and-Mathematics.md": "b582047dcffb2dbcf7e313059ba69f7b5c6d7198ab7217e57b5e0da4360d67b3",
-    "docs/wiki/Reproduction.md": "607197038e34fc900270361a55808f295a1fbe81bc2bf69e2711cd32a8af411d"
+    "README.md": "aa58a647d96000ada39973d9f6ea3dd4ff556f871a37573f23fd8d8a88574788",
+    "docs/skill_sources.md": "24f0e2e588f48b5e3e2a1ec86ea08ff439026df38d8fa694a299a53a5c255251",
+    "docs/wiki/AI-Workflow.md": "7896ed008dc0c98fb22a41d739ef82aacba314ccb41d2cf04b575e02c89ec767",
+    "docs/wiki/Algorithm-and-Mathematics.md": "0fdefd6a67280466e0c2e165aa58af3beb1d3c593da697129a7ccaf405f60c76",
+    "docs/wiki/Dataset-and-Experiment-Protocol.md": "0a6aedbca8799937e2f5be00d966ca9f4c47bcc2107a123770df4d47ad45ea78",
+    "docs/wiki/Home.md": "a331c5da1e0040f1acfa7d5192c2a4794348ebf4e4e1f69ca5db825db7ee4a3a",
+    "docs/wiki/Reproduction.md": "f5069a9fb0beb6e3c6340b86234a456421ab804aecfaa241d9212ec25874ef1b",
+    "docs/wiki/Results-and-Visualization.md": "dd8134c0fb2a640c42b7dfe5bda6e5cfd5f1ac7a3fcbbdcc48871cb1a785cedb"
   },
+  "public_github_rendering": {
+    "wiki_pages_inspected": [
+      "Home",
+      "Algorithm-and-Mathematics",
+      "Results-and-Visualization"
+    ],
+    "math_and_matrices_verified": true,
+    "results_tables_verified": true,
+    "three_figures_verified": true,
+    "initial_macro_and_matrix_errors_repaired": true,
+    "readme_verified": true
+  },
+  "previous_local_render_record": "results/markdown_validation_prepublication.json",
   "visual_review": {
     "reviewer": "AI agent",
     "date": "2026-10-09",
-    "pages_inspected": 8,
-    "outcome": "All eight screenshots inspected; equations and four tables readable; no overlapping or clipped prose. Long code remains scrollable."
+    "scope": "Public Home, mathematical wiki page and results wiki page; public README.",
+    "outcome": "Readable equations, correct matrices, tables, figures and navigation."
   }
 }
