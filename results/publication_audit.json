@@ -1,0 +1,105 @@
+{
+  "repository": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition",
+  "public": true,
+  "default_branch": "main",
+  "content_commit_verified": "1618499177e6a530620500bcdff13a067f442ff0",
+  "public_tree_blobs_verified": 172,
+  "required_public_files": {
+    "README.md": {
+      "url": "https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/1618499177e6a530620500bcdff13a067f442ff0/README.md",
+      "sha256": "aa58a647d96000ada39973d9f6ea3dd4ff556f871a37573f23fd8d8a88574788"
+    },
+    "report/main.tex": {
+      "url": "https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/1618499177e6a530620500bcdff13a067f442ff0/report/main.tex",
+      "sha256": "69e05ebe873b3d863a4d58b6a95a2d1d7a9be378696c4591afd2f875c3190f7a"
+    },
+    "report/main.pdf": {
+      "url": "https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/1618499177e6a530620500bcdff13a067f442ff0/report/main.pdf",
+      "sha256": "bffa92d53d42d51cb060b71dd2d0aa6c4bc798fb564ef6bb02d109aa3a2f58ef"
+    },
+    "AGENTS.md": {
+      "url": "https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/1618499177e6a530620500bcdff13a067f442ff0/AGENTS.md",
+      "sha256": "322fa5daa078f182517f858c1756a0d6caae2586de74321a6fcdce79847666aa"
+    },
+    "AIassign2.pdf": {
+      "url": "https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/1618499177e6a530620500bcdff13a067f442ff0/AIassign2.pdf",
+      "sha256": "6298135c8cc5e1ad052dd2ba1bb4f179ac252a266f11e31417fcb3f2ef0dffe3"
+    },
+    "configs/default.json": {
+      "url": "https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/1618499177e6a530620500bcdff13a067f442ff0/configs/default.json",
+      "sha256": "ed878d5095c025e93dd3f5c5895a80bdf2de32d8356c3a324ea963f048b8f2f8"
+    },
+    "results/summary.json": {
+      "url": "https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/1618499177e6a530620500bcdff13a067f442ff0/results/summary.json",
+      "sha256": "187cf6d58d35a6f0235ac8afafe3556b07286aad244cfc62b092b66e17a91708"
+    },
+    "results/predictions.npz": {
+      "url": "https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/1618499177e6a530620500bcdff13a067f442ff0/results/predictions.npz",
+      "sha256": "73695f0f3b742c9d7db725d2ea1adf903e5129c24746ddab5d4a38a09fb2ceea"
+    },
+    "src/bayes_digits/laplace.py": {
+      "url": "https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/1618499177e6a530620500bcdff13a067f442ff0/src/bayes_digits/laplace.py",
+      "sha256": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c"
+    },
+    "tests/test_core.py": {
+      "url": "https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/1618499177e6a530620500bcdff13a067f442ff0/tests/test_core.py",
+      "sha256": "d3b30d8abdfbe9a513b67cd45862f7c7cd09af1cbe37635fe619d66047c5b2f3"
+    },
+    "prompts/03_PUBLISH_GITHUB_AND_WIKI.md": {
+      "url": "https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/1618499177e6a530620500bcdff13a067f442ff0/prompts/03_PUBLISH_GITHUB_AND_WIKI.md",
+      "sha256": "72d98e110cedc8234df25c816b2114e565c819c02c297aaef197c33defb443fd"
+    }
+  },
+  "public_pdf_bitwise_equal": true,
+  "wiki_enabled": true,
+  "wiki_commit_verified": "49cdaf0a6bdd6b7399e7d1fbc57e01277a242106",
+  "wiki_pages": {
+    "AI-Workflow": {
+      "url": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/wiki/AI-Workflow",
+      "status": 200,
+      "synchronized_source": true
+    },
+    "Algorithm-and-Mathematics": {
+      "url": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/wiki/Algorithm-and-Mathematics",
+      "status": 200,
+      "synchronized_source": true
+    },
+    "Dataset-and-Experiment-Protocol": {
+      "url": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/wiki/Dataset-and-Experiment-Protocol",
+      "status": 200,
+      "synchronized_source": true
+    },
+    "Home": {
+      "url": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/wiki",
+      "status": 200,
+      "synchronized_source": true
+    },
+    "Reproduction": {
+      "url": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/wiki/Reproduction",
+      "status": 200,
+      "synchronized_source": true
+    },
+    "Results-and-Visualization": {
+      "url": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/wiki/Results-and-Visualization",
+      "status": 200,
+      "synchronized_source": true
+    }
+  },
+  "wiki_images": {
+    "covariance_geometry": {
+      "url": "https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/1618499177e6a530620500bcdff13a067f442ff0/results/figures/covariance_geometry.png",
+      "sha256": "ef853988c87a99df32fde655f1d50fa988a8e6009005a32381c1cd970aa67521"
+    },
+    "comparison": {
+      "url": "https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/1618499177e6a530620500bcdff13a067f442ff0/results/figures/comparison.png",
+      "sha256": "20c41cba4f20130ba1f1d1576a37d2254e20d38a3ea9a996c22d9d41c44d513d"
+    },
+    "classes": {
+      "url": "https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/1618499177e6a530620500bcdff13a067f442ff0/results/figures/classes.png",
+      "sha256": "18b5d173d9f5df4c2a15b22000cd9d8e771a464f34e72f795c10df244928cfee"
+    }
+  },
+  "requests_authenticated": false,
+  "browser_checks": "Home navigation; mathematical derivations/matrices; results tables; three figures. Rendering errors repaired and rechecked.",
+  "audit_date": "2026-10-09"
+}
