@@ -71,5 +71,18 @@
   "fresh_reproduction_log": "results/logs/submission_reproduction.log",
   "public_status_checked_separately": "results/publication_audit.json",
   "unresolved_technical_failures": [],
-  "remaining_student_action": "Submit final PDF through UMMoodle; no course upload or Turnitin check performed by the agent."
+  "remaining_student_action": "Submit final PDF through UMMoodle; no course upload or Turnitin check performed by the agent.",
+  "public_content_commit_verified": "b67fa8bea26bb67d8ca3bab01a7879286ed57e59",
+  "wiki_commit_verified": "ba2d5e2643c4a3b9296d6fa93748a18fd0d1918b",
+  "public_pdf_bitwise_equal": true,
+  "anonymous_wiki_pages_verified": 6,
+  "public_tree_blobs_verified": 182,
+  "public_browser_pages_inspected": [
+    "README",
+    "Final submission audit",
+    "Wiki Home",
+    "Wiki Algorithm and Mathematics",
+    "Wiki Results and Visualization",
+    "Wiki Reproduction"
+  ]
 }
