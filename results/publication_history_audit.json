@@ -1,0 +1,23 @@
+{
+  "review_date": "2026-10-09",
+  "baseline_commit": "2f86bfec787b5887c7a0db131ecae6de363888ad",
+  "commits_checked": 5,
+  "historical_blobs_checked": 287,
+  "historical_blob_bytes": 11799471,
+  "largest_blob_bytes": 1987180,
+  "credential_pattern_findings": [],
+  "excluded_directory_findings": [],
+  "tracked_files": 159,
+  "selected_checkpoints": {
+    "results/models/features_11.pt": 12229,
+    "results/models/features_22.pt": 12229,
+    "results/models/features_33.pt": 12229,
+    "results/models/gaussian_nb.joblib": 11207,
+    "results/models/posterior_11.npz": 676972,
+    "results/models/posterior_22.npz": 676850,
+    "results/models/posterior_33.npz": 676934
+  },
+  "checkpoint_rationale": "Only seven selected small artifacts retained for exact checkpoint reload/reproduction audits; no dataset caches or redundant training checkpoints.",
+  "intentional_public_course_identity": "Report title includes the student name and ID required by the course.",
+  "scope": "Pattern and inventory audit, not a guarantee that every conceivable secret format is detectable."
+}
