@@ -1,6 +1,6 @@
-# Technical acceptance and Prompt 03 publication
+# Technical acceptance and final submission audit
 
-Updated on 9 October 2026 after Prompt 02, its [final refinement](refinement_02.md), student reflection insertion and [Section 1 refinement](instruction_section_review.md). The original Prompt 01 acceptance snapshot is recoverable in Git a28a563. The student's supplied reflection is included and verified. This records technical completion and verified public repository publication; the separate wiki is populated and publicly verified.
+Updated on 9 October 2026 after Prompt 02, its [final refinement](refinement_02.md), student reflection insertion and [Section 1 refinement](instruction_section_review.md). The original Prompt 01 acceptance snapshot is recoverable in Git a28a563. The student's supplied reflection is included and verified. Prompt 04 repeated tests, full reproduction and final PDF/public-documentation checks. This records technical completion and verified public repository publication; the separate wiki is populated and publicly verified.
 
 ## Verified deliverables
 
@@ -35,14 +35,16 @@ $env:PYTHONPATH = "src"
 .\.venv\Scripts\python.exe -m pip check
 ~~~
 
-The LaTeX plugin's compile_latex.py built report/main.tex with Tectonic; the exact compiler command and output are in [compile.json](../results/logs/compile.json). Poppler rendered every page, and the AI reviewed the images. Correcting package order (float before hyperref) removed duplicate figure/table PDF destination warnings. There are no overfull/underfull boxes. Initial-pass citation/reference warnings are resolved by the compiler's subsequent pass. A Fontconfig setup diagnostic appears in the log, but compilation succeeds and embedded fonts/text were visually verified.
+The LaTeX plugin's compile_latex.py built report/main.tex with Tectonic; the exact compiler command and output are in [compile.json](../results/logs/compile.json). Poppler rendered every page, and the AI reviewed the images. Correcting package order (float before hyperref) removed duplicate figure/table PDF destination warnings. There are no overfull/underfull boxes. Initial-pass citation/reference warnings are resolved by the compiler's subsequent pass. Earlier builds recorded a Fontconfig setup diagnostic; the final successful build and page review are authoritative.
 
 The quantitative result is not uniformly favorable to the Bayesian method: Laplace accuracy is 97.69% and NLL 0.151; the selected MAP baseline achieves 97.78% and NLL 0.099. The report retains this negative probability-quality finding. Three seeds share one test split and do not establish general superiority or deployment performance.
 
-## Exact remaining work
+## Final submission status
 
 Completed: the student supplied their own reflection; all five paragraphs are preserved in report/student_reflection.txt and included through report/student_reflection.tex. Compilation, extracted-text comparison and visual inspection passed.
-1. Perform the final submission audit (Prompt 04).
+Prompt 04 reran all nine tests, metric/checkpoint checks and a fresh full reproduction. It recompiled and inspected every page and rechecked public repository/wiki documentation. The report now shows the small nonzero diagonal NLL SD as 0.0002 instead of rounding it to 0.000. All 25 original experiment evidence files remain unchanged; six numerical includes are byte-identical and the seventh has only that verified precision correction. See [final audit](submission_audit_04.md).
+
+The remaining student action is to submit the final PDF through UMMoodle as required by the assignment. No course-site upload or Turnitin check was performed by the agent.
 
 The student initialized Home through the Codex browser. CLI synchronization then published all six pages to the separate wiki master branch; public Home, mathematical and results pages were verified. GitHub rejected an operator macro and Markdown escaped matrix row separators in the first wiki rendering; supported upright notation and fenced math repaired both without changing the equations.
 

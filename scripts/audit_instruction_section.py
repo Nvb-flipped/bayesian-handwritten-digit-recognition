@@ -38,7 +38,7 @@ def audit():
     assert r'\input{instruction_workflow.tex}' in main
     assert r'\ref{fig:ai-workflow}' in main
     assert all(text in diagram for text in ['HUMAN', 'Codex Desktop', 'Laplace Redux, NatPN, VBLL',
-        'Prompt 02', 'Pending:', 'Prompt 03', 'Prompt 04'])
+        'Prompt 02', 'Final submission checks', 'Prompt 03', 'Prompt 04'])
     record = dict(baseline_commit=baseline, source_files_and_reflection_bitwise_unchanged=preserved,
         sections_2_through_5_source_unchanged=True, bibliography_preserved=True, original_selection_justification_preserved=True,
         verified_verbatim_excerpts=len(quotes), skill_document_snapshots_verified=len(skills),

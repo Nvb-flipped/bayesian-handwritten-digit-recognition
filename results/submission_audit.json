@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-09",
+  "six_required_sections": [
+    {
+      "section": 1,
+      "title": "How AI Found the Algorithm",
+      "start_page": 2,
+      "compiled_text_verified": true
+    },
+    {
+      "section": 2,
+      "title": "Algorithm Description",
+      "start_page": 5,
+      "compiled_text_verified": true
+    },
+    {
+      "section": 3,
+      "title": "How AI Implemented the Algorithm",
+      "start_page": 8,
+      "compiled_text_verified": true
+    },
+    {
+      "section": 4,
+      "title": "Experiment Settings and Results",
+      "start_page": 9,
+      "compiled_text_verified": true
+    },
+    {
+      "section": 5,
+      "title": "What I Have Learnt from This AI Assignment",
+      "start_page": 17,
+      "compiled_text_verified": true
+    },
+    {
+      "section": 6,
+      "title": "Webpage Link of the Source Codes",
+      "start_page": 17,
+      "compiled_text_verified": true
+    }
+  ],
+  "pdf_sha256": "6cefe143fee870c07891bc65c67c0b8fb95d7fb5d94bac5100df918631062b77",
+  "title_metadata_verified": true,
+  "reflection_verified": "results/report_validation.json",
+  "all_final_pages_visually_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "numbered_figures_verified": 9,
+  "numbered_tables_verified": 10,
+  "public_repo_uri_in_pdf": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition",
+  "public_wiki_uri_in_pdf": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/wiki",
+  "nonzero_diagonal_sd_visible": true,
+  "scientific_evidence_audit": "results/refinement_audit.json",
+  "test_log": "results/logs/submission_tests.log",
+  "fresh_reproduction_log": "results/logs/submission_reproduction.log",
+  "public_status_checked_separately": "results/publication_audit.json",
+  "unresolved_technical_failures": [],
+  "remaining_student_action": "Submit final PDF through UMMoodle; no course upload or Turnitin check performed by the agent."
+}

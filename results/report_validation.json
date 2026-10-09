@@ -1,6 +1,6 @@
 {
   "pdf": "report/main.pdf",
-  "sha256": "bffa92d53d42d51cb060b71dd2d0aa6c4bc798fb564ef6bb02d109aa3a2f58ef",
+  "sha256": "6cefe143fee870c07891bc65c67c0b8fb95d7fb5d94bac5100df918631062b77",
   "pages": 18,
   "compiler_exit_code": 0,
   "layout_box_warnings": 0,
@@ -47,5 +47,5 @@
     ],
     "outcome": "All final pages readable; no clipped content or overlapping text/figures observed."
   },
-  "diagnostic": "Initial Fontconfig configuration diagnostic; compilation and visual inspection succeeded."
+  "diagnostic": "Initial-pass reference warnings resolved on the subsequent pass; no final unresolved references or layout-box warnings."
 }

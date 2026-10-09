@@ -10,10 +10,11 @@ summary=json.loads((root/"summary.json").read_text())
 select=json.loads((root/"selection_locked.json").read_text())
 env=json.loads((root/"environment.json").read_text())
 records=json.loads((root/"metrics.json").read_text())
-def cell(method,key,scale=1,digits=3):
+def cell(method,key,scale=1,digits=3,sd_digits=None):
     v=summary[method][key]
     m=v["mean"]*scale
-    return f"{m:.{digits}f}" if v["sd"] is None else "$"+f"{m:.{digits}f}\\pm {v['sd']*scale:.{digits}f}"+"$"
+    sd_digits = digits if sd_digits is None else sd_digits
+    return f"{m:.{digits}f}" if v["sd"] is None else "$"+f"{m:.{digits}f}\\pm {v['sd']*scale:.{sd_digits}f}"+"$"
 
 main=[r"\begin{tabular}{lrrrr}\toprule",
       r"Method & Accuracy (\%) & Macro-F1 & NLL & Brier \\\midrule"]
@@ -30,7 +31,9 @@ more.append(r"\bottomrule\end{tabular}")
 (report/"probability_metrics.tex").write_text("\n".join(more),newline="\n")
 abl=[r"\begin{tabular}{lrrr}\toprule",r"Frozen-prior variant & Accuracy (\%) & NLL & ECE \\\midrule"]
 for method in ["Matched MAP","Laplace","Diagonal Laplace"]:
-    abl.append(method+" & "+cell(method,"accuracy",100,2)+" & "+cell(method,"nll")+" & "+cell(method,"ece")+r"\\")
+    # Preserve the small, measured diagonal NLL variation rather than rounding it to zero.
+    nll = cell(method,"nll",sd_digits=4 if method=="Diagonal Laplace" else 3)
+    abl.append(method+" & "+cell(method,"accuracy",100,2)+" & "+nll+" & "+cell(method,"ece")+r"\\")
 abl.append(r"\bottomrule\end{tabular}")
 (report/"ablation.tex").write_text("\n".join(abl),newline="\n")
 rows=[r"\begin{tabular}{rrrrr}\toprule",

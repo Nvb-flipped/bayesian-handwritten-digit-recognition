@@ -59,20 +59,21 @@
     }
   ],
   "source_sha256": {
-    "README.md": "aa58a647d96000ada39973d9f6ea3dd4ff556f871a37573f23fd8d8a88574788",
-    "docs/skill_sources.md": "24f0e2e588f48b5e3e2a1ec86ea08ff439026df38d8fa694a299a53a5c255251",
-    "docs/wiki/AI-Workflow.md": "7896ed008dc0c98fb22a41d739ef82aacba314ccb41d2cf04b575e02c89ec767",
+    "README.md": "08e66b6f38ee00abc3a9ba19b032b9aa8429f0ae819a1e8b711020435c99af08",
+    "docs/skill_sources.md": "7e98705256b3a51d23ecb040b3ea0033abfa236e457e66a8265d35d786b95277",
+    "docs/wiki/AI-Workflow.md": "6d479d6297756a03cb712b5b9fc916e7c8ee75cff49be32b64af634fd6e52af9",
     "docs/wiki/Algorithm-and-Mathematics.md": "0fdefd6a67280466e0c2e165aa58af3beb1d3c593da697129a7ccaf405f60c76",
     "docs/wiki/Dataset-and-Experiment-Protocol.md": "0a6aedbca8799937e2f5be00d966ca9f4c47bcc2107a123770df4d47ad45ea78",
     "docs/wiki/Home.md": "a331c5da1e0040f1acfa7d5192c2a4794348ebf4e4e1f69ca5db825db7ee4a3a",
-    "docs/wiki/Reproduction.md": "f5069a9fb0beb6e3c6340b86234a456421ab804aecfaa241d9212ec25874ef1b",
+    "docs/wiki/Reproduction.md": "8cbd741aeea70d6464139796fe621204282a8293186ae0398b3d2a35be734d8d",
     "docs/wiki/Results-and-Visualization.md": "dd8134c0fb2a640c42b7dfe5bda6e5cfd5f1ac7a3fcbbdcc48871cb1a785cedb"
   },
   "public_github_rendering": {
     "wiki_pages_inspected": [
       "Home",
       "Algorithm-and-Mathematics",
-      "Results-and-Visualization"
+      "Results-and-Visualization",
+      "Reproduction"
     ],
     "math_and_matrices_verified": true,
     "results_tables_verified": true,
@@ -84,7 +85,7 @@
   "visual_review": {
     "reviewer": "AI agent",
     "date": "2026-10-09",
-    "scope": "Public Home, mathematical wiki page and results wiki page; public README.",
+    "scope": "Public Home, mathematics, results and reproduction wiki pages; public README.",
     "outcome": "Readable equations, correct matrices, tables, figures and navigation."
   }
 }

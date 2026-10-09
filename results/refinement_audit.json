@@ -29,7 +29,16 @@
     "results/review_diagnostics/summary.json": "85ab7c10630dbfdde40840d4a937b169c83a07af0e9bcf0f9d3c953213e2d166"
   },
   "primary_arrays_bitwise_unchanged": 18,
-  "numerical_table_files_bitwise_unchanged": 7,
+  "numerical_table_files_bitwise_unchanged": 6,
+  "verified_table_precision_changes": [
+    {
+      "file": "report/ablation.tex",
+      "measured_sd": 0.00019644239400501596,
+      "before": "$0.229\\pm 0.000$",
+      "after": "$0.229\\pm 0.0002$",
+      "reason": "Show nonzero measured variation"
+    }
+  ],
   "raw_f1_observations_preserved": 60,
   "confusion_proportions_unchanged": true,
   "covariance_contours_and_contrast_variances_verified": true,

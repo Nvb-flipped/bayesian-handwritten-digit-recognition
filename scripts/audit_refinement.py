@@ -31,9 +31,20 @@ def audit():
     tables = [Path("report") / name for name in [
         "results.tex", "performance.tex", "probability_metrics.tex", "selection.tex",
         "per_class.tex", "diagnostic_text.tex", "ablation.tex"]]
+    formatting_changes = []
     for path in tables:
         original = subprocess.check_output(["git", "show", f"{baseline}:{path.as_posix()}"])
-        assert original == path.read_bytes(), f"Numerical table changed: {path}"
+        if path.name == 'ablation.tex':
+            value = json.loads((root/'summary.json').read_text())['Diagonal Laplace']['nll']
+            before = f"${value['mean']:.3f}\\pm {value['sd']:.3f}$"
+            after = f"${value['mean']:.3f}\\pm {value['sd']:.4f}$"
+            assert original.decode().count(before) == 1
+            expected = original.decode().replace(before, after).encode()
+            assert path.read_bytes() == expected, 'Unexpected ablation-table change'
+            formatting_changes.append(dict(file=path.as_posix(), measured_sd=value['sd'],
+                before=before, after=after, reason='Show nonzero measured variation'))
+        else:
+            assert original == path.read_bytes(), f"Numerical table changed: {path}"
 
     old = np.load(io.BytesIO(subprocess.check_output(
         ["git", "show", f"{baseline}:results/predictions.npz"])))
@@ -71,13 +82,14 @@ def audit():
     save_json(root / "refinement_audit.json", dict(
         baseline_commit=baseline, executed_files_bitwise_unchanged=len(paths),
         evidence_sha256=hashes, primary_arrays_bitwise_unchanged=len(current.files),
-        numerical_table_files_bitwise_unchanged=len(tables),
+        numerical_table_files_bitwise_unchanged=len(tables)-len(formatting_changes),
+        verified_table_precision_changes=formatting_changes,
         raw_f1_observations_preserved=raw_observations, confusion_proportions_unchanged=True,
         covariance_contours_and_contrast_variances_verified=True,
         historical_experiment_environment_preserved=True,
         current_plotting_provenance="results/figure_manifest.json"))
     print(f"Refinement audit passed: {len(paths)} unchanged evidence files, "
-          f"{len(current.files)} arrays, {len(tables)} tables, {raw_observations} raw F1 observations; toy geometry verified.")
+          f"{len(current.files)} arrays, {len(tables)} verified tables (one SD precision fix), {raw_observations} raw F1 observations; toy geometry verified.")
 
 
 if __name__ == "__main__":
