@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-12",
+  "resolved_before_final_delivery": true,
+  "findings": [
+    {
+      "commit": "ffb8564",
+      "check": "Fresh full public clone and first Ubuntu/Windows CI",
+      "observed": "11 tests passed; two temporary-fixture setup errors because the tmp parent directory did not exist",
+      "correction": "Use a direct ignored .pytest-tmp child as pytest basetemp",
+      "ci_run": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/actions/runs/38252732363"
+    },
+    {
+      "commit": "a57187f",
+      "check": "Full-clone instruction/evidence audit after all 13 tests passed",
+      "observed": "Strict reflection TXT byte comparison failed because Windows checkout converted LF to CRLF",
+      "correction": "Path-specific -text Git attribute preserves original canonical reflection bytes; audit unchanged"
+    }
+  ]
+}

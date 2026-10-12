@@ -14,3 +14,6 @@
 *.joblib binary
 # Archived third-party instruction documents retain their original literal bytes.
 docs/skill_documents/** -text whitespace=cr-at-eol
+
+# Preserve the student-authored canonical reflection bytes across checkouts.
+report/student_reflection.txt -text
