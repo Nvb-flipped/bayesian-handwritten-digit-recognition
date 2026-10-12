@@ -18,3 +18,5 @@ report/*.toc
 report/*.synctex.gz
 report/*.xdv
 report/*.fls
+
+.pytest-tmp/
