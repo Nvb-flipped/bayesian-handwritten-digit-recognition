@@ -2,204 +2,204 @@
   "conclusion": "success",
   "jobs": [
     {
-      "completedAt": "2026-10-12T13:09:05Z",
+      "completedAt": "2026-10-12T13:19:54Z",
       "conclusion": "success",
-      "databaseId": 114825308680,
+      "databaseId": 114829547918,
       "name": "verify (windows-latest)",
-      "startedAt": "2026-10-12T13:07:07Z",
+      "startedAt": "2026-10-12T13:17:44Z",
       "status": "completed",
       "steps": [
         {
-          "completedAt": "2026-10-12T13:07:09Z",
+          "completedAt": "2026-10-12T13:17:46Z",
           "conclusion": "success",
           "name": "Set up job",
           "number": 1,
-          "startedAt": "2026-10-12T13:07:08Z",
+          "startedAt": "2026-10-12T13:17:45Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:07:14Z",
+          "completedAt": "2026-10-12T13:17:53Z",
           "conclusion": "success",
           "name": "Run actions/checkout@v4",
           "number": 2,
-          "startedAt": "2026-10-12T13:07:09Z",
+          "startedAt": "2026-10-12T13:17:46Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:07:14Z",
+          "completedAt": "2026-10-12T13:17:53Z",
           "conclusion": "success",
           "name": "Run actions/setup-python@v5",
           "number": 3,
-          "startedAt": "2026-10-12T13:07:14Z",
+          "startedAt": "2026-10-12T13:17:53Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:08:15Z",
+          "completedAt": "2026-10-12T13:19:00Z",
           "conclusion": "success",
           "name": "Run python -m pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cpu",
           "number": 4,
-          "startedAt": "2026-10-12T13:07:14Z",
+          "startedAt": "2026-10-12T13:17:53Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:08:45Z",
+          "completedAt": "2026-10-12T13:19:33Z",
           "conclusion": "success",
           "name": "Run python -m pip install -r requirements.txt",
           "number": 5,
-          "startedAt": "2026-10-12T13:08:15Z",
+          "startedAt": "2026-10-12T13:19:00Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:08:46Z",
+          "completedAt": "2026-10-12T13:19:34Z",
           "conclusion": "success",
           "name": "Run python -m pip check",
           "number": 6,
-          "startedAt": "2026-10-12T13:08:45Z",
+          "startedAt": "2026-10-12T13:19:33Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:08:56Z",
+          "completedAt": "2026-10-12T13:19:46Z",
           "conclusion": "success",
           "name": "Run python -m pytest -q",
           "number": 7,
-          "startedAt": "2026-10-12T13:08:46Z",
+          "startedAt": "2026-10-12T13:19:34Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:09:01Z",
+          "completedAt": "2026-10-12T13:19:50Z",
           "conclusion": "success",
           "name": "Run python -m bayes_digits.experiment --config configs/smoke.json",
           "number": 8,
-          "startedAt": "2026-10-12T13:08:56Z",
+          "startedAt": "2026-10-12T13:19:46Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:09:01Z",
+          "completedAt": "2026-10-12T13:19:51Z",
           "conclusion": "success",
           "name": "Post Run actions/setup-python@v5",
           "number": 15,
-          "startedAt": "2026-10-12T13:09:01Z",
+          "startedAt": "2026-10-12T13:19:50Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:09:03Z",
+          "completedAt": "2026-10-12T13:19:52Z",
           "conclusion": "success",
           "name": "Post Run actions/checkout@v4",
           "number": 16,
-          "startedAt": "2026-10-12T13:09:01Z",
+          "startedAt": "2026-10-12T13:19:51Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:09:03Z",
+          "completedAt": "2026-10-12T13:19:52Z",
           "conclusion": "success",
           "name": "Complete job",
           "number": 17,
-          "startedAt": "2026-10-12T13:09:03Z",
+          "startedAt": "2026-10-12T13:19:52Z",
           "status": "completed"
         }
       ],
-      "url": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/actions/runs/38253444598/job/114825308680"
+      "url": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/actions/runs/38254673439/job/114829547918"
     },
     {
-      "completedAt": "2026-10-12T13:08:03Z",
+      "completedAt": "2026-10-12T13:18:40Z",
       "conclusion": "success",
-      "databaseId": 114825309290,
+      "databaseId": 114829548432,
       "name": "verify (ubuntu-latest)",
-      "startedAt": "2026-10-12T13:07:07Z",
+      "startedAt": "2026-10-12T13:17:43Z",
       "status": "completed",
       "steps": [
         {
-          "completedAt": "2026-10-12T13:07:09Z",
+          "completedAt": "2026-10-12T13:17:45Z",
           "conclusion": "success",
           "name": "Set up job",
           "number": 1,
-          "startedAt": "2026-10-12T13:07:08Z",
+          "startedAt": "2026-10-12T13:17:44Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:07:10Z",
+          "completedAt": "2026-10-12T13:17:48Z",
           "conclusion": "success",
           "name": "Run actions/checkout@v4",
           "number": 2,
-          "startedAt": "2026-10-12T13:07:09Z",
+          "startedAt": "2026-10-12T13:17:45Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:07:10Z",
+          "completedAt": "2026-10-12T13:17:48Z",
           "conclusion": "success",
           "name": "Run actions/setup-python@v5",
           "number": 3,
-          "startedAt": "2026-10-12T13:07:10Z",
+          "startedAt": "2026-10-12T13:17:48Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:07:34Z",
+          "completedAt": "2026-10-12T13:18:11Z",
           "conclusion": "success",
           "name": "Run python -m pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cpu",
           "number": 4,
-          "startedAt": "2026-10-12T13:07:10Z",
+          "startedAt": "2026-10-12T13:17:48Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:07:51Z",
+          "completedAt": "2026-10-12T13:18:27Z",
           "conclusion": "success",
           "name": "Run python -m pip install -r requirements.txt",
           "number": 5,
-          "startedAt": "2026-10-12T13:07:34Z",
+          "startedAt": "2026-10-12T13:18:11Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:07:51Z",
+          "completedAt": "2026-10-12T13:18:27Z",
           "conclusion": "success",
           "name": "Run python -m pip check",
           "number": 6,
-          "startedAt": "2026-10-12T13:07:51Z",
+          "startedAt": "2026-10-12T13:18:27Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:07:57Z",
+          "completedAt": "2026-10-12T13:18:33Z",
           "conclusion": "success",
           "name": "Run python -m pytest -q",
           "number": 7,
-          "startedAt": "2026-10-12T13:07:51Z",
+          "startedAt": "2026-10-12T13:18:27Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:08:01Z",
+          "completedAt": "2026-10-12T13:18:37Z",
           "conclusion": "success",
           "name": "Run python -m bayes_digits.experiment --config configs/smoke.json",
           "number": 8,
-          "startedAt": "2026-10-12T13:07:57Z",
+          "startedAt": "2026-10-12T13:18:33Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:08:01Z",
+          "completedAt": "2026-10-12T13:18:37Z",
           "conclusion": "success",
           "name": "Post Run actions/setup-python@v5",
           "number": 15,
-          "startedAt": "2026-10-12T13:08:01Z",
+          "startedAt": "2026-10-12T13:18:37Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:08:01Z",
+          "completedAt": "2026-10-12T13:18:38Z",
           "conclusion": "success",
           "name": "Post Run actions/checkout@v4",
           "number": 16,
-          "startedAt": "2026-10-12T13:08:01Z",
+          "startedAt": "2026-10-12T13:18:37Z",
           "status": "completed"
         },
         {
-          "completedAt": "2026-10-12T13:08:01Z",
+          "completedAt": "2026-10-12T13:18:38Z",
           "conclusion": "success",
           "name": "Complete job",
           "number": 17,
-          "startedAt": "2026-10-12T13:08:01Z",
+          "startedAt": "2026-10-12T13:18:38Z",
           "status": "completed"
         }
       ],
-      "url": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/actions/runs/38253444598/job/114825309290"
+      "url": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/actions/runs/38254673439/job/114829548432"
     }
   ],
   "status": "completed",
-  "url": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/actions/runs/38253444598"
+  "url": "https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/actions/runs/38254673439"
 }
