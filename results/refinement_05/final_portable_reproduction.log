@@ -1,0 +1,394 @@
+python -m pip check
+No broken requirements found.
+python -m pytest -q
+.............                                                            [100%]
+13 passed in 4.06s
+python -m bayes_digits.experiment --config configs/smoke.json
+Seed 11: feature epoch 3; MAP alpha 1, Laplace alpha 1
+{
+  "Gaussian NB": {
+    "accuracy": {
+      "mean": 0.8944444444444445,
+      "sd": null
+    },
+    "macro_f1": {
+      "mean": 0.8961645384136485,
+      "sd": null
+    },
+    "macro_precision": {
+      "mean": 0.9035194875549741,
+      "sd": null
+    },
+    "macro_recall": {
+      "mean": 0.895010725010725,
+      "sd": null
+    },
+    "nll": {
+      "mean": 1.49450914604608,
+      "sd": null
+    },
+    "brier": {
+      "mean": 0.19506780884184682,
+      "sd": null
+    },
+    "ece": {
+      "mean": 0.09861233408496611,
+      "sd": null
+    },
+    "runs": 1
+  },
+  "MAP": {
+    "accuracy": {
+      "mean": 0.7194444444444444,
+      "sd": null
+    },
+    "macro_f1": {
+      "mean": 0.7025738477389998,
+      "sd": null
+    },
+    "macro_precision": {
+      "mean": 0.7048340541698515,
+      "sd": null
+    },
+    "macro_recall": {
+      "mean": 0.716990561990562,
+      "sd": null
+    },
+    "nll": {
+      "mean": 1.0630083872485465,
+      "sd": null
+    },
+    "brier": {
+      "mean": 0.48195200742080413,
+      "sd": null
+    },
+    "ece": {
+      "mean": 0.2568098903710805,
+      "sd": null
+    },
+    "runs": 1
+  },
+  "Laplace": {
+    "accuracy": {
+      "mean": 0.7111111111111111,
+      "sd": null
+    },
+    "macro_f1": {
+      "mean": 0.6908640429314653,
+      "sd": null
+    },
+    "macro_precision": {
+      "mean": 0.6883323071232177,
+      "sd": null
+    },
+    "macro_recall": {
+      "mean": 0.7084984984984986,
+      "sd": null
+    },
+    "nll": {
+      "mean": 1.0709060861842494,
+      "sd": null
+    },
+    "brier": {
+      "mean": 0.485295784852144,
+      "sd": null
+    },
+    "ece": {
+      "mean": 0.2523512975475219,
+      "sd": null
+    },
+    "runs": 1
+  },
+  "Matched MAP": {
+    "accuracy": {
+      "mean": 0.7194444444444444,
+      "sd": null
+    },
+    "macro_f1": {
+      "mean": 0.7025738477389998,
+      "sd": null
+    },
+    "macro_precision": {
+      "mean": 0.7048340541698515,
+      "sd": null
+    },
+    "macro_recall": {
+      "mean": 0.716990561990562,
+      "sd": null
+    },
+    "nll": {
+      "mean": 1.0630083872485465,
+      "sd": null
+    },
+    "brier": {
+      "mean": 0.48195200742080413,
+      "sd": null
+    },
+    "ece": {
+      "mean": 0.2568098903710805,
+      "sd": null
+    },
+    "runs": 1
+  },
+  "Diagonal Laplace": {
+    "accuracy": {
+      "mean": 0.7,
+      "sd": null
+    },
+    "macro_f1": {
+      "mean": 0.681368097280303,
+      "sd": null
+    },
+    "macro_precision": {
+      "mean": 0.6785030597347195,
+      "sd": null
+    },
+    "macro_recall": {
+      "mean": 0.6973830973830973,
+      "sd": null
+    },
+    "nll": {
+      "mean": 1.072516108080351,
+      "sd": null
+    },
+    "brier": {
+      "mean": 0.48598911798750555,
+      "sd": null
+    },
+    "ece": {
+      "mean": 0.24182161445896413,
+      "sd": null
+    },
+    "runs": 1
+  }
+}
+python scripts/audit_results.py
+Seed 11: feature epoch 120; MAP alpha 0.1, Laplace alpha 1
+Seed 22: feature epoch 120; MAP alpha 0.1, Laplace alpha 1
+Seed 33: feature epoch 120; MAP alpha 1, Laplace alpha 1
+{
+  "Gaussian NB": {
+    "accuracy": {
+      "mean": 0.9194444444444444,
+      "sd": null
+    },
+    "macro_f1": {
+      "mean": 0.920200039955537,
+      "sd": null
+    },
+    "macro_precision": {
+      "mean": 0.9242642276698003,
+      "sd": null
+    },
+    "macro_recall": {
+      "mean": 0.9197061347061346,
+      "sd": null
+    },
+    "nll": {
+      "mean": 0.6295857788359301,
+      "sd": null
+    },
+    "brier": {
+      "mean": 0.13371351684738803,
+      "sd": null
+    },
+    "ece": {
+      "mean": 0.06333158042583954,
+      "sd": null
+    },
+    "runs": 1
+  },
+  "MAP": {
+    "accuracy": {
+      "mean": 0.9777777777777777,
+      "sd": 0.002777777777777768
+    },
+    "macro_f1": {
+      "mean": 0.9776403165907513,
+      "sd": 0.0028607533793973167
+    },
+    "macro_precision": {
+      "mean": 0.9784523360551111,
+      "sd": 0.002288857842292692
+    },
+    "macro_recall": {
+      "mean": 0.9775604175604174,
+      "sd": 0.0028989926847930235
+    },
+    "nll": {
+      "mean": 0.09909232073795005,
+      "sd": 0.0033566579888113677
+    },
+    "brier": {
+      "mean": 0.03986029949587413,
+      "sd": 0.002119437395269912
+    },
+    "ece": {
+      "mean": 0.01722155677415252,
+      "sd": 0.008197027561121617
+    },
+    "runs": 3
+  },
+  "Laplace": {
+    "accuracy": {
+      "mean": 0.9768518518518517,
+      "sd": 0.0016037507477489547
+    },
+    "macro_f1": {
+      "mean": 0.9766264446876279,
+      "sd": 0.0017550347046810212
+    },
+    "macro_precision": {
+      "mean": 0.977347832895371,
+      "sd": 0.0013163749385504406
+    },
+    "macro_recall": {
+      "mean": 0.9766080366080366,
+      "sd": 0.001741689348659956
+    },
+    "nll": {
+      "mean": 0.1508414144744621,
+      "sd": 0.0027405409243824994
+    },
+    "brier": {
+      "mean": 0.05469566731016268,
+      "sd": 0.0009942935908776075
+    },
+    "ece": {
+      "mean": 0.08009999000643131,
+      "sd": 0.0028156373049434765
+    },
+    "runs": 3
+  },
+  "Matched MAP": {
+    "accuracy": {
+      "mean": 0.9768518518518517,
+      "sd": 0.0016037507477489547
+    },
+    "macro_f1": {
+      "mean": 0.9767267317730569,
+      "sd": 0.001721045750736757
+    },
+    "macro_precision": {
+      "mean": 0.9775988509910997,
+      "sd": 0.0010871534411647226
+    },
+    "macro_recall": {
+      "mean": 0.9766595166595167,
+      "sd": 0.001784559712360057
+    },
+    "nll": {
+      "mean": 0.09695191178072082,
+      "sd": 0.002398906547929757
+    },
+    "brier": {
+      "mean": 0.04111083447526939,
+      "sd": 0.0010004213800164303
+    },
+    "ece": {
+      "mean": 0.024739317548600582,
+      "sd": 0.0017728971205737448
+    },
+    "runs": 3
+  },
+  "Diagonal Laplace": {
+    "accuracy": {
+      "mean": 0.9768518518518517,
+      "sd": 0.0042431256434776144
+    },
+    "macro_f1": {
+      "mean": 0.97666190663117,
+      "sd": 0.004269959415330057
+    },
+    "macro_precision": {
+      "mean": 0.9774544641284465,
+      "sd": 0.0035974271653289253
+    },
+    "macro_recall": {
+      "mean": 0.9766344916344915,
+      "sd": 0.0043820834652128545
+    },
+    "nll": {
+      "mean": 0.2289702786417198,
+      "sd": 0.00019644239400501596
+    },
+    "brier": {
+      "mean": 0.07890787195804076,
+      "sd": 0.0006685043670434058
+    },
+    "ece": {
+      "mean": 0.1473639272264405,
+      "sd": 0.004910704069125317
+    },
+    "runs": 3
+  }
+}
+Audit passed: metrics, checkpoint reloads, and full rerun match exactly.
+python scripts/paired_analysis.py
+{
+  "error": {
+    "estimate": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "percentile95": [
+      -0.002777777777777778,
+      0.002777777777777778
+    ]
+  },
+  "nll": {
+    "estimate": 0.053889502693741265,
+    "per_seed": [
+      0.05017906589744449,
+      0.05763017182663762,
+      0.05385927035714174
+    ],
+    "percentile95": [
+      0.03994417916624509,
+      0.0661220665829171
+    ]
+  },
+  "brier": {
+    "estimate": 0.013584832834893285,
+    "per_seed": [
+      0.012466536410901825,
+      0.014354326817409996,
+      0.013933635276368032
+    ],
+    "percentile95": [
+      0.008233908819683222,
+      0.018775178255398966
+    ]
+  },
+  "ece": {
+    "estimate": 0.05536067245783074,
+    "per_seed": [
+      0.05424053473359835,
+      0.05682876817006982,
+      0.05501271446982402
+    ],
+    "percentile95": [
+      0.04162078578757943,
+      0.05958581828899947
+    ]
+  }
+}
+python -m bayes_digits.figures
+Generated 10 figures in PDF/SVG/PNG: results\figures
+python scripts/build_report.py
+Report tables generated from recorded results.
+python scripts/audit_review.py
+Review audit passed: 18 unchanged arrays; 72 diagnostic records; 9 citation keys; 7 Markdown pages.
+python scripts/audit_refinement.py
+Refinement audit passed: 24 byte-identical evidence files, one verified command-only redaction, 18 arrays, 7 verified tables (one SD precision fix), 60 raw F1 observations; toy geometry verified.
+python scripts/audit_instruction_section.py
+Instruction audit passed: 7 verified excerpts, 12 current/historical skill provenance hashes; original prompts/reflection, all displayed equations, eight references and selection rationale preserved.
+python scripts/audit_paired.py
+Paired audit passed: three SciPy bootstrap intervals, independent ECE and 19 Wilson intervals.
+python scripts/validate_submission.py
+Submission validation passed: 19 pages, six sections, eleven tables, ten figure triplets, workflow exports, English/privacy and GFM structure.
+python scripts/check_artifacts.py
+Artifact audit passed: 133 local links, recorded source hashes, 10 figures, report and results.
+Reproduction completed; inspect the final PDF visually after compilation.

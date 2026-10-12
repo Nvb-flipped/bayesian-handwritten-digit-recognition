@@ -1,0 +1,15 @@
+{
+  "source": "Fresh full public Git clone",
+  "commit": "34a26f837753baa19e77dc613dd814d539ae8d56",
+  "shallow_clone": false,
+  "independent_cpu_wheel_environment": true,
+  "tests_passed": 13,
+  "smoke_completed": true,
+  "full_primary_arrays_bitwise_equal": 18,
+  "checkpoint_reload_passed": true,
+  "all_historical_and_paired_audits_passed": true,
+  "reflection_bytes_unchanged": true,
+  "log_sha256": "cde9e1f442416b221196a2c97aa462afcbbc361e86b1a0850cab470f0db0528c",
+  "environment_scope": "Existing independently installed clean environment; no Assignment 1 paths or installed private skill dependencies",
+  "prior_reused_checkout_note": "Changing attributes does not necessarily rewrite an existing checkout; the final verification used a new clone"
+}

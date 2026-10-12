@@ -44,7 +44,7 @@ python3.12 -m venv .venv
 .venv/bin/python scripts/reproduce.py
 ~~~
 
-The portable runner checks dependencies and 13 tests, executes a smoke experiment, reloads checkpoints, independently trains the unchanged full protocol into **ignored `tmp/reproduction`**, compares saved arrays/summary, computes the separate paired analysis and regenerates figures/tables. It does not overwrite the primary measurements. Historical audits require the complete Git history (the default clone); use `git fetch --unshallow` for a shallow clone. Windows and Ubuntu CI check tests and smoke execution; full bitwise reproduction is an environment-specific check. macOS instructions have not been executed here.
+The portable runner checks dependencies and 13 tests, executes a smoke experiment, reloads checkpoints, independently trains the unchanged full protocol into **ignored `tmp/reproduction`**, compares saved arrays/summary, computes the separate paired analysis and regenerates figures/tables. It does not overwrite the primary measurements. It refreshes export-validation hashes after regeneration and checks current artifact links/provenance. Historical audits require the complete Git history (the default clone); use `git fetch --unshallow` for a shallow clone. Windows and Ubuntu CI check tests and smoke execution; full bitwise reproduction is an environment-specific check. macOS instructions have not been executed here.
 
 To regenerate the optional, already recorded 72 fixed-model sampling diagnostics:
 

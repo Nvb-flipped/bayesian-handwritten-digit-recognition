@@ -25,6 +25,9 @@ def main():
         for document in ['main.tex','workflow_export.tex']:
             subprocess.run(['tectonic','-X','compile','--untrusted',document],cwd=root/'report',check=True)
         subprocess.run([sys.executable,'scripts/export_workflow.py'],cwd=root,check=True)
+    for command in ['scripts/validate_submission.py','scripts/check_artifacts.py']:
+        print('python '+command,flush=True)
+        subprocess.run([sys.executable,command],cwd=root,env=environment,check=True)
     print('Reproduction completed; inspect the final PDF visually after compilation.')
 
 

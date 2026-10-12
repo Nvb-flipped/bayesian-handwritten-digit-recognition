@@ -1,13 +1,13 @@
 {
   "review_date": "2026-10-12",
-  "baseline_commit": "11fe6ceb1b2f85bf04b281e273bb73ad38657105",
-  "commits_checked": 10,
-  "historical_blobs_checked": 345,
-  "historical_blob_bytes": 12937273,
+  "baseline_commit": "34a26f837753baa19e77dc613dd814d539ae8d56",
+  "commits_checked": 13,
+  "historical_blobs_checked": 470,
+  "historical_blob_bytes": 15940884,
   "largest_blob_bytes": 1987180,
   "credential_pattern_findings": [],
   "excluded_directory_findings": [],
-  "tracked_files": 182,
+  "tracked_files": 235,
   "selected_checkpoints": {
     "results/models/features_11.pt": 12229,
     "results/models/features_22.pt": 12229,
