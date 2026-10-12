@@ -6,5 +6,5 @@
     "scripts/audit_results.py"
   ],
   "probability_arrays_checked": 18,
-  "tests": "Nine pytest tests; see results/logs/tests.log"
+  "tests": "Run pytest separately; current executed test evidence: results/refinement_05/tests.log"
 }

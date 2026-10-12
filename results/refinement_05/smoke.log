@@ -1,0 +1,158 @@
+Seed 11: feature epoch 3; MAP alpha 1, Laplace alpha 1
+{
+  "Gaussian NB": {
+    "accuracy": {
+      "mean": 0.8944444444444445,
+      "sd": null
+    },
+    "macro_f1": {
+      "mean": 0.8961645384136485,
+      "sd": null
+    },
+    "macro_precision": {
+      "mean": 0.9035194875549741,
+      "sd": null
+    },
+    "macro_recall": {
+      "mean": 0.895010725010725,
+      "sd": null
+    },
+    "nll": {
+      "mean": 1.49450914604608,
+      "sd": null
+    },
+    "brier": {
+      "mean": 0.19506780884184682,
+      "sd": null
+    },
+    "ece": {
+      "mean": 0.09861233408496611,
+      "sd": null
+    },
+    "runs": 1
+  },
+  "MAP": {
+    "accuracy": {
+      "mean": 0.7194444444444444,
+      "sd": null
+    },
+    "macro_f1": {
+      "mean": 0.7025738477389998,
+      "sd": null
+    },
+    "macro_precision": {
+      "mean": 0.7048340541698515,
+      "sd": null
+    },
+    "macro_recall": {
+      "mean": 0.716990561990562,
+      "sd": null
+    },
+    "nll": {
+      "mean": 1.0630083872485465,
+      "sd": null
+    },
+    "brier": {
+      "mean": 0.48195200742080413,
+      "sd": null
+    },
+    "ece": {
+      "mean": 0.2568098903710805,
+      "sd": null
+    },
+    "runs": 1
+  },
+  "Laplace": {
+    "accuracy": {
+      "mean": 0.7111111111111111,
+      "sd": null
+    },
+    "macro_f1": {
+      "mean": 0.6908640429314653,
+      "sd": null
+    },
+    "macro_precision": {
+      "mean": 0.6883323071232177,
+      "sd": null
+    },
+    "macro_recall": {
+      "mean": 0.7084984984984986,
+      "sd": null
+    },
+    "nll": {
+      "mean": 1.0709060861842494,
+      "sd": null
+    },
+    "brier": {
+      "mean": 0.485295784852144,
+      "sd": null
+    },
+    "ece": {
+      "mean": 0.2523512975475219,
+      "sd": null
+    },
+    "runs": 1
+  },
+  "Matched MAP": {
+    "accuracy": {
+      "mean": 0.7194444444444444,
+      "sd": null
+    },
+    "macro_f1": {
+      "mean": 0.7025738477389998,
+      "sd": null
+    },
+    "macro_precision": {
+      "mean": 0.7048340541698515,
+      "sd": null
+    },
+    "macro_recall": {
+      "mean": 0.716990561990562,
+      "sd": null
+    },
+    "nll": {
+      "mean": 1.0630083872485465,
+      "sd": null
+    },
+    "brier": {
+      "mean": 0.48195200742080413,
+      "sd": null
+    },
+    "ece": {
+      "mean": 0.2568098903710805,
+      "sd": null
+    },
+    "runs": 1
+  },
+  "Diagonal Laplace": {
+    "accuracy": {
+      "mean": 0.7,
+      "sd": null
+    },
+    "macro_f1": {
+      "mean": 0.681368097280303,
+      "sd": null
+    },
+    "macro_precision": {
+      "mean": 0.6785030597347195,
+      "sd": null
+    },
+    "macro_recall": {
+      "mean": 0.6973830973830973,
+      "sd": null
+    },
+    "nll": {
+      "mean": 1.072516108080351,
+      "sd": null
+    },
+    "brier": {
+      "mean": 0.48598911798750555,
+      "sd": null
+    },
+    "ece": {
+      "mean": 0.24182161445896413,
+      "sd": null
+    },
+    "runs": 1
+  }
+}

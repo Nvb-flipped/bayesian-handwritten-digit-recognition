@@ -70,3 +70,11 @@ if (diagnostic/'summary.json').exists():
           "rather than attributing it solely to the original random draws.\n")
     (report/'diagnostic_text.tex').write_text(text,newline="\n")
 print("Report tables generated from recorded results.")
+
+paired=json.loads((root/'refinement_05/paired.json').read_text())['differences']
+rows=[r"\begin{tabular}{lrr}\toprule",r"Score difference & Estimate & Paired percentile interval \\\midrule"]
+for key,label,scale in [('error','Error (percentage points)',100),('nll','NLL (nats)',1),('brier','Brier (class sum)',1),('ece','ECE (ten bins)',1)]:
+    value=paired[key]; lo,hi=np.array(value['percentile95'])*scale
+    rows.append(f"{label} & {value['estimate']*scale:.5f} & [{lo:.5f}, {hi:.5f}]"+r"\\")
+rows.append(r"\bottomrule\end{tabular}")
+(report/'paired.tex').write_text('\n'.join(rows),newline='\n')

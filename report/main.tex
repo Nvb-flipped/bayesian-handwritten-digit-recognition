@@ -19,6 +19,11 @@
 \renewcommand{\textfraction}{0.08}
 \renewcommand{\floatpagefraction}{0.8}
 \raggedbottom
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpsep}{12pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+\makeatother
 \setcounter{tocdepth}{1}
 \emergencystretch=2em
 \brokenpenalty=10000
@@ -197,37 +202,32 @@ therefore supports an educational adaptation, not a state-of-the-art or full
 benchmark-reproduction claim, and does not use test outcomes to change the method.
 
 
+\textbf{Recency boundary.} In October 2026 this is a five-year-old framework.
+The instructor supplies no numerical cutoff; Prompt 01 specifies approximately
+2021--2026. The examiner may interpret recency more strictly. No test-driven
+replacement, superiority over unexecuted candidates or state-of-the-art claim is made.
+
 \subsection{How staged review changed the outcome}
-Prompt 01 produced an executable study and a first compiled report. Prompt 02
-then required section-by-section criticism and repeated visual QA. It strengthened
-the distinction between an exact conditional Hessian and an approximate Gaussian
-posterior, added a tested two-class covariance example, and corrected the
-pre-update training versus post-update validation loss log. Reproduction retained
-the primary predictions. A separately recorded post hoc diagnostic executed
-72 fixed-model predictions to quantify Monte Carlo integration variation;
-it neither selected new models nor turned seed spread into a dataset confidence
-interval. The unfavorable probability-quality result was preserved.
+Prompt 01 produced the executed study and report. Prompt 02 strengthened the
+exact-Hessian/approximate-posterior distinction, tested a binary covariance
+example and repaired completed-epoch loss logging; all primary arrays remained
+identical. Its 72 fixed-model predictions quantified MC integration variation
+without retuning or treating seed spread as a dataset interval.
+Review also enlarged labels, separated seed markers and exposed calibration-bin
+support and unequal correct/error groups. Subsequent requests preserved all F1
+observations and improved layout. Prompt 05 replaces the deficit display with
+paired signed F1 differences, adds image-bootstrap and sparse-bin intervals,
+redesigns both workflows/all exports, and verifies a clean environment.
+Nature Figure/composition, statistical, LaTeX and PDF guidance supported this
+same-agent refinement; no external peer review or gallery/generative service is claimed.
 
-The review enlarged confusion labels, separated seed markers, replaced joined
-reliability lines with occupied-bin points, and normalized uncertainty displays
-within correct/error groups. Later refinement showed bounded F1 deficits as
-individual seed values and observed ranges, avoiding a misleading negative
-mean-minus-SD endpoint without deleting measurements. It also added covariance
-geometry and improved page layout. These were same-agent self-review and
-refinement, not independent peer review; Sections 2--4 give the technical detail.
-
-\textbf{Complete records and publication status.}
-The source tree preserves \texttt{AGENTS.md}, all four original files in
-\texttt{prompts/}, \texttt{docs/research.md}, \texttt{docs/ai\_usage.md},
-\texttt{docs/review\_02.md} and \texttt{docs/refinement\_02.md}.
-\texttt{docs/skill\_sources.md} identifies the actual skill documents, origins,
-local hashes and consultation status. These records and linked complete skill
-documentation are available in the public repository linked in Section 6.
-Prompt 03 published the audited Git history on 9 October 2026, following the
-student's explicit approval of public disclosure. After the student initialized
-Home, the CLI published six wiki pages; their public mathematics, figures,
-tables and navigation were checked. Both verified URLs appear in Section 6.
-\path{prompts/04_FINAL_SUBMISSION_AUDIT.md} rechecked the compiled report, reproducibility and public deliverables without retuning models.
+\textbf{Complete records.} The public repository in Section 6 contains the
+assignment, \texttt{AGENTS.md}, original \texttt{prompts/}, research/AI-use/review
+records, verified excerpts and \texttt{docs/skill\_sources.md} with consultation,
+license, source links and hashes. Prompt 03 published after explicit student
+approval; the student's initial Home page enabled CLI synchronization of six
+wiki pages. Prompt 04 audited submission; Prompt 05's current evidence is in
+\texttt{docs/refinement\_05.md}. Full technical details follow in Sections 2--4.
 
 \section{Algorithm Description}
 \subsection{Task, notation and conditional model}
@@ -465,6 +465,7 @@ training, inference, evaluation and presentation are separated.
 \texttt{audit\_results.py} & Metrics, checkpoint reload and full-run verification.\\
 \texttt{build\_report.py} & Numerical LaTeX tables generated from JSON.\\
 \texttt{review\_diagnostics.py} & Fixed-model posterior sampling repetitions.\\
+\texttt{paired.py} & Post hoc paired image scores, bootstrap and bin intervals.\\
 \bottomrule\end{tabularx}
 \caption{Modules reside under \texttt{src/bayes\_digits/}, scripts under
 \texttt{scripts/}.}
@@ -491,11 +492,15 @@ Save test probabilities, indices, labels, confusion matrices and metrics.
 \end{enumerate}
 
 \subsection{Checks, repairs and evidence}
-Nine tests passed. They verify portable JSON evidence bytes, split coverage/disjointness, analytic derivatives
+Thirteen tests passed in the clean environment. The original nine verify portable JSON evidence bytes, split coverage/disjointness, analytic derivatives
 against independent PyTorch autograd, precision-to-covariance sampling,
 normalization and serialization, known metric values and bin boundaries,
 deterministic tiny-batch optimization, and rejection of invalid priors.
 The binary example additionally checks the exact MAP and logit-contrast covariance.
+Four added tests check elementwise class-major Hessian indexing and its prior-only
+common-logit direction, MI against the direct entropy calculation, paired-score
+identities and Wilson intervals at sparse/empty-bin boundaries. This connects
+Eq.~\ref{eq:hessian} and predictive integration to independently constructed checks.
 The tiny-batch test achieves perfect training classification and loss below 0.02
 on 20 images; repeated seeded feature training matches exactly.
 
@@ -601,8 +606,11 @@ conditional Hessian are inexpensive. The review training/selection/evaluation
 command took \RunSeconds\ seconds, excluding setup, tests, plotting and
 compilation. This is one observed wall-clock duration, not a controlled hardware
 benchmark. Existing PyTorch/scientific packages were reused read-only through
-a local environment path; missing scikit-learn dependencies were installed in
-the new Assignment 2 environment. README also gives a standalone setup recipe.
+a local environment path in the original execution. Prompt 05 installed an
+independent Python 3.12 environment using pinned dependencies and the CPU wheel
+of PyTorch 2.11.0. It reproduced all 18 arrays and loaded every checkpoint exactly;
+the README gives portable clean-clone commands. Original timing and environment
+fields are retained; only the public command path is redacted with a hash ledger.
 
 \begin{table}[H]\centering\input{selection.tex}
 \caption{Choices locked before full-run test predictions. All feature checkpoints
@@ -674,17 +682,46 @@ this approximation. Accuracy alone would miss that result.
 Small accuracy differences involve only a few images. No significance test or
 statistical equivalence claim is made.
 
+\subsection{Post hoc paired image-level analysis}
+Prompt 05 quantified the matched-prior comparison using the saved probabilities.
+The estimand is the mean Laplace-minus-matched-MAP score across the three
+\emph{fixed fitted models} on this split. For additive scores, let
+$d_i=\tfrac13\sum_{r=1}^3[\ell_{ir}^{\rm LA}-\ell_{ir}^{\rm matched}]$;
+the estimate is $M^{-1}\sum_i d_i$. The analysis plan was recorded before this
+supplementary calculation, after the primary outcomes were already known.
+It jointly resamples $M=360$ image positions with replacement, preserving pairing
+across both methods and all seeds, for 5,000 repetitions (seed 20261012).
+The reported endpoints are empirical 2.5th/97.5th percentiles; they are a
+transparent descriptive bootstrap, not bias-corrected or confirmatory coverage.
+ECE is nonlinear, so bins and ECE are recomputed within each resample and then
+averaged over the fixed models. This follows paired-resampling logic \cite{bootstrap}.
+\begin{table}[H]\centering\input{paired.tex}
+\caption{Exploratory Laplace-minus-matched-MAP differences and conditional 95\%
+paired image-bootstrap percentile intervals. Scores use the same 360 images;
+error uses percentage points. Positive proper-score differences favor matched MAP.}
+\label{tab:paired}\end{table}
+The error-count difference is zero for each model, but the identities of errors
+can differ; the interval does not establish equivalence. NLL and Brier penalties
+remain positive throughout these conditional intervals. These describe finite-image
+variation assuming exchangeable images; unknown writer dependence is not modeled.
+They exclude model retraining and fresh posterior draws. Initialization SD,
+Monte Carlo repetition SD and these intervals therefore answer different questions.
+ECE remains bin-dependent and biased in finite samples, especially in sparse bins;
+its bootstrap should be interpreted as exploratory estimator variability rather
+than a definitive calibration guarantee.
+
+
 
 \subsection{Class-level results and feature training}
 \begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{classes.pdf}
 \caption{Laplace confusion is normalized by true-class support within each seed,
 then averaged. Cell labels are percentages rounded to the nearest integer;
 entries below 0.5\% are unlabeled. The color scale uses proportions.
-The right panel plots
-$1-F_1$ (lower is better) for every seed: filled MAP and open Laplace points,
-with seed-specific shapes. Black dashes are means; vertical spans are the observed
-min--max across three seeds, not SD bars or confidence intervals.
-All observations remain visible on a nonnegative scale; Table~\ref{tab:class} gives raw F1.
+The right panel plots paired $F_1(\mathrm{Laplace})-F_1(\mathrm{MAP})$
+in percentage points for each digit and seed against separately selected MAP.
+Shapes identify seeds; black vertical dashes are descriptive means, not intervals.
+The symmetric signed scale preserves all negative and positive differences;
+Table~\ref{tab:class} gives raw Laplace F1.
 Digit 8 is the weakest class. There are 360 unique test images.}
 \end{figure}
 \begin{table}[!htbp]\centering\input{per_class.tex}
@@ -697,7 +734,7 @@ mistakes are spread across several labels, including 1 and 3.
 Digit 1 has perfect recall but lower precision because other digits are
 sometimes assigned to it. Thus recall alone does not establish reliable
 predictions of a label.
-\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{convergence.pdf}
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{convergence.pdf}
 \caption{Recorded feature-training and validation mean NLL on base-10 logarithmic axes.
 Both panels share the same positive NLL limits and are evaluated after each epoch's optimizer update, using the original
 training head before conditional MAP refitting. Line styles and markers identify
@@ -713,17 +750,22 @@ has no stochastic training trajectory in this implementation.
 \subsection{Calibration, uncertainty and ablations}
 \begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{calibration.pdf}
 \caption{Reliability and posterior mutual information for prespecified seed 11.
-Ten equal-width confidence bins are used. Reliability points have equal size;
-the aligned table gives every bin's image count, including zeros, for each method.
-Empty-bin points are omitted and occupied points are not joined. Laplace is often underconfident,
-but several bins contain few observations.
-Right: empirical cumulative distributions normalized separately over 352 correct
+Panels a--c use ten equal-width confidence bins, unconnected occupied-bin points
+and their exact support counts (bin indices 0--9). Vertical bars are marginal
+95\% Wilson score intervals for bin accuracy; open points flag fewer than 20
+images, a display threshold rather than a rule for deleting bins. These intervals
+condition on bin membership and approximate independent Bernoulli outcomes;
+they do not quantify uncertainty in mean confidence or provide a simultaneous
+calibration band. Empty bins have no point or interval.
+Panel d: empirical cumulative distributions normalized separately over 352 correct
 and eight erroneous predictions. Errors often have greater disagreement, but
 the distributions overlap and eight errors provide limited precision.}
 \end{figure}
 Several populated Laplace reliability bins lie above the identity line:
-confidence is lower than observed success frequency. This agrees with higher
-ECE/NLL, although sparse bins and only eight mistakes limit conclusions.
+confidence is lower than observed success frequency. This is compatible with
+underconfidence in this run, but many low-support intervals are wide. Higher
+NLL/ECE alone does not prove underconfidence, and eight errors limit precision.
+Bin support and uncertainty prevent treating tiny bins as reliable evidence.
 Many correct images have low posterior disagreement, while errors span a
 broader range; within-group normalization exposes both distributions despite
 their unequal sample counts. Overlap prevents a guaranteed error detector.
@@ -735,7 +777,9 @@ averaging; diagonal Laplace drops off-diagonal precision terms before inversion.
 This differs from taking the diagonal of the full covariance.}
 \end{table}
 \begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{sensitivity.pdf}
-\caption{Left: validation-only prior sensitivity. Right: predeclared frozen-prior
+\caption{Left: the three discrete validation-only prior candidates, shown as unconnected
+seed points with small horizontal offsets for visibility. No interpolated optimum
+is estimated. Right: predeclared frozen-prior
 test NLL and seed SD, with offset seed points. $\alpha=1$ gives the lowest validation
 NLL in this grid; full Laplace has lower test NLL than diagonal precision but
 higher NLL than matched MAP. Test scores were not used to retune the prior.}
@@ -762,7 +806,7 @@ it, \texttt{configs/review\_diagnostics.json} specified sample counts
 $2002000+10000r+10S+j$ for feature seed $r$, sample count $S$ and
 repetition $j\in\{0,\ldots,7\}$. Repetition SD measures numerical integration
 variation conditional on a fitted posterior, not test-set or retraining uncertainty.
-\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{monte_carlo.pdf}
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{monte_carlo.pdf}
 \caption{Post hoc fixed-model sampling diagnostic. Left: mean NLL penalty
 against matched MAP with sampling-repeat SD, eight repetitions per point.
 Right: the same SD alone. The penalty persists at 2048 samples while numerical
@@ -777,7 +821,8 @@ cannot establish the accuracy of the Laplace posterior approximation itself.
 \subsection{Failure cases, interpretation and limits}
 \begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{errors.pdf}
 \caption{All eight Laplace errors for seed 11, ordered by original dataset index.
-Titles show true digit, prediction and maximum posterior probability.
+Titles show true digit, predicted digit, both relevant posterior probabilities
+and original index.
 Native $8\times8$ pixels are displayed without smoothing.}
 \end{figure}
 Several mistakes involve ambiguous low-resolution strokes; that interpretation
@@ -785,6 +830,20 @@ is descriptive, not a measured explanation of image quality.
 The 9-to-5 case has confidence 0.85, showing that a Bayesian predictor can still
 make a relatively confident mistake. The 8-to-3 case has much lower confidence.
 Selecting only favorable examples would conceal this variation.
+
+\textbf{Why might probability scores deteriorate?}
+The matched-prior comparison demonstrates the effect of this implemented
+posterior average, while the MC diagnostic shows that a persistent gap is not
+explained solely by the original finite draws. The local Gaussian and fixed
+representation can still misdescribe conditional uncertainty; those mechanisms
+were not separately measured. Softmax is nonlinear, so averaging logits or using
+the MAP head is generally different from averaging probabilities. Convexity of
+$-\log$ makes NLL of the predictive mixture no greater than average sampled-head
+NLL, but gives no ordering against MAP NLL. Averaging can dilute probabilities
+assigned to correct labels in an already accurate point predictor. The coarse
+prior grid and feature scale influence posterior dispersion; validation selection
+does not guarantee test improvement. These are bounded hypotheses, not a measured
+causal decomposition or proof that Bayesian inference generally harms calibration.
 
 \textbf{Answers to the research questions.} Conditional Laplace inference
 retains high recognition accuracy in this experiment. It does not improve
@@ -798,8 +857,9 @@ one architecture and three initialization seeds cannot establish a general
 ranking of Bayesian classifiers. The Gaussian is local and omits representation
 uncertainty. The prior grid is coarse and feature-scale dependent. Checkpoint
 and prior selection reuse the same validation partition; there is no nested
-validation estimate. The post hoc diagnostic quantifies integration variation
-at three sample counts, but not uncertainty over representation or data sampling.
+validation estimate. The fixed-model diagnostic quantifies integration variation at three sample
+counts. The separate paired bootstrap addresses conditional image resampling;
+neither covers representation uncertainty, unknown writer dependence or new splits.
 Writer independence, natural-image recognition, corruption and OOD detection
 were not tested.
 
@@ -826,6 +886,7 @@ recognition accuracy before drawing conclusions about uncertainty quality.
 \section{What I Have Learnt from This AI Assignment}
 \input{student_reflection.tex}
 
+\clearpage
 \section{Webpage Link of the Source Codes}
 The public source repository is:
 
@@ -841,16 +902,16 @@ results, figures and navigation were verified on GitHub.
 \subsection*{Local reproduction}
 After installing the pinned requirements, execute from the project root:
 \begin{verbatim}
-.\scripts\reproduce.ps1                 # PowerShell
-.venv\Scripts\python.exe scripts/audit_results.py
-.venv\Scripts\python.exe scripts/audit_review.py
+python scripts/reproduce.py           # Windows / POSIX
+cd report
+tectonic -X compile --untrusted main.tex
 \end{verbatim}
 Compile \texttt{report/main.tex} with its tables and figures available.
-The executed compiler was Tectonic 0.17.0 via the installed LaTeX plugin.
+The verified compiler is Tectonic 0.17.0; no private plugin is required by the portable recipe.
 README includes standalone installation and compilation commands.
 The generated PDF is rendered and reviewed page by page.
 
-\begin{thebibliography}{9}\small\raggedright
+\begin{thebibliography}{99}\small\raggedright
 \bibitem{laplace} E. Daxberger, A. Kristiadi, A. Immer, R. Eschenhagen,
 M. Bauer and P. Hennig. \emph{Laplace Redux---Effortless Bayesian Deep Learning}.
 NeurIPS 34, 2021.
@@ -878,5 +939,8 @@ Accessed 8 October 2026.
 \emph{Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents}.
 ArXiv:2609.00065, 2026; record revised 2 September 2026.
 \url{https://doi.org/10.48550/arXiv.2609.00065}.
+\bibitem{bootstrap} SciPy developers. \emph{scipy.stats.bootstrap} documentation.
+Paired resampling and percentile intervals. Accessed 12 October 2026.
+\url{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html}.
 \end{thebibliography}
 \end{document}

@@ -16,3 +16,7 @@ Laplace accuracy: 97.69% ± 0.16% across three initialization seeds on one test 
 
 These six wiki pages are synchronized from version-controlled sources in the main repository. See the source repository for configurations, raw evidence, tests and original instruction records.
 
+
+## Latest refinement
+
+Prompt 05 preserves the original study and student reflection, adds conditional paired image-bootstrap analysis, redraws all scientific figures and both workflows, and verifies an independent environment. See [the final refinement audit](https://github.com/Nvb-flipped/bayesian-handwritten-digit-recognition/blob/main/docs/refinement_05.md) for executed checks, figure rationale and limitations.

@@ -11,7 +11,7 @@
   "requested_device": "cpu",
   "used_device": "cpu",
   "seconds": 6.451542199938558,
-  "command": "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\src\\bayes_digits\\experiment.py --config configs/default.json",
+  "command": "python -m bayes_digits.experiment --config configs/default.json",
   "git_revision": "a28a563b7f68e3db71176c96d49f7049634d179a",
   "source_sha256": {
     "src/bayes_digits/__init__.py": "4f0146c9095e350b28799ee44ea4f9c7b72afa8dd2c461f1651082414330e7ee",

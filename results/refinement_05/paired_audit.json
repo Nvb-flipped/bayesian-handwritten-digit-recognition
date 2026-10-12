@@ -1,0 +1,7 @@
+{
+  "source_arrays_unchanged": true,
+  "scipy_percentile_intervals_verified": 3,
+  "independent_count_weighted_ece_verified": true,
+  "scipy_wilson_intervals_verified": 19,
+  "paired_record_sha256": "43b57cae0667381a98bd19071a6e9f64d4575d63a4500120ddbd722c65f31b2a"
+}

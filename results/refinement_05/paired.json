@@ -1,0 +1,470 @@
+{
+  "analysis": "Post hoc; Laplace minus matched-prior MAP",
+  "estimand": "Mean score difference across three fixed fitted models on the same images",
+  "resampling_unit": "Image position, jointly across all methods/seeds",
+  "images": 360,
+  "fixed_seeds": [
+    11,
+    22,
+    33
+  ],
+  "repetitions": 5000,
+  "bootstrap_seed": 20261012,
+  "interval": "95% paired percentile bootstrap; conditional on fixed fitted models",
+  "assumptions": "Exchangeable test images; unknown writer dependence is not accounted for",
+  "limitations": "Post hoc, one split; not seed uncertainty, MC integration uncertainty, a population guarantee or a significance test",
+  "differences": {
+    "error": {
+      "estimate": 0.0,
+      "per_seed": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "percentile95": [
+        -0.002777777777777778,
+        0.002777777777777778
+      ]
+    },
+    "nll": {
+      "estimate": 0.053889502693741265,
+      "per_seed": [
+        0.05017906589744449,
+        0.05763017182663762,
+        0.05385927035714174
+      ],
+      "percentile95": [
+        0.03994417916624509,
+        0.0661220665829171
+      ]
+    },
+    "brier": {
+      "estimate": 0.013584832834893285,
+      "per_seed": [
+        0.012466536410901825,
+        0.014354326817409996,
+        0.013933635276368032
+      ],
+      "percentile95": [
+        0.008233908819683222,
+        0.018775178255398966
+      ]
+    },
+    "ece": {
+      "estimate": 0.05536067245783074,
+      "per_seed": [
+        0.05424053473359835,
+        0.05682876817006982,
+        0.05501271446982402
+      ],
+      "percentile95": [
+        0.04162078578757943,
+        0.05958581828899947
+      ]
+    }
+  },
+  "reliability_seed": 11,
+  "reliability": {
+    "Gaussian NB": [
+      {
+        "bin": 0,
+        "low": 0.0,
+        "high": 0.1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null,
+        "successes": 0,
+        "wilson95": null,
+        "sparse": true
+      },
+      {
+        "bin": 1,
+        "low": 0.1,
+        "high": 0.2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null,
+        "successes": 0,
+        "wilson95": null,
+        "sparse": true
+      },
+      {
+        "bin": 2,
+        "low": 0.2,
+        "high": 0.3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null,
+        "successes": 0,
+        "wilson95": null,
+        "sparse": true
+      },
+      {
+        "bin": 3,
+        "low": 0.3,
+        "high": 0.4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null,
+        "successes": 0,
+        "wilson95": null,
+        "sparse": true
+      },
+      {
+        "bin": 4,
+        "low": 0.4,
+        "high": 0.5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null,
+        "successes": 0,
+        "wilson95": null,
+        "sparse": true
+      },
+      {
+        "bin": 5,
+        "low": 0.5,
+        "high": 0.6,
+        "count": 4,
+        "confidence": 0.5478521899212556,
+        "accuracy": 0.25,
+        "successes": 1,
+        "wilson95": [
+          0.04558726080970055,
+          0.6993581574175981
+        ],
+        "sparse": true
+      },
+      {
+        "bin": 6,
+        "low": 0.6,
+        "high": 0.7,
+        "count": 5,
+        "confidence": 0.6734908129123782,
+        "accuracy": 0.2,
+        "successes": 1,
+        "wilson95": [
+          0.03622410863243014,
+          0.6244653702374747
+        ],
+        "sparse": true
+      },
+      {
+        "bin": 7,
+        "low": 0.7,
+        "high": 0.8,
+        "count": 4,
+        "confidence": 0.7470372554929661,
+        "accuracy": 0.75,
+        "successes": 3,
+        "wilson95": [
+          0.30064184258240184,
+          0.9544127391902995
+        ],
+        "sparse": true
+      },
+      {
+        "bin": 8,
+        "low": 0.8,
+        "high": 0.9,
+        "count": 8,
+        "confidence": 0.8739511708289971,
+        "accuracy": 0.25,
+        "successes": 2,
+        "wilson95": [
+          0.071479212752109,
+          0.5907245696898311
+        ],
+        "sparse": true
+      },
+      {
+        "bin": 9,
+        "low": 0.9,
+        "high": 1.0,
+        "count": 339,
+        "confidence": 0.9977493975940862,
+        "accuracy": 0.9557522123893806,
+        "successes": 324,
+        "wilson95": [
+          0.9282865882852126,
+          0.9730046413779035
+        ],
+        "sparse": false
+      }
+    ],
+    "MAP": [
+      {
+        "bin": 0,
+        "low": 0.0,
+        "high": 0.1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null,
+        "successes": 0,
+        "wilson95": null,
+        "sparse": true
+      },
+      {
+        "bin": 1,
+        "low": 0.1,
+        "high": 0.2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null,
+        "successes": 0,
+        "wilson95": null,
+        "sparse": true
+      },
+      {
+        "bin": 2,
+        "low": 0.2,
+        "high": 0.3,
+        "count": 1,
+        "confidence": 0.28276901581922564,
+        "accuracy": 1.0,
+        "successes": 1,
+        "wilson95": [
+          0.20654931437723745,
+          1.0
+        ],
+        "sparse": true
+      },
+      {
+        "bin": 3,
+        "low": 0.3,
+        "high": 0.4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null,
+        "successes": 0,
+        "wilson95": null,
+        "sparse": true
+      },
+      {
+        "bin": 4,
+        "low": 0.4,
+        "high": 0.5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null,
+        "successes": 0,
+        "wilson95": null,
+        "sparse": true
+      },
+      {
+        "bin": 5,
+        "low": 0.5,
+        "high": 0.6,
+        "count": 3,
+        "confidence": 0.5387964936053931,
+        "accuracy": 0.6666666666666666,
+        "successes": 2,
+        "wilson95": [
+          0.2076596008020477,
+          0.9385080552796037
+        ],
+        "sparse": true
+      },
+      {
+        "bin": 6,
+        "low": 0.6,
+        "high": 0.7,
+        "count": 4,
+        "confidence": 0.6574569520303841,
+        "accuracy": 0.75,
+        "successes": 3,
+        "wilson95": [
+          0.30064184258240184,
+          0.9544127391902995
+        ],
+        "sparse": true
+      },
+      {
+        "bin": 7,
+        "low": 0.7,
+        "high": 0.8,
+        "count": 6,
+        "confidence": 0.7481359375365942,
+        "accuracy": 0.6666666666666666,
+        "successes": 4,
+        "wilson95": [
+          0.299993315138392,
+          0.9032285888942195
+        ],
+        "sparse": true
+      },
+      {
+        "bin": 8,
+        "low": 0.8,
+        "high": 0.9,
+        "count": 8,
+        "confidence": 0.8525525568041932,
+        "accuracy": 0.875,
+        "successes": 7,
+        "wilson95": [
+          0.5291118177871464,
+          0.9775825085499433
+        ],
+        "sparse": true
+      },
+      {
+        "bin": 9,
+        "low": 0.9,
+        "high": 1.0,
+        "count": 338,
+        "confidence": 0.9951499004689301,
+        "accuracy": 0.9911242603550295,
+        "successes": 335,
+        "wilson95": [
+          0.9742335122663691,
+          0.9969769463636465
+        ],
+        "sparse": false
+      }
+    ],
+    "Laplace": [
+      {
+        "bin": 0,
+        "low": 0.0,
+        "high": 0.1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null,
+        "successes": 0,
+        "wilson95": null,
+        "sparse": true
+      },
+      {
+        "bin": 1,
+        "low": 0.1,
+        "high": 0.2,
+        "count": 1,
+        "confidence": 0.18496770845198843,
+        "accuracy": 1.0,
+        "successes": 1,
+        "wilson95": [
+          0.20654931437723745,
+          1.0
+        ],
+        "sparse": true
+      },
+      {
+        "bin": 2,
+        "low": 0.2,
+        "high": 0.3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null,
+        "successes": 0,
+        "wilson95": null,
+        "sparse": true
+      },
+      {
+        "bin": 3,
+        "low": 0.3,
+        "high": 0.4,
+        "count": 3,
+        "confidence": 0.3691073513402705,
+        "accuracy": 0.3333333333333333,
+        "successes": 1,
+        "wilson95": [
+          0.06149194472039621,
+          0.7923403991979522
+        ],
+        "sparse": true
+      },
+      {
+        "bin": 4,
+        "low": 0.4,
+        "high": 0.5,
+        "count": 9,
+        "confidence": 0.46244337930068213,
+        "accuracy": 0.7777777777777778,
+        "successes": 7,
+        "wilson95": [
+          0.45258896910698887,
+          0.9367748928821533
+        ],
+        "sparse": true
+      },
+      {
+        "bin": 5,
+        "low": 0.5,
+        "high": 0.6,
+        "count": 9,
+        "confidence": 0.5765203989779829,
+        "accuracy": 0.7777777777777778,
+        "successes": 7,
+        "wilson95": [
+          0.45258896910698887,
+          0.9367748928821533
+        ],
+        "sparse": true
+      },
+      {
+        "bin": 6,
+        "low": 0.6,
+        "high": 0.7,
+        "count": 8,
+        "confidence": 0.6541814996755454,
+        "accuracy": 0.875,
+        "successes": 7,
+        "wilson95": [
+          0.5291118177871464,
+          0.9775825085499433
+        ],
+        "sparse": true
+      },
+      {
+        "bin": 7,
+        "low": 0.7,
+        "high": 0.8,
+        "count": 25,
+        "confidence": 0.7563808019010885,
+        "accuracy": 1.0,
+        "successes": 25,
+        "wilson95": [
+          0.8668077490609515,
+          1.0
+        ],
+        "sparse": false
+      },
+      {
+        "bin": 8,
+        "low": 0.8,
+        "high": 0.9,
+        "count": 49,
+        "confidence": 0.8586139353449797,
+        "accuracy": 0.9795918367346939,
+        "successes": 48,
+        "wilson95": [
+          0.8930647847660838,
+          0.9963883274101746
+        ],
+        "sparse": false
+      },
+      {
+        "bin": 9,
+        "low": 0.9,
+        "high": 1.0,
+        "count": 256,
+        "confidence": 0.9674035219091741,
+        "accuracy": 1.0,
+        "successes": 256,
+        "wilson95": [
+          0.9852161435741286,
+          1.0
+        ],
+        "sparse": false
+      }
+    ]
+  },
+  "source_sha256": {
+    "predictions.npz": "73695f0f3b742c9d7db725d2ea1adf903e5129c24746ddab5d4a38a09fb2ceea",
+    "config.json": "4beafe7e50d2ac0b3097f77a899344ed7c7feaf0e06b72745f687cb3e761f923"
+  },
+  "generator_sha256": {
+    "src/bayes_digits/paired.py": "fff2e9fe67bffabf8fc5174abae7b00d3afb0d706f470dc5a9d24b8eef9c546b",
+    "scripts/paired_analysis.py": "350ed9b2719ddefe5299ee8980263571c7f4870f809f41ee0c4d290565b3eb83"
+  }
+}

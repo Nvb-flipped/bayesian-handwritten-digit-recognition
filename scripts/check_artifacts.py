@@ -25,6 +25,8 @@ expected=9+int(Path('results/review_diagnostics/summary.json').exists())
 assert len(manifest)==expected
 for figure in manifest:
     assert hashlib.sha256(Path(figure['generator']).read_bytes()).hexdigest()==figure['generator_sha256']
+    for name,digest in figure.get('supporting_source_sha256',{}).items():
+        assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==digest,name
     for name,digest in figure['source_sha256'].items():
         assert hashlib.sha256((Path('results')/name).read_bytes()).hexdigest()==digest,name
     for ext in ["pdf","svg","png"]:
@@ -37,6 +39,10 @@ for figure in json.loads(Path('results/figure_export_validation.json').read_text
     for ext,record in figure['files'].items():
         path=Path('results/figures')/(figure['name']+'.'+ext)
         assert hashlib.sha256(path.read_bytes()).hexdigest()==record['sha256'],path
+workflow=json.loads(Path('results/refinement_05/workflow_manifest.json').read_text())
+assert hashlib.sha256(Path(workflow['editable_source']).read_bytes()).hexdigest()==workflow['source_sha256']
+for name,digest in workflow['files'].items():
+    assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==digest,name
 for key in ["metrics_regenerated","checkpoint_predictions_bitwise_equal","full_reproduction_bitwise_equal"]:
     assert json.loads(Path("results/audit.json").read_text())[key]
 print(f"Artifact audit passed: {links} local links, recorded source hashes, {expected} figures, report and results.")

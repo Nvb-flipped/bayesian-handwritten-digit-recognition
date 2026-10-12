@@ -4,19 +4,19 @@
       "name": "dataset",
       "files": {
         "pdf": {
-          "bytes": 39148,
-          "sha256": "cce42c13702e23a52a632780d95fa41770a232cead847080866bad0358951088"
+          "bytes": 23950,
+          "sha256": "73f9369bf1588bcb05468d66afe36db77cebe06fd0e36e73c8b140289212875d"
         },
         "svg": {
-          "bytes": 114162,
-          "sha256": "bfc7ce1ad624b9475d06190b12127cb0f74baa48dff6a1b0c5684abb8dd57382"
+          "bytes": 30485,
+          "sha256": "e790046d194fbd34c383dabf530434590da3837b9e6d24bd856aae6be93b6d03"
         },
         "png": {
-          "bytes": 74485,
-          "sha256": "bd9b22c2cb0882560bec0c6f0943383728b9324701cf8f7739eee249a05895fd",
+          "bytes": 88999,
+          "sha256": "4d63109fcefe09d84870ac9ad5788e7e7677523ef16c4a463dc77c6e8c3790d2",
           "pixels": [
-            2100,
-            870
+            2007,
+            795
           ],
           "dpi": [
             299.9994,
@@ -25,26 +25,25 @@
         }
       },
       "fonts_embedded": true,
-      "individually_inspected": true,
-      "inspected_in_final_report": true
+      "minimum_glyph_pt": 8.0
     },
     {
       "name": "inference",
       "files": {
         "pdf": {
-          "bytes": 18202,
-          "sha256": "fce14b4d454caec6d1e22060b1564f0f75266e6fc3e4cf3c546ccd7e64ff00c1"
+          "bytes": 16715,
+          "sha256": "b51c346c7583ad96477e9927261237f976f21a145acb7f8de422dec388767324"
         },
         "svg": {
-          "bytes": 9584,
-          "sha256": "aa1b77deb6c8af0572932e27d3b26f3508fe5c8f7d1b6ad3e416d555f6a63c1f"
+          "bytes": 11063,
+          "sha256": "70ff0629a835c4f1c9e13536882c14cd0b6724639f53e60e434a582fce1a247c"
         },
         "png": {
-          "bytes": 95536,
-          "sha256": "c9b0d0420e7e560f3f4b29486a76b135d7d4720f3ea93d44fc043b37045d2b14",
+          "bytes": 121288,
+          "sha256": "21459a0a1f24e20a474f6ebad33d5116d43ce23bd5c943f10c306db7b5669ae7",
           "pixels": [
-            2100,
-            780
+            2007,
+            915
           ],
           "dpi": [
             299.9994,
@@ -53,25 +52,24 @@
         }
       },
       "fonts_embedded": true,
-      "individually_inspected": true,
-      "inspected_in_final_report": true
+      "minimum_glyph_pt": 8.5
     },
     {
       "name": "covariance_geometry",
       "files": {
         "pdf": {
-          "bytes": 29756,
-          "sha256": "b1d501a3f60c7ed5bcbe7e36c225743e59f221b8ceee1d3cf70adca5e34289e9"
+          "bytes": 29032,
+          "sha256": "b8902fb72521808bb6be59741399b0c5d904331b46d3ebf4664511acbe6250db"
         },
         "svg": {
-          "bytes": 30893,
-          "sha256": "b6316982e40c91c4980e2483097e959336eea61131688601189bcd1ca14ed222"
+          "bytes": 25025,
+          "sha256": "a7760afaef63cb46290ea2344ea7eed9640dd42e7f42f06c4d9261f910924604"
         },
         "png": {
-          "bytes": 141484,
-          "sha256": "ef853988c87a99df32fde655f1d50fa988a8e6009005a32381c1cd970aa67521",
+          "bytes": 129214,
+          "sha256": "f605f460f3ac518d061efeb60a901202c7b4fd73721b8c84d029d430191b066c",
           "pixels": [
-            2100,
+            2007,
             810
           ],
           "dpi": [
@@ -81,25 +79,24 @@
         }
       },
       "fonts_embedded": true,
-      "individually_inspected": true,
-      "inspected_in_final_report": true
+      "minimum_glyph_pt": 6.300000190734863
     },
     {
       "name": "comparison",
       "files": {
         "pdf": {
-          "bytes": 20963,
-          "sha256": "b0c7cb62bb26279cefc278ff8c82d6563cb5642cb1024e520afdeafa7ad9d0a7"
+          "bytes": 20764,
+          "sha256": "fdff2f1faa1bd8f5f2dcafb6dad1e7cb99a5df7639adbf512e9059941db65b8c"
         },
         "svg": {
-          "bytes": 31150,
-          "sha256": "e52ccd2143b98dab350faa28a239ca59f2052b6685940b3f553354a0955b0bb0"
+          "bytes": 26496,
+          "sha256": "70a1e43c35bc8bad7ca81410718d84e70e32d24410e41fa5b897026ccece1233"
         },
         "png": {
-          "bytes": 91850,
-          "sha256": "20c41cba4f20130ba1f1d1576a37d2254e20d38a3ea9a996c22d9d41c44d513d",
+          "bytes": 82468,
+          "sha256": "211a9c3cb5e71af9921750f54f99c1d2fc37e0b53fcb83be64edf6441fb25f3b",
           "pixels": [
-            2100,
+            2007,
             780
           ],
           "dpi": [
@@ -109,26 +106,25 @@
         }
       },
       "fonts_embedded": true,
-      "individually_inspected": true,
-      "inspected_in_final_report": true
+      "minimum_glyph_pt": 8.0
     },
     {
       "name": "classes",
       "files": {
         "pdf": {
-          "bytes": 37662,
-          "sha256": "e6b699cb6b5647e28f6211ceea3e71dc69a6df5757faed7d95911d8659e4d29c"
+          "bytes": 31800,
+          "sha256": "d002a45958840bc1e1ecfb00addc2794b4f2a1f6679894d56bd81887ce8d4fd3"
         },
         "svg": {
-          "bytes": 65836,
-          "sha256": "dc37a4f6e745b5877833e08061e2e34d50f93772b433968c93a5c99f3e069116"
+          "bytes": 35129,
+          "sha256": "5818a4f3c7b465f6ef5640c609b1649c19c7147b7ae8fc168696c13db4779270"
         },
         "png": {
-          "bytes": 151867,
-          "sha256": "18b5d173d9f5df4c2a15b22000cd9d8e771a464f34e72f795c10df244928cfee",
+          "bytes": 116014,
+          "sha256": "afb0718d67f51d109aab46ec5db7ffaca44f2c04c718a910c971822bdee2449d",
           "pixels": [
-            2100,
-            1170
+            2007,
+            1035
           ],
           "dpi": [
             299.9994,
@@ -137,26 +133,25 @@
         }
       },
       "fonts_embedded": true,
-      "individually_inspected": true,
-      "inspected_in_final_report": true
+      "minimum_glyph_pt": 8.0
     },
     {
       "name": "calibration",
       "files": {
         "pdf": {
-          "bytes": 31766,
-          "sha256": "6836ba7a2753ca923ea0e355c182479da7afc8c78faff671277cbeaf85e77680"
+          "bytes": 36085,
+          "sha256": "4d02f80172745c79095eea6585924676070654519dc8e9e0d98c6c5b26faafe2"
         },
         "svg": {
-          "bytes": 56588,
-          "sha256": "162e78d05ed7050845a23d26d6ac8b44116e0f1148c6f1b280c1c93aaed82ac3"
+          "bytes": 60790,
+          "sha256": "c33abbb2580626a93cc70202b0192c2ce9a9c03533c1409c23a61ba73e640bb5"
         },
         "png": {
-          "bytes": 190846,
-          "sha256": "4b65b1ba8ceb9b04d856e51b6f812f49243a7693bd1694fe95d65886dc6a2935",
+          "bytes": 245836,
+          "sha256": "687aed52a830436fcefcaee2ce6b7f8700c2cbc57a1d0a65a1a4ff127c9eec4f",
           "pixels": [
-            2100,
-            1140
+            2007,
+            1635
           ],
           "dpi": [
             299.9994,
@@ -165,25 +160,24 @@
         }
       },
       "fonts_embedded": true,
-      "individually_inspected": true,
-      "inspected_in_final_report": true
+      "minimum_glyph_pt": 7.5
     },
     {
       "name": "convergence",
       "files": {
         "pdf": {
-          "bytes": 28793,
-          "sha256": "163c1f3ef9da46b60f3e7e280c2c2fa308085310e68dbe50066f19a630c94c85"
+          "bytes": 28311,
+          "sha256": "5293bbeb0e7a37810a992ed454f1083f6111e8bd3e9d5daf62ccf157c0c744b8"
         },
         "svg": {
-          "bytes": 47055,
-          "sha256": "3e32399f7554497ba5e33c59e6dd3cf110569e8f5bd821f0f305e0f7b4a02213"
+          "bytes": 41870,
+          "sha256": "1fe1c794789949b097120b066840c8b0df8862c563ad590d5beaa01cd9c5d921"
         },
         "png": {
-          "bytes": 117354,
-          "sha256": "a4585aa3a9c0a723f31412eb80aa46b7fd8ad28805328a1bdf4a4282c6622360",
+          "bytes": 107519,
+          "sha256": "47e48fc72cd5b23147d4e8a9b75b9cb5d18dbc3625cb83ea1bd41d3923bbba8b",
           "pixels": [
-            2100,
+            2007,
             870
           ],
           "dpi": [
@@ -193,25 +187,24 @@
         }
       },
       "fonts_embedded": true,
-      "individually_inspected": true,
-      "inspected_in_final_report": true
+      "minimum_glyph_pt": 5.599999904632568
     },
     {
       "name": "sensitivity",
       "files": {
         "pdf": {
-          "bytes": 25296,
-          "sha256": "11110bab0e48d02244407517d34e4f2f445baa67cf7807aa1e02dababc3802dd"
+          "bytes": 21007,
+          "sha256": "8e4b7858498800d1e502ab00a21d159d931e94a53b551b97779b35508fc1074d"
         },
         "svg": {
-          "bytes": 30530,
-          "sha256": "763800887649b6843ed678d1e1e8382c7effd9af035ad8cc2c1d207a40e91ed0"
+          "bytes": 21778,
+          "sha256": "0027b0b970b1d65d95028fdc9283811491ae85fbb2214ff166bd9b5550cc8f48"
         },
         "png": {
-          "bytes": 127634,
-          "sha256": "607cb4e354ee8b3f47bb1bc398428ba2404f6e5375a19c5dcbf331d092a46e37",
+          "bytes": 88626,
+          "sha256": "e94dd2519c26d7be20c67547c1c175b78eb62de8d7a33e7f46c502cc78ebc2f3",
           "pixels": [
-            2100,
+            2007,
             870
           ],
           "dpi": [
@@ -221,26 +214,25 @@
         }
       },
       "fonts_embedded": true,
-      "individually_inspected": true,
-      "inspected_in_final_report": true
+      "minimum_glyph_pt": 8.0
     },
     {
       "name": "errors",
       "files": {
         "pdf": {
-          "bytes": 21966,
-          "sha256": "d897403b94c133b97ca152bde3943c0188df4395f60dc7402e034721053365bb"
+          "bytes": 15341,
+          "sha256": "b5fd74d80f3f7becbe7762b061aa575c7ed408833d28e010ee23207793178075"
         },
         "svg": {
-          "bytes": 27023,
-          "sha256": "202f227e6f11f2de83f1acd52ae37c82dec51799c067d4754c08d058b4d9b806"
+          "bytes": 13467,
+          "sha256": "dadb66285934c3e4e3cd41bf9b7e4f02c1c6075203891be318cd10e8d6ea37fc"
         },
         "png": {
-          "bytes": 48803,
-          "sha256": "97c8c6845cd6d4fdcd7a0b5e1b5dd09f1a598c9af2d7beb844fc66617fa068e6",
+          "bytes": 121977,
+          "sha256": "74269ded0811c4eda8d1c5bd38f6563e2ab6c198f7bc5df0b8b464c98eed3e44",
           "pixels": [
-            2100,
-            1050
+            2007,
+            1110
           ],
           "dpi": [
             299.9994,
@@ -249,25 +241,24 @@
         }
       },
       "fonts_embedded": true,
-      "individually_inspected": true,
-      "inspected_in_final_report": true
+      "minimum_glyph_pt": 8.5
     },
     {
       "name": "monte_carlo",
       "files": {
         "pdf": {
-          "bytes": 23050,
-          "sha256": "2ca28100061807c929e168693f97b80dd957dba8452dd722fe8bf3953f24a8e8"
+          "bytes": 22454,
+          "sha256": "519ba4a25d62e6efad47e7f86236874005a6a0cfd40acdb12f384f17e43ace5d"
         },
         "svg": {
-          "bytes": 27234,
-          "sha256": "ea07c4f72858696d64e11143cd319a33ceccc4955af47acddee738d848fe8f9b"
+          "bytes": 24006,
+          "sha256": "9cc2f92a1b0528d58a9f5c3f201d6cfcd506aa7c54efd519cb7da54090c16e85"
         },
         "png": {
-          "bytes": 147491,
-          "sha256": "5e0cde7fd2ab323881d348a09842e0353332cb0edcfc25f8c54520ab09c25eda",
+          "bytes": 148609,
+          "sha256": "e94d7de657b315e6a27a9ec96c9bd4d8248e5ed025e52ad378e6e1fd6513b82e",
           "pixels": [
-            2100,
+            2007,
             840
           ],
           "dpi": [
@@ -277,11 +268,10 @@
         }
       },
       "fonts_embedded": true,
-      "individually_inspected": true,
-      "inspected_in_final_report": true
+      "minimum_glyph_pt": 8.0
     }
   ],
-  "review_date": "2026-10-08",
-  "reviewer": "AI agent",
-  "outcome": "Ten individually reviewed figures; embedded fonts, DPI and provenance verified."
+  "review_date": "2026-10-12",
+  "workflow_manifest": "results/refinement_05/workflow_manifest.json",
+  "automated_validation_only": true
 }

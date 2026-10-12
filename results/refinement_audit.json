@@ -1,6 +1,7 @@
 {
   "baseline_commit": "93b625e",
-  "executed_files_bitwise_unchanged": 25,
+  "executed_files_bitwise_unchanged": 24,
+  "public_metadata_redaction": "results/environment.json command only; all remaining fields semantically identical",
   "evidence_sha256": {
     "results/config.json": "4beafe7e50d2ac0b3097f77a899344ed7c7feaf0e06b72745f687cb3e761f923",
     "results/dataset.json": "b2b16450457c9e94e5b89196b8d63b8e0f3e1833b5d8aab0565b59b65a2de44a",
@@ -42,6 +43,6 @@
   "raw_f1_observations_preserved": 60,
   "confusion_proportions_unchanged": true,
   "covariance_contours_and_contrast_variances_verified": true,
-  "historical_experiment_environment_preserved": true,
+  "historical_experiment_environment_preserved_except_public_command": true,
   "current_plotting_provenance": "results/figure_manifest.json"
 }

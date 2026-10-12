@@ -10,12 +10,14 @@
     "report/student_reflection.txt": "a7e226a534b89f17b4a54e76409e3c0c4e2fc3071324f1d621087e1d8864f542",
     "report/student_reflection.tex": "3e03a33951cb968fb390fc933882c60efa72328881630590bfa897e15e9ea413"
   },
-  "sections_2_through_5_source_unchanged": true,
-  "bibliography_preserved": true,
+  "original_displayed_equations_preserved": 18,
+  "original_bibliography_entries_preserved": true,
   "original_selection_justification_preserved": true,
   "verified_verbatim_excerpts": 7,
   "skill_document_snapshots_verified": 12,
-  "vector_diagram_source_sha256": "1691464b7a85c918091de326777d19918195adc8e808a806a4942970ef173689",
+  "current_redistributed_snapshots": 5,
+  "historical_only_snapshots": 7,
+  "vector_diagram_source_sha256": "3ba606d3c88f5b01616d59ef7396ae8d50498accde265a1c63b6c3f379fcab60",
   "github_publication_pending": false,
   "independent_peer_review_claimed": false
 }

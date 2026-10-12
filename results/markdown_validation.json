@@ -1,91 +1,64 @@
 {
-  "renderer": "Published GitHub wiki browser inspection; GFM source structure audit",
+  "renderer": "GFM source structure audit; public rendering separately verified",
   "records": [
     {
       "source": "README.md",
       "gfm_structure_checked": true,
       "tables": 1,
-      "math_fences": 0,
-      "display_dollar_delimiters": 0
+      "math_fences": 0
     },
     {
       "source": "docs/skill_sources.md",
       "gfm_structure_checked": true,
       "tables": 1,
-      "math_fences": 0,
-      "display_dollar_delimiters": 0
+      "math_fences": 0
     },
     {
       "source": "docs/wiki/AI-Workflow.md",
       "gfm_structure_checked": true,
       "tables": 0,
-      "math_fences": 0,
-      "display_dollar_delimiters": 0
+      "math_fences": 0
     },
     {
       "source": "docs/wiki/Algorithm-and-Mathematics.md",
       "gfm_structure_checked": true,
       "tables": 0,
-      "math_fences": 5,
-      "display_dollar_delimiters": 0
+      "math_fences": 5
     },
     {
       "source": "docs/wiki/Dataset-and-Experiment-Protocol.md",
       "gfm_structure_checked": true,
       "tables": 0,
-      "math_fences": 0,
-      "display_dollar_delimiters": 0
+      "math_fences": 0
     },
     {
       "source": "docs/wiki/Home.md",
       "gfm_structure_checked": true,
       "tables": 0,
-      "math_fences": 0,
-      "display_dollar_delimiters": 0
+      "math_fences": 0
     },
     {
       "source": "docs/wiki/Reproduction.md",
       "gfm_structure_checked": true,
       "tables": 0,
-      "math_fences": 0,
-      "display_dollar_delimiters": 0
+      "math_fences": 0
     },
     {
       "source": "docs/wiki/Results-and-Visualization.md",
       "gfm_structure_checked": true,
-      "tables": 2,
-      "math_fences": 0,
-      "display_dollar_delimiters": 0
+      "tables": 3,
+      "math_fences": 0
     }
   ],
   "source_sha256": {
-    "README.md": "08e66b6f38ee00abc3a9ba19b032b9aa8429f0ae819a1e8b711020435c99af08",
-    "docs/skill_sources.md": "7e98705256b3a51d23ecb040b3ea0033abfa236e457e66a8265d35d786b95277",
-    "docs/wiki/AI-Workflow.md": "6d479d6297756a03cb712b5b9fc916e7c8ee75cff49be32b64af634fd6e52af9",
+    "README.md": "dc974fac6075d1d22cf872aa29fb36e2ec90396b4be564c389236045d7c017b4",
+    "docs/skill_sources.md": "395b3b8983c8148d9c5e05cb55d04ac91e91372b32a7bc96ba0c3d3a287e548d",
+    "docs/wiki/AI-Workflow.md": "3cd83a84cdf74c0e7c2dbbfa9a29a5084cc07d45c46e2f8280cc9e7048802c08",
     "docs/wiki/Algorithm-and-Mathematics.md": "0fdefd6a67280466e0c2e165aa58af3beb1d3c593da697129a7ccaf405f60c76",
     "docs/wiki/Dataset-and-Experiment-Protocol.md": "0a6aedbca8799937e2f5be00d966ca9f4c47bcc2107a123770df4d47ad45ea78",
-    "docs/wiki/Home.md": "a331c5da1e0040f1acfa7d5192c2a4794348ebf4e4e1f69ca5db825db7ee4a3a",
-    "docs/wiki/Reproduction.md": "8cbd741aeea70d6464139796fe621204282a8293186ae0398b3d2a35be734d8d",
-    "docs/wiki/Results-and-Visualization.md": "dd8134c0fb2a640c42b7dfe5bda6e5cfd5f1ac7a3fcbbdcc48871cb1a785cedb"
+    "docs/wiki/Home.md": "dcdd2f4f7ca686f78e941d2fa72e37602a72298cee965ea024fb14e3fa59cdfe",
+    "docs/wiki/Reproduction.md": "b6400de4d743c925de2ad179141effda8ee052e094ded3b06e996011e5c09de8",
+    "docs/wiki/Results-and-Visualization.md": "1b1d1d2aebbc307553a5b9867caf6209abd70ae6d9101075b547e9f64b186763"
   },
-  "public_github_rendering": {
-    "wiki_pages_inspected": [
-      "Home",
-      "Algorithm-and-Mathematics",
-      "Results-and-Visualization",
-      "Reproduction"
-    ],
-    "math_and_matrices_verified": true,
-    "results_tables_verified": true,
-    "three_figures_verified": true,
-    "initial_macro_and_matrix_errors_repaired": true,
-    "readme_verified": true
-  },
-  "previous_local_render_record": "results/markdown_validation_prepublication.json",
-  "visual_review": {
-    "reviewer": "AI agent",
-    "date": "2026-10-09",
-    "scope": "Public Home, mathematics, results and reproduction wiki pages; public README.",
-    "outcome": "Readable equations, correct matrices, tables, figures and navigation."
-  }
+  "automated_validation_only": true
 }

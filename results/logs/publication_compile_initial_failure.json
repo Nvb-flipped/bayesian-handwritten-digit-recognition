@@ -2,11 +2,11 @@
   "attempts": [
     {
       "command": [
-        "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.1002.7124.0_x64__2p2nqsd0c76g0\\app\\resources\\tectonic\\tectonic.exe",
+        "{TECTONIC}",
         "-X",
         "compile",
         "--outdir",
-        "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report",
+        "{PROJECT_ROOT}\\report",
         "--outfmt",
         "pdf",
         "--print",
@@ -17,7 +17,7 @@
       "exitCode": 101,
       "log": "note: \"version 2\" Tectonic command-line interface activated\n\nthread 'main' (30332) panicked at src\\config.rs:154:18:\ncalled `Result::unwrap()` on an `Err` value: this bundle isn't cached, and we couldn't get it from the internet. Error: error sending request for url (https://relay.fullyjustified.net/default_bundle_v33.tar.index.gz)\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n",
       "pdfExists": true,
-      "pdfPath": "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\main.pdf"
+      "pdfPath": "{PROJECT_ROOT}\\report\\main.pdf"
     }
   ],
   "command": null,
@@ -25,16 +25,16 @@
   "exitCode": 1,
   "log": "note: \"version 2\" Tectonic command-line interface activated\n\nthread 'main' (30332) panicked at src\\config.rs:154:18:\ncalled `Result::unwrap()` on an `Err` value: this bundle isn't cached, and we couldn't get it from the internet. Error: error sending request for url (https://relay.fullyjustified.net/default_bundle_v33.tar.index.gz)\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n",
   "pdfExists": true,
-  "pdfPath": "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\main.pdf",
-  "rootFile": "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\main.tex",
+  "pdfPath": "{PROJECT_ROOT}\\report\\main.pdf",
+  "rootFile": "{PROJECT_ROOT}\\report\\main.tex",
   "tectonic": {
     "checked": [
       {
-        "path": "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.1002.7124.0_x64__2p2nqsd0c76g0\\app\\resources\\tectonic\\tectonic.exe",
+        "path": "{TECTONIC}",
         "source": "app"
       }
     ],
-    "path": "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.1002.7124.0_x64__2p2nqsd0c76g0\\app\\resources\\tectonic\\tectonic.exe",
+    "path": "{TECTONIC}",
     "reason": "Tectonic executable is available.",
     "source": "app",
     "status": "available",
@@ -43,16 +43,16 @@
   "tectonicSuitability": {
     "reasons": [],
     "scannedFiles": [
-      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\main.tex",
-      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\student_reflection.tex",
-      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\diagnostic_text.tex",
-      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\ablation.tex",
-      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\per_class.tex",
-      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\probability_metrics.tex",
-      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\performance.tex",
-      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\selection.tex",
-      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\instruction_workflow.tex",
-      "C:\\Users\\csmen\\Documents\\Codex\\Pattern Recognition\\AI Assignment 2\\report\\results.tex"
+      "{PROJECT_ROOT}\\report\\main.tex",
+      "{PROJECT_ROOT}\\report\\student_reflection.tex",
+      "{PROJECT_ROOT}\\report\\diagnostic_text.tex",
+      "{PROJECT_ROOT}\\report\\ablation.tex",
+      "{PROJECT_ROOT}\\report\\per_class.tex",
+      "{PROJECT_ROOT}\\report\\probability_metrics.tex",
+      "{PROJECT_ROOT}\\report\\performance.tex",
+      "{PROJECT_ROOT}\\report\\selection.tex",
+      "{PROJECT_ROOT}\\report\\instruction_workflow.tex",
+      "{PROJECT_ROOT}\\report\\results.tex"
     ],
     "suitable": true
   },

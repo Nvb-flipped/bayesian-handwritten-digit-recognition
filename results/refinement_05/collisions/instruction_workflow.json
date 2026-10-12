@@ -1,0 +1,596 @@
+{
+  "pdf": "results\\refinement_05\\instruction_workflow.pdf",
+  "auditable": true,
+  "verdict": "FIX BEFORE DELIVERY",
+  "page_count": 1,
+  "visible_text_box_count": 47,
+  "text_trace_count": 22,
+  "stroke_path_count": 38,
+  "filled_region_count": 25,
+  "image_region_count": 0,
+  "summary": {
+    "fail": 26,
+    "warn": 0,
+    "contained_fill_overlays": 38,
+    "contained_image_overlays": 0
+  },
+  "thresholds": {
+    "text_inset_pt": 0.6,
+    "min_overlap_ratio": 0.05,
+    "clipping_tolerance_pt": 0.5
+  },
+  "findings": [
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Work\ufb02owdiagram1.Executedinstruction-to-evidencestages.Humandirection(orange),Codexactivities(blue)",
+      "text_bbox": [
+        5.919452667236328,
+        285.81719970703125,
+        475.53814697265625,
+        342.604248046875
+      ],
+      "other_text": "andoutputs(green)remaindistinct.Research/designskillssupportedcomparisonandcontrols;ML/PyTorch",
+      "other_bbox": [
+        19.276981353759766,
+        297.7723388671875,
+        462.1710510253906,
+        306.73870849609375
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Work\ufb02owdiagram1.Executedinstruction-to-evidencestages.Humandirection(orange),Codexactivities(blue)",
+      "text_bbox": [
+        5.919452667236328,
+        285.81719970703125,
+        475.53814697265625,
+        342.604248046875
+      ],
+      "other_text": "supportedimplementation;statistics,visualizationandLaTeX/PDFguidancesupportedreviewandre\ufb01nement.",
+      "other_bbox": [
+        14.706932067871094,
+        309.7275390625,
+        466.76470947265625,
+        318.69390869140625
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Work\ufb02owdiagram1.Executedinstruction-to-evidencestages.Humandirection(orange),Codexactivities(blue)",
+      "text_bbox": [
+        5.919452667236328,
+        285.81719970703125,
+        475.53814697265625,
+        342.604248046875
+      ],
+      "other_text": "Dashedarrowsdenotesame-agentrepairandrechecking,notindependenthumanreview.Prompt05retainsthe",
+      "other_bbox": [
+        14.324573516845703,
+        321.6827087402344,
+        467.099609375,
+        330.6490783691406
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Work\ufb02owdiagram1.Executedinstruction-to-evidencestages.Humandirection(orange),Codexactivities(blue)",
+      "text_bbox": [
+        5.919452667236328,
+        285.81719970703125,
+        475.53814697265625,
+        342.604248046875
+      ],
+      "other_text": "selectedmodelsandre\ufb02ectionwhileextendinganalysisandverifyingthedeliverables.",
+      "other_bbox": [
+        68.10758972167969,
+        333.63787841796875,
+        413.322021484375,
+        342.604248046875
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "AssignmentPDF",
+      "text_bbox": [
+        29.48412322998047,
+        36.456451416015625,
+        125.06172180175781,
+        64.35183715820312
+      ],
+      "other_text": "+AGENTS",
+      "other_bbox": [
+        56.263282775878906,
+        46.419090270996094,
+        98.26577758789062,
+        54.38920211791992
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "AssignmentPDF",
+      "text_bbox": [
+        29.48412322998047,
+        36.456451416015625,
+        125.06172180175781,
+        64.35183715820312
+      ],
+      "other_text": "Research/implementation",
+      "other_bbox": [
+        29.48412322998047,
+        56.38172912597656,
+        125.06172180175781,
+        64.35183715820312
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Search/compare",
+      "text_bbox": [
+        34.24828338623047,
+        114.81173706054688,
+        120.30956268310547,
+        152.66976928710938
+      ],
+      "other_text": "LaplaceRedux,",
+      "other_bbox": [
+        50.40314483642578,
+        124.77438354492188,
+        104.13765716552734,
+        132.74449157714844
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Search/compare",
+      "text_bbox": [
+        34.24828338623047,
+        114.81173706054688,
+        120.30956268310547,
+        152.66976928710938
+      ],
+      "other_text": "NatPN,VBLL",
+      "other_bbox": [
+        52.18129348754883,
+        134.7370147705078,
+        102.34518432617188,
+        142.70712280273438
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Search/compare",
+      "text_bbox": [
+        34.24828338623047,
+        114.81173706054688,
+        120.30956268310547,
+        152.66976928710938
+      ],
+      "other_text": "Derive,implement,train",
+      "other_bbox": [
+        34.24828338623047,
+        144.6996612548828,
+        120.30956268310547,
+        152.66976928710938
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Sourcecode/tests",
+      "text_bbox": [
+        42.680686950683594,
+        219.0069580078125,
+        111.83735656738281,
+        246.90234375
+      ],
+      "other_text": "Lockedselections",
+      "other_bbox": [
+        46.672325134277344,
+        228.9696044921875,
+        107.85887908935547,
+        236.93971252441406
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Sourcecode/tests",
+      "text_bbox": [
+        42.680686950683594,
+        219.0069580078125,
+        111.83735656738281,
+        246.90234375
+      ],
+      "other_text": "Primaryresults",
+      "other_bbox": [
+        50.72016525268555,
+        238.93223571777344,
+        103.82502746582031,
+        246.90234375
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Verifymath/logging",
+      "text_bbox": [
+        148.17135620117188,
+        119.57168579101562,
+        233.14869689941406,
+        147.46707153320312
+      ],
+      "other_text": "72MCdiagnostics",
+      "other_bbox": [
+        157.88075256347656,
+        129.53433227539062,
+        223.4269561767578,
+        137.5044403076172
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Verifymath/logging",
+      "text_bbox": [
+        148.17135620117188,
+        119.57168579101562,
+        233.14869689941406,
+        147.46707153320312
+      ],
+      "other_text": "Improve\ufb01gures/report",
+      "other_bbox": [
+        148.17135620117188,
+        139.49696350097656,
+        233.14869689941406,
+        147.46707153320312
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Review/repairrecords",
+      "text_bbox": [
+        149.47891235351562,
+        219.00698852539062,
+        231.84205627441406,
+        246.90237426757812
+      ],
+      "other_text": "Samplingevidence",
+      "other_bbox": [
+        158.12393188476562,
+        228.96963500976562,
+        223.1999053955078,
+        236.9397430419922
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Review/repairrecords",
+      "text_bbox": [
+        149.47891235351562,
+        219.00698852539062,
+        231.84205627441406,
+        246.90237426757812
+      ],
+      "other_text": "Re\ufb01nedreport",
+      "other_bbox": [
+        165.49229431152344,
+        238.93226623535156,
+        215.83949279785156,
+        246.90237426757812
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Criticalreview",
+      "text_bbox": [
+        153.67405700683594,
+        41.65925979614258,
+        227.63670349121094,
+        59.592010498046875
+      ],
+      "other_text": "Laterreportrequests",
+      "other_bbox": [
+        153.67405700683594,
+        51.62189865112305,
+        227.63670349121094,
+        59.592010498046875
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Auditpublic\ufb01les",
+      "text_bbox": [
+        258.16461181640625,
+        119.5716552734375,
+        349.9324951171875,
+        147.467041015625
+      ],
+      "other_text": "CLIrepository/wikisync",
+      "other_bbox": [
+        258.16461181640625,
+        129.5343017578125,
+        349.9324951171875,
+        137.50440979003906
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Auditpublic\ufb01les",
+      "text_bbox": [
+        258.16461181640625,
+        119.5716552734375,
+        349.9324951171875,
+        147.467041015625
+      ],
+      "other_text": "VerifypublicURLs",
+      "other_bbox": [
+        270.8984069824219,
+        139.49693298339844,
+        337.2017822265625,
+        147.467041015625
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "PublicGitHubrepository",
+      "text_bbox": [
+        260.20916748046875,
+        219.56039428710938,
+        347.91229248046875,
+        247.45578002929688
+      ],
+      "other_text": "Sixwikipages",
+      "other_bbox": [
+        279.0833740234375,
+        229.52304077148438,
+        329.0081481933594,
+        237.49314880371094
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "PublicGitHubrepository",
+      "text_bbox": [
+        260.20916748046875,
+        219.56039428710938,
+        347.91229248046875,
+        247.45578002929688
+      ],
+      "other_text": "Veri\ufb01edsourcelinks",
+      "other_bbox": [
+        268.8045349121094,
+        239.4856719970703,
+        339.28424072265625,
+        247.45578002929688
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Publicationapproval",
+      "text_bbox": [
+        260.8734130859375,
+        42.43410873413086,
+        347.237548828125,
+        60.366859436035156
+      ],
+      "other_text": "StudentinitializesHome",
+      "other_bbox": [
+        260.8734130859375,
+        52.39674758911133,
+        347.237548828125,
+        60.366859436035156
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Pairedimageanalysis",
+      "text_bbox": [
+        370.16522216796875,
+        119.35025024414062,
+        464.71466064453125,
+        147.24563598632812
+      ],
+      "other_text": "Clean-environmentchecks",
+      "other_bbox": [
+        371.52734375,
+        129.31289672851562,
+        463.34307861328125,
+        137.2830047607422
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Pairedimageanalysis",
+      "text_bbox": [
+        370.16522216796875,
+        119.35025024414062,
+        464.71466064453125,
+        147.24563598632812
+      ],
+      "other_text": "Redraw/rebuild/inspect",
+      "other_bbox": [
+        370.16522216796875,
+        139.27552795410156,
+        464.71466064453125,
+        147.24563598632812
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "Finalaudit",
+      "text_bbox": [
+        371.091552734375,
+        41.65925979614258,
+        463.7839660644531,
+        59.592010498046875
+      ],
+      "other_text": "Comprehensivere\ufb01nement",
+      "other_bbox": [
+        371.091552734375,
+        51.62189865112305,
+        463.7839660644531,
+        59.592010498046875
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "13tests/reproduction",
+      "text_bbox": [
+        375.0985412597656,
+        219.78182983398438,
+        459.74908447265625,
+        247.67721557617188
+      ],
+      "other_text": "Figures/LaTeX/PDF",
+      "other_bbox": [
+        375.0985412597656,
+        229.74447631835938,
+        459.74908447265625,
+        237.71458435058594
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    },
+    {
+      "severity": "FAIL",
+      "kind": "text-text",
+      "page": 1,
+      "message": "Text boxes overlap by 100.0% of the smaller box",
+      "text": "13tests/reproduction",
+      "text_bbox": [
+        375.0985412597656,
+        219.78182983398438,
+        459.74908447265625,
+        247.67721557617188
+      ],
+      "other_text": "Finalsubmissionchecks",
+      "other_bbox": [
+        375.4935607910156,
+        239.7071075439453,
+        459.3789978027344,
+        247.67721557617188
+      ],
+      "object_count": 1,
+      "object_indexes": []
+    }
+  ]
+}

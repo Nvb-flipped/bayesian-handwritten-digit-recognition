@@ -1,4 +1,5 @@
 """Check publishable Git history without emitting suspected credential contents."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -7,6 +8,10 @@ import subprocess
 
 
 def audit():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output',default='results/publication_history_audit.json')
+    parser.add_argument('--date',default='2026-10-09')
+    args=parser.parse_args()
     objects = subprocess.check_output(['git', 'rev-list', '--objects', '--all']).decode().splitlines()
     names = {}
     for row in objects:
@@ -40,7 +45,7 @@ def audit():
     assert not findings, 'History findings (values withheld): '+json.dumps(findings)
     tracked = subprocess.check_output(['git','ls-files','-z']).decode().split('\0')[:-1]
     selected = {p.as_posix():p.stat().st_size for p in sorted(Path('results/models').glob('*'))}
-    record = dict(review_date='2026-10-09', baseline_commit=subprocess.check_output(
+    record = dict(review_date=args.date, baseline_commit=subprocess.check_output(
         ['git','rev-parse','HEAD']).decode().strip(),
         commits_checked=int(subprocess.check_output(['git','rev-list','--count','--all'])),
         historical_blobs_checked=blobs, historical_blob_bytes=total, largest_blob_bytes=largest,
@@ -49,7 +54,7 @@ def audit():
         checkpoint_rationale='Only seven selected small artifacts retained for exact checkpoint reload/reproduction audits; no dataset caches or redundant training checkpoints.',
         intentional_public_course_identity='Report title includes the student name and ID required by the course.',
         scope='Pattern and inventory audit, not a guarantee that every conceivable secret format is detectable.')
-    Path('results/publication_history_audit.json').write_text(json.dumps(record,indent=2)+'\n',
+    Path(args.output).write_text(json.dumps(record,indent=2)+'\n',
         encoding='utf8',newline='\n')
     print(f'History audit passed: {record["commits_checked"]} commits, {blobs} blobs; '
           f'largest {largest:,} bytes; no credential-pattern or excluded-directory findings.')

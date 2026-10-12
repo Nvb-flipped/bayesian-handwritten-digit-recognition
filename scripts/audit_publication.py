@@ -1,4 +1,5 @@
 """Verify anonymous public access, exact Git trees, PDF bytes and wiki sync."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -23,6 +24,11 @@ def fetch(url):
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output',default='results/publication_audit.json')
+    parser.add_argument('--date',default='2026-10-09')
+    parser.add_argument('--browser-verified',action='store_true')
+    args=parser.parse_args()
     api='https://api.github.com/repos/'+OWNER_REPO
     repo=json.loads(fetch(api)[0])
     assert repo['private'] is False and repo['default_branch']=='main' and repo['has_wiki']
@@ -73,9 +79,10 @@ def main():
         public_tree_blobs_verified=len(expected),required_public_files=checked,
         public_pdf_bitwise_equal=True,wiki_enabled=True,wiki_commit_verified=wiki_head,
         wiki_pages=routes,wiki_images=images,requests_authenticated=False,
-        browser_checks='Home navigation; mathematical derivations/matrices; results tables; three figures. Rendering errors repaired and rechecked.',
-        audit_date='2026-10-09')
-    (ROOT/'results/publication_audit.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf8',newline='\n')
+        browser_checks=('Public README and wiki navigation, equations, tables and figures inspected'
+                        if args.browser_verified else 'No browser review recorded by this invocation'),
+        audit_date=args.date)
+    (ROOT/args.output).write_text(json.dumps(record,indent=2)+'\n',encoding='utf8',newline='\n')
     print(f'Public audit passed: {len(expected)} exact Git blobs; matching PDF; six anonymous wiki pages; three matching figures.')
 
 

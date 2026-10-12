@@ -1,54 +1,42 @@
-% Vector workflow; independent caption counter preserves experimental figure numbering.
-\begin{figure}[H]
-\centering
+% Editable executed workflow; independent counter preserves experiment numbering.
+\begin{figure}[H]\centering
 \begin{tikzpicture}[
-  box/.style={draw=black!55,rounded corners=2pt,line width=.6pt,
-    text width=67mm,minimum height=29mm,inner sep=3mm,
-    align=left,font=\fontsize{9}{11}\selectfont},
-  human/.style={box,fill=orange!9,draw=orange!65!black},
-  activity/.style={box,fill=blue!5,draw=blue!55!black},
-  output/.style={box,fill=green!7,draw=green!40!black},
-  flow/.style={-{Stealth[length=2mm]},line width=.8pt,draw=black!65},
-  edge/.style={font=\fontsize{8}{9}\selectfont,fill=white,inner sep=1pt}
+ box/.style={draw=black!50,line width=.6pt,rounded corners=1pt,text width=35mm,
+  minimum height=20mm,inner sep=2mm,align=center,font=\sffamily\fontsize{8}{10}\selectfont},
+ human/.style={box,fill=orange!9}, activity/.style={box,fill=blue!5},
+ output/.style={box,fill=green!7},
+ flow/.style={-{Stealth[length=1.5mm]},line width=.7pt,draw=black!60},
+ lane/.style={font=\sffamily\fontsize{8}{9}\selectfont,anchor=west},
+ edge/.style={font=\sffamily\fontsize{7}{8}\selectfont,inner sep=1pt}
 ]
-\node[human] (human) at (0,0) {\textbf{1. HUMAN: define requirements}\\
-  Assignment PDF: course requirements\\
-  \texttt{AGENTS.md}: persistent rules\\
-  Engineered Prompts 01--03: staged work};
-\node[activity] (agent) at (8.15,0) {\textbf{2. AI: Codex Desktop + skills}\\
-  Research and experimental design\\
-  ML/PyTorch; mathematics verification\\
-  Visualization, writing, PDF and LaTeX};
-\node[activity] (discovery) at (8.15,-3.65) {\textbf{3. AI: discover and select}\\
-  Search and verify primary literature\\
-  Compare Laplace Redux, NatPN, VBLL\\
-  Select conditional last-layer Laplace};
-\node[activity] (execute) at (0,-3.65) {\textbf{4. AI: implement and execute}\\
-  Derive prior, likelihood, MAP, Hessian\\
-  Generate code; test; train and evaluate\\
-  Validation selection; reproducibility checks};
-\node[activity] (review) at (0,-7.3) {\textbf{5. AI: review and refine}\\
-  Prompt 02 and later refinement requests\\
-  Verify mathematics; interpret evidence\\
-  Improve graphs/report; repeat visual QA};
-\node[output] (deliver) at (8.15,-7.3) {\textbf{6. OUTPUT: verified deliverables}\\
-  Source code; saved experimental evidence\\
-  LaTeX/PDF report; student reflection\\[2pt]
-  Public GitHub + six wiki pages (Prompt 03)\\
-  Final submission checks (Prompt 04)};
-\draw[flow] (human.east) -- node[edge,above]{guide} (agent.west);
-\draw[flow] (agent.south) -- node[edge,right]{research} (discovery.north);
-\draw[flow] (discovery.west) -- node[edge,above]{build} (execute.east);
-\draw[flow] (execute.south) -- node[edge,right]{review} (review.north);
-\draw[flow] (review.east) -- node[edge,above]{verify} (deliver.west);
-\draw[flow,dashed] (review.west) -- ++(-.55,0) |- (execute.west);
-\node[edge,rotate=90] at (-4.3,-5.47) {repair + recheck};
+\node[lane,rotate=90,anchor=center] at (-24mm,0) {\textbf{HUMAN DIRECTION}};
+\node[human] (h1) at (0,0) {\textbf{Prompt 01}\\Assignment PDF + AGENTS\\Research / implementation};
+\node[human] (h2) at (40mm,0) {\textbf{Prompt 02}\\Critical review\\Later report requests};
+\node[human] (h3) at (80mm,0) {\textbf{Prompt 03}\\Publication approval\\Student initializes Home};
+\node[human] (h4) at (120mm,0) {\textbf{Prompts 04--05}\\Final audit\\Comprehensive refinement};
+\node[lane,rotate=90,anchor=center] at (-24mm,-31mm) {\textbf{Codex Desktop + skills}};
+\node[activity] (a1) at (0,-31mm) {Search / compare\\Laplace Redux, NatPN, VBLL\\Derive, implement, train};
+\node[activity] (a2) at (40mm,-31mm) {Verify math / logging\\72 MC diagnostics\\Improve figures / report};
+\node[activity] (a3) at (80mm,-31mm) {Audit public files\\CLI repository / wiki sync\\Verify public URLs};
+\node[activity] (a4) at (120mm,-31mm) {Paired image analysis\\Clean-environment checks\\Redraw / rebuild / inspect};
+\node[lane,rotate=90,anchor=center] at (-24mm,-66mm) {\textbf{VERIFIED EVIDENCE}};
+\node[output] (e1) at (0,-66mm) {Source code / tests\\Locked selections\\Primary results};
+\node[output] (e2) at (40mm,-66mm) {Review / repair records\\Sampling evidence\\Refined report};
+\node[output] (e3) at (80mm,-66mm) {Public GitHub repository\\Six wiki pages\\Verified source links};
+\node[output] (e4) at (120mm,-66mm) {13 tests / reproduction\\Figures / LaTeX / PDF\\Final submission checks};
+\foreach \i in {1,2,3,4} {\draw[flow] (h\i.south)--(a\i.north);\draw[flow] (a\i.south)--(e\i.north);}
+\draw[flow] (a1.east)--(a2.west);
+\draw[flow] (a2.east)--(a3.west);
+\draw[flow] (a3.east)--(a4.west);
+\draw[flow,dashed] (a2.south west)--++(-1mm,-5mm)-| node[edge,pos=.3,below]{repair / recheck} (a1.south east);
+\draw[flow,dashed] (a4.south east)--++(2mm,-5mm)-| (a4.south west);
 \end{tikzpicture}
-\par\smallskip
-\refstepcounter{workflowdiagram}\label{fig:ai-workflow}
+\par\smallskip\refstepcounter{workflowdiagram}\label{fig:ai-workflow}
 {\small\textbf{Workflow diagram \theworkflowdiagram.}
-Human instructions (orange), AI activities (blue) and generated outputs (green).
-Arrows trace executed work; the dashed loop denotes repair and rechecking.
-Repository, wiki and final submission checks are verified.
-Skill contributions and limits are identified in the accompanying text.}
+Executed instruction-to-evidence stages. Human direction (orange), Codex activities
+(blue) and outputs (green) remain distinct. Research/design skills supported comparison
+and controls; ML/PyTorch supported implementation; statistics, visualization and
+LaTeX/PDF guidance supported review and refinement. Dashed arrows denote same-agent
+repair and rechecking, not independent human review. Prompt 05 retains the selected
+models and reflection while extending analysis and verifying the deliverables.}
 \end{figure}

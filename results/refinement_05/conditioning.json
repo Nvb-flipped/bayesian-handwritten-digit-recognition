@@ -1,0 +1,36 @@
+{
+  "selected_prior_precision": 1,
+  "method": "Independent eigvalsh and Cholesky checks on all three saved selected posterior precisions",
+  "records": [
+    {
+      "model": "results/models/posterior_11.npz",
+      "sha256": "d47e3e30486b89fee441bfeffa8bebb21e3659b35225a9e42360bf40884351cf",
+      "dimension": 330,
+      "minimum_eigenvalue": 0.9999999999999946,
+      "maximum_eigenvalue": 64.75876663284501,
+      "condition_number": 64.75876663284537,
+      "cholesky_reconstruction_max_abs": 1.7763568394002505e-15,
+      "prior_only_common_logit_direction_max_abs": 1.7319479184152442e-14
+    },
+    {
+      "model": "results/models/posterior_22.npz",
+      "sha256": "7ef31766cc758aec5cd3fbfefd1d9a2621151186bc3382dd89c97751c6b83dae",
+      "dimension": 330,
+      "minimum_eigenvalue": 0.9999999999999947,
+      "maximum_eigenvalue": 67.69749753726498,
+      "condition_number": 67.69749753726533,
+      "cholesky_reconstruction_max_abs": 1.7763568394002505e-15,
+      "prior_only_common_logit_direction_max_abs": 2.042810365310288e-14
+    },
+    {
+      "model": "results/models/posterior_33.npz",
+      "sha256": "b125a70f2f05173f544b41b5852b8ec50fc1ff910279a3e3f3c7f7a7d4b4bbf1",
+      "dimension": 330,
+      "minimum_eigenvalue": 0.999999999999994,
+      "maximum_eigenvalue": 69.01848669648291,
+      "condition_number": 69.01848669648332,
+      "cholesky_reconstruction_max_abs": 2.6645352591003757e-15,
+      "prior_only_common_logit_direction_max_abs": 1.6708856520608606e-14
+    }
+  ]
+}

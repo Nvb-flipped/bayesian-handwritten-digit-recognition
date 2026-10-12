@@ -1,0 +1,17 @@
+{
+  "editable_source": "report/instruction_workflow.tex",
+  "source_sha256": "3ba606d3c88f5b01616d59ef7396ae8d50498accde265a1c63b6c3f379fcab60",
+  "files": {
+    "results/refinement_05/instruction_workflow.pdf": "62bbbb737709ec52635d8f2549009a933350d80b3f9ddcc68935fc34872fe1b0",
+    "results/refinement_05/instruction_workflow.svg": "9de0e2b323a307da19fdd6c9b983c3dbc7cdb4734abaa9410ab6d9d5137c2fb5",
+    "results/refinement_05/instruction_workflow.png": "e76bd9b9962d14bee80138944586b6bec24fadf8f356720de2f926ad6335849d"
+  },
+  "width_mm": 170.62980889214407,
+  "height_mm": 122.627054172092,
+  "raster_dpi": 300,
+  "generator": "scripts/export_workflow.py",
+  "generator_sha256": "65bbda3e434d0cdb3f45f7b8b912df85c8e57217959818734bc6f972182788e0",
+  "generated_from": "report/workflow_export.pdf",
+  "compiled_source_sha256": "9c5fd6c177f7458e550c6c51d39fc57931ace4cb4e83ecde661755debc72d8bc",
+  "standalone_source_sha256": "f42db737d0f3d753c05ead659b1e43d4753fb1cb56d5d116fe5527a278d1f510"
+}

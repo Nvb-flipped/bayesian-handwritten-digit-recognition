@@ -24,7 +24,17 @@ def audit():
     for path in paths:
         name = path.as_posix()
         original = subprocess.check_output(["git", "show", f"{baseline}:{name}"])
-        assert original == path.read_bytes(), f"Executed evidence changed: {name}"
+        if path.name=="environment.json":
+            # Narrow exception: ONLY the command string is publicly redacted.
+            expected=json.loads(original)
+            expected["command"]="python -m bayes_digits.experiment --config configs/default.json"
+            assert json.loads(path.read_bytes())==expected, "Experimental environment changed beyond command redaction"
+            ledger=json.loads(Path("results/refinement_05/metadata_redactions.json").read_text())
+            item=next(v for v in ledger if v["file"]==name)
+            assert item["original_sha256"]==hashlib.sha256(original).hexdigest()
+            assert item["public_sha256"]==hashlib.sha256(path.read_bytes()).hexdigest()
+        else:
+            assert original == path.read_bytes(), f"Executed evidence changed: {name}"
         hashes[name] = hashlib.sha256(original).hexdigest()
     # Only generated numerical tables belong to the frozen evidence set.
     # Diagram/prose includes may legitimately change during report refinement.
@@ -80,15 +90,16 @@ def audit():
                                    np.ones(len(points)), atol=1e-12)
 
     save_json(root / "refinement_audit.json", dict(
-        baseline_commit=baseline, executed_files_bitwise_unchanged=len(paths),
+        baseline_commit=baseline, executed_files_bitwise_unchanged=len(paths)-1,
+        public_metadata_redaction="results/environment.json command only; all remaining fields semantically identical",
         evidence_sha256=hashes, primary_arrays_bitwise_unchanged=len(current.files),
         numerical_table_files_bitwise_unchanged=len(tables)-len(formatting_changes),
         verified_table_precision_changes=formatting_changes,
         raw_f1_observations_preserved=raw_observations, confusion_proportions_unchanged=True,
         covariance_contours_and_contrast_variances_verified=True,
-        historical_experiment_environment_preserved=True,
+        historical_experiment_environment_preserved_except_public_command=True,
         current_plotting_provenance="results/figure_manifest.json"))
-    print(f"Refinement audit passed: {len(paths)} unchanged evidence files, "
+    print(f"Refinement audit passed: {len(paths)-1} byte-identical evidence files, one verified command-only redaction, "
           f"{len(current.files)} arrays, {len(tables)} verified tables (one SD precision fix), {raw_observations} raw F1 observations; toy geometry verified.")
 
 

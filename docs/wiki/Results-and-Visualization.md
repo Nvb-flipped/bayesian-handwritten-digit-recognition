@@ -24,7 +24,24 @@ Correlations help relative to diagonal precision, but averaging worsens proper s
 
 Digit 8 mean F1: 0.931; recall: 0.905. Seed 11 has eight errors/352 correct cases. All its mistakes are displayed in ascending original index. Averaging confusion over seeds does not increase unique test support beyond 360.
 
-Nine evidence figures cover dataset, inference, comparison, classes, calibration/disagreement, convergence, prior/curvature sensitivity, sampling diagnostics and errors. The comparison plots error counts from zero and offsets seed points. Class errors use $1-F_1$ on a nonnegative axis, with all three seed values, means and observed min–max spans; these spans are not confidence intervals. The confusion cells display rounded integer percentages, with full-precision data retained. Reliability uses equal-size unconnected points and an aligned table of all ten confidence-bin counts, including zeros; MI uses separately normalized empirical cumulative distributions for correct/error groups. Curve losses are both measured after each epoch update on shared positive logarithmic limits. An additional explicitly labeled toy covariance diagram explains why smaller marginal variances can accompany larger logit-contrast variance; it is not ten-class experimental evidence. JSON/NPZ, transformed figure_data.json, source hashes and plot scripts supply provenance.
+All ten figures have been redesigned from exact saved data in PDF/SVG/300-DPI PNG. Dataset counts remain exact and examples deterministic. The architecture diagram separates training/validation from the locked test stage. Paired per-digit $F_1(\mathrm{Laplace})-F_1(\mathrm{MAP})$ replaces the deficit display: individual seed shapes and black descriptive means retain genuine signed differences against separately selected MAP. Confusion cells retain rounded percentages and full-precision source data. Training losses retain completed-epoch values and shared positive logarithmic limits; prior candidates are discrete unconnected points rather than an interpolated optimum. Failure images retain native pixels and deterministic indices, with true/predicted probabilities. Covariance geometry remains a tested mathematical toy, not measured ten-class evidence.
+
+Calibration uses three separate reliability panels, exact ten-bin image counts and marginal 95% Wilson bin-accuracy intervals. Open points flag n < 20; empty bins are omitted without erasing their counts. Intervals assume independent bin outcomes and are not simultaneous calibration bands or mean-confidence intervals. The fourth panel separately normalizes MI ECDFs over 352 correct predictions and just eight errors (seed 11). This small error group cannot establish an error detector.
+
+## Post hoc paired image analysis
+
+Prompt 05 resamples the same 360 positions jointly over both methods and three fixed models, 5,000 repetitions, seed 20261012. Estimates are Laplace minus matched-prior MAP; the analysis is exploratory and conditional on fitted models/draws.
+
+| Difference | Estimate | Conditional 95% percentile interval |
+|---|---:|---:|
+| Error, percentage points | 0.00000 | [−0.27778, +0.27778] |
+| NLL, nats | 0.05389 | [0.03994, 0.06612] |
+| Brier, class sum | 0.01358 | [0.00823, 0.01878] |
+| ECE, ten bins | 0.05536 | [0.04162, 0.05959] |
+
+Unknown writer dependence, new splits, retraining and fresh posterior draws are not covered. ECE is recomputed in every resample and remains bin-dependent and biased. These intervals differ from seed SD and MC-repeat SD; no significance or equivalence claim is made. [Full calculation and source hashes](../../results/refinement_05/paired.json). [Current audit and plot rationale](../refinement_05.md).
+
+The controlled comparison demonstrates the score penalty for this posterior average, not why the approximation is inaccurate. Local Gaussian assumptions, omitted feature uncertainty and prior/feature-scale effects are plausible unisolated causes. Softmax nonlinearity means the predictive average need not match MAP; convexity of negative log only compares mixture NLL to average sampled-head NLL, not MAP NLL. Original primary measurements and model choices are unchanged.
 
 ## Post hoc integration diagnostic
 
@@ -34,4 +51,4 @@ Limits: one small dataset, one split, no writer separation, point-estimated feat
 
 ![Measured classifier comparison](https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/main/results/figures/comparison.png)
 
-![Per-class confusion and all measured F1 deficits](https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/main/results/figures/classes.png)
+![Per-class confusion and paired per-digit F1 differences](https://raw.githubusercontent.com/Nvb-flipped/bayesian-handwritten-digit-recognition/main/results/figures/classes.png)

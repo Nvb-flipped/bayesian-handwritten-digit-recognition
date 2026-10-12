@@ -1,0 +1,10 @@
+{
+  "pdf": "results/refinement_05/instruction_workflow.pdf",
+  "method": "Per-line span geometry, avoiding multi-line Tectonic text-trace aggregation",
+  "initial_generic_validator_false_positives": 26,
+  "findings": [],
+  "info": {
+    "contained_fill_overlays": 38,
+    "contained_image_overlays": 0
+  }
+}

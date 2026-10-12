@@ -1,0 +1,30 @@
+[
+  {
+    "file": "results/environment.json",
+    "baseline_commit": "11fe6ce",
+    "original_sha256": "5104b5daa68a4ff6044b04cf50498edf3b2a8bc9b32f6b4f9642392aa4ee95e3",
+    "public_sha256": "d741b009fe8513afa0308f775b339f3eec79abacea1f947dc7a915bdbca8957c",
+    "scope": "Command only; all other fields identical"
+  },
+  {
+    "file": "results/publication_relocation.json",
+    "baseline_commit": "11fe6ce",
+    "original_sha256": "5db49fc76aefdd3d28c8a9038008164e547a4d1664ab87847b4c1d8ba47621aa",
+    "public_sha256": "6be06f56c826f70fc2c672d9dd076591cd93dc7850ce29bb65001cff91496aa2",
+    "scope": "Machine-path prefixes only; non-path diagnostic content and outcomes preserved"
+  },
+  {
+    "file": "results/logs/compile.json",
+    "baseline_commit": "11fe6ce",
+    "original_sha256": "e92b1ffa9773a98b014d30518b3ddf58e87e76841cf15ecc0da5038a2020d4ab",
+    "public_sha256": "dc081babdc9cc6f09160d640d1de1c1508593c73e0eac516f298bea493db5d4a",
+    "scope": "Machine-path prefixes only; non-path diagnostic content and outcomes preserved"
+  },
+  {
+    "file": "results/logs/publication_compile_initial_failure.json",
+    "baseline_commit": "11fe6ce",
+    "original_sha256": "be0d06338a80357a22bde38463d3c80dbfee77553dbdfd8775f87b18c911ef7b",
+    "public_sha256": "d910f8f9ef6b29d39c9722220b0f1eee7dc91c0e9f2c72288e793fbf3b7b83ce",
+    "scope": "Machine-path prefixes only; non-path diagnostic content and outcomes preserved"
+  }
+]

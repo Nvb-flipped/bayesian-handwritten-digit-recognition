@@ -8,12 +8,17 @@
     ],
     "description": "Split balance and deterministic digit examples; images from sklearn.load_digits.",
     "inches": [
-      7.0,
-      2.9
+      6.692913385826772,
+      2.65
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
+    "supporting_source_sha256": {
+      "src/bayes_digits/paired.py": "fff2e9fe67bffabf8fc5174abae7b00d3afb0d706f470dc5a9d24b8eef9c546b",
+      "src/bayes_digits/laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c",
+      "src/bayes_digits/data.py": "8e0c5390ebcd85fde6fc7706767e517c4e283d0751b0fc8d0afa4199d79d6a53"
+    },
+    "generator_sha256": "e4a0d174bd4828df3aa632be82c07e6e583e958b4149319e84937d4ecc3c1a67",
     "source_sha256": {
       "splits.npz": "b08b1d81d8c0fe3d3353ab9298eee147926f690832f9d29798cc971ae0579240",
       "dataset.json": "b2b16450457c9e94e5b89196b8d63b8e0f3e1833b5d8aab0565b59b65a2de44a",
@@ -23,18 +28,25 @@
   {
     "name": "inference",
     "sources": [
-      "config.json"
+      "config.json",
+      "selection_locked.json"
     ],
-    "description": "Project inference stages, with training and validation roles.",
+    "description": "Training and validation stages precede selection lock; test integration occurs only afterwards. Exact Hessian does not imply exact posterior.",
     "inches": [
-      7.0,
-      2.6
+      6.692913385826772,
+      3.05
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
+    "supporting_source_sha256": {
+      "src/bayes_digits/paired.py": "fff2e9fe67bffabf8fc5174abae7b00d3afb0d706f470dc5a9d24b8eef9c546b",
+      "src/bayes_digits/laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c",
+      "src/bayes_digits/data.py": "8e0c5390ebcd85fde6fc7706767e517c4e283d0751b0fc8d0afa4199d79d6a53"
+    },
+    "generator_sha256": "e4a0d174bd4828df3aa632be82c07e6e583e958b4149319e84937d4ecc3c1a67",
     "source_sha256": {
-      "config.json": "4beafe7e50d2ac0b3097f77a899344ed7c7feaf0e06b72745f687cb3e761f923"
+      "config.json": "4beafe7e50d2ac0b3097f77a899344ed7c7feaf0e06b72745f687cb3e761f923",
+      "selection_locked.json": "92bbcd00214be72e96fb086d4add852bdcc33a59f175a5db5857b96050f1b4df"
     }
   },
   {
@@ -44,12 +56,17 @@
     ],
     "description": "Worked-example radius-one Mahalanobis contours and exact Gaussian logit-contrast densities; toy calculation, not ten-class measurements.",
     "inches": [
-      7.0,
+      6.692913385826772,
       2.7
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
+    "supporting_source_sha256": {
+      "src/bayes_digits/paired.py": "fff2e9fe67bffabf8fc5174abae7b00d3afb0d706f470dc5a9d24b8eef9c546b",
+      "src/bayes_digits/laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c",
+      "src/bayes_digits/data.py": "8e0c5390ebcd85fde6fc7706767e517c4e283d0751b0fc8d0afa4199d79d6a53"
+    },
+    "generator_sha256": "e4a0d174bd4828df3aa632be82c07e6e583e958b4149319e84937d4ecc3c1a67",
     "source_sha256": {
       "../src/bayes_digits/laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c"
     }
@@ -62,12 +79,17 @@
     ],
     "description": "Raw seed results and sample SD; GNB evaluated once.",
     "inches": [
-      7.0,
+      6.692913385826772,
       2.6
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
+    "supporting_source_sha256": {
+      "src/bayes_digits/paired.py": "fff2e9fe67bffabf8fc5174abae7b00d3afb0d706f470dc5a9d24b8eef9c546b",
+      "src/bayes_digits/laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c",
+      "src/bayes_digits/data.py": "8e0c5390ebcd85fde6fc7706767e517c4e283d0751b0fc8d0afa4199d79d6a53"
+    },
+    "generator_sha256": "e4a0d174bd4828df3aa632be82c07e6e583e958b4149319e84937d4ecc3c1a67",
     "source_sha256": {
       "metrics.json": "fb99d9500c5d4f5bd569e2c5b68396998461494e3b52ec9f4cfdb40a22cfff27",
       "summary.json": "187cf6d58d35a6f0235ac8afafe3556b07286aad244cfc62b092b66e17a91708"
@@ -78,14 +100,19 @@
     "sources": [
       "metrics.json"
     ],
-    "description": "Row-normalized confusion; all three seed F1 deficits, arithmetic means and observed min-max ranges. No SD/CI bars.",
+    "description": "Row-normalized confusion; exact paired F1 differences against separately selected MAP, all three seeds and descriptive means. Signed scale preserves measured differences.",
     "inches": [
-      7.0,
-      3.9
+      6.692913385826772,
+      3.45
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
+    "supporting_source_sha256": {
+      "src/bayes_digits/paired.py": "fff2e9fe67bffabf8fc5174abae7b00d3afb0d706f470dc5a9d24b8eef9c546b",
+      "src/bayes_digits/laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c",
+      "src/bayes_digits/data.py": "8e0c5390ebcd85fde6fc7706767e517c4e283d0751b0fc8d0afa4199d79d6a53"
+    },
+    "generator_sha256": "e4a0d174bd4828df3aa632be82c07e6e583e958b4149319e84937d4ecc3c1a67",
     "source_sha256": {
       "metrics.json": "fb99d9500c5d4f5bd569e2c5b68396998461494e3b52ec9f4cfdb40a22cfff27"
     }
@@ -96,14 +123,19 @@
       "metrics.json",
       "predictions.npz"
     ],
-    "description": "Unconnected, equal-size reliability points with exact bin-count table; within-group MI ECDFs, fixed seed 11.",
+    "description": "Separated reliability panels with marginal Wilson bin-accuracy intervals and exact support; open points identify sparse bins (<20). MI ECDFs are separately normalized (352 correct, 8 errors).",
     "inches": [
-      7.0,
-      3.8
+      6.692913385826772,
+      5.45
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
+    "supporting_source_sha256": {
+      "src/bayes_digits/paired.py": "fff2e9fe67bffabf8fc5174abae7b00d3afb0d706f470dc5a9d24b8eef9c546b",
+      "src/bayes_digits/laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c",
+      "src/bayes_digits/data.py": "8e0c5390ebcd85fde6fc7706767e517c4e283d0751b0fc8d0afa4199d79d6a53"
+    },
+    "generator_sha256": "e4a0d174bd4828df3aa632be82c07e6e583e958b4149319e84937d4ecc3c1a67",
     "source_sha256": {
       "metrics.json": "fb99d9500c5d4f5bd569e2c5b68396998461494e3b52ec9f4cfdb40a22cfff27",
       "predictions.npz": "73695f0f3b742c9d7db725d2ea1adf903e5129c24746ddab5d4a38a09fb2ceea"
@@ -118,12 +150,17 @@
     ],
     "description": "Feature network NLL, before convex last-layer refitting.",
     "inches": [
-      7.0,
+      6.692913385826772,
       2.9
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
+    "supporting_source_sha256": {
+      "src/bayes_digits/paired.py": "fff2e9fe67bffabf8fc5174abae7b00d3afb0d706f470dc5a9d24b8eef9c546b",
+      "src/bayes_digits/laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c",
+      "src/bayes_digits/data.py": "8e0c5390ebcd85fde6fc7706767e517c4e283d0751b0fc8d0afa4199d79d6a53"
+    },
+    "generator_sha256": "e4a0d174bd4828df3aa632be82c07e6e583e958b4149319e84937d4ecc3c1a67",
     "source_sha256": {
       "history_11.json": "9184599fa0519ef69d6c247fe9504b9a912587df50f649b7cde352f795c18495",
       "history_22.json": "68b2578729b85f9e2995503dfa7064e5d16f39998eec43f11bf4cfea478ee70d",
@@ -138,12 +175,17 @@
     ],
     "description": "Prior selection uses validation; frozen-prior ablations use test.",
     "inches": [
-      7.0,
+      6.692913385826772,
       2.9
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
+    "supporting_source_sha256": {
+      "src/bayes_digits/paired.py": "fff2e9fe67bffabf8fc5174abae7b00d3afb0d706f470dc5a9d24b8eef9c546b",
+      "src/bayes_digits/laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c",
+      "src/bayes_digits/data.py": "8e0c5390ebcd85fde6fc7706767e517c4e283d0751b0fc8d0afa4199d79d6a53"
+    },
+    "generator_sha256": "e4a0d174bd4828df3aa632be82c07e6e583e958b4149319e84937d4ecc3c1a67",
     "source_sha256": {
       "sensitivity.json": "f27feb8748cf8ba807ed8628d43d02f781532c2a95229a18e78103bfb4b78609",
       "metrics.json": "fb99d9500c5d4f5bd569e2c5b68396998461494e3b52ec9f4cfdb40a22cfff27"
@@ -157,12 +199,17 @@
     ],
     "description": "First eight mistakes in ascending dataset index; seed 11 fixed before experiments.",
     "inches": [
-      7.0,
-      3.5
+      6.692913385826772,
+      3.7
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
+    "supporting_source_sha256": {
+      "src/bayes_digits/paired.py": "fff2e9fe67bffabf8fc5174abae7b00d3afb0d706f470dc5a9d24b8eef9c546b",
+      "src/bayes_digits/laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c",
+      "src/bayes_digits/data.py": "8e0c5390ebcd85fde6fc7706767e517c4e283d0751b0fc8d0afa4199d79d6a53"
+    },
+    "generator_sha256": "e4a0d174bd4828df3aa632be82c07e6e583e958b4149319e84937d4ecc3c1a67",
     "source_sha256": {
       "predictions.npz": "73695f0f3b742c9d7db725d2ea1adf903e5129c24746ddab5d4a38a09fb2ceea"
     }
@@ -175,12 +222,17 @@
     ],
     "description": "Post hoc fixed-model diagnostic; eight independent sampling repetitions per model/count, not a test-set CI.",
     "inches": [
-      7.0,
+      6.692913385826772,
       2.8
     ],
     "raster_dpi": 300,
     "generator": "src/bayes_digits/figures.py",
-    "generator_sha256": "f7d64a67e7c3901d85dfdf857c58e25f04aba68bf558ecfc675bbde6d344cdc8",
+    "supporting_source_sha256": {
+      "src/bayes_digits/paired.py": "fff2e9fe67bffabf8fc5174abae7b00d3afb0d706f470dc5a9d24b8eef9c546b",
+      "src/bayes_digits/laplace.py": "086bc10f3b3f4fdaa5536643e9cc6bbe2cdca3e78afd60d8b4dbddd64b54128c",
+      "src/bayes_digits/data.py": "8e0c5390ebcd85fde6fc7706767e517c4e283d0751b0fc8d0afa4199d79d6a53"
+    },
+    "generator_sha256": "e4a0d174bd4828df3aa632be82c07e6e583e958b4149319e84937d4ecc3c1a67",
     "source_sha256": {
       "review_diagnostics/summary.json": "85ab7c10630dbfdde40840d4a937b169c83a07af0e9bcf0f9d3c953213e2d166",
       "review_diagnostics/matched_map.json": "1c11a453660256643c437f1800cc3ea1551134cfd8436f5657067a698dd4c192"
